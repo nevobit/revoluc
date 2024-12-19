@@ -30,8 +30,20 @@
 ## Project Structure
 
 ```
-/src |-- /pages | |-- /[lang] | |-- index.tsx # Main landing page in all languages | |-- about.tsx # About page in all languages |-- /public | |-- /images # Image assets | |-- favicon.ico # Website icon |-- /styles | |-- globals.css # Global styles | |-- tailwind.css # Tailwind configuration |-- /locales | |-- en.json # English translations | |-- fr.json # French translations | |-- es.json # Spanish translations
+/src 
+    /pages
+        /[lang] 
+            index.tsx # Main landing page in all languages 
+            about.tsx # About page in all languages 
+    /public 
+        /images # Image assets 
+            favicon.ico # Website icon  
+    /locales 
+        en.json # English translations 
+        fr.json # French translations  
+        es.json # Spanish translations
 ```
+
 
 ## Deployment
 Prepare the production build:
@@ -41,6 +53,7 @@ Prepare the production build:
 ```
 **Deploy on Vercel:** Ensure the repository is connected to Vercel and follow the deployment steps.
 
+
 ## Features Checklist
 [x] Complete translations in English, French, and Spanish.
 [x] Seamless navigation between languages without page reloads.
@@ -48,14 +61,16 @@ Prepare the production build:
 [x] Responsive design tested on desktop and mobile.
 [x] Successful deployment on Vercel.
 
+
 ## Resources
 - Next.js Documentation
 - Next.js i18n Routing Guide
 - CSS Modules
 - Vercel
 
+
 ## Contributions
 If you'd like to contribute, open an issue or submit a pull request to the GitHub repository.
 
-**Author**: Revoluc Team
-**Version**: 1.0.0
+- **Author**: Revoluc Team
+- **Version**: 1.0.0
