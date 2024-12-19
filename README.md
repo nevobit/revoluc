@@ -72,5 +72,5 @@ Prepare the production build:
 ## Contributions
 If you'd like to contribute, open an issue or submit a pull request to the GitHub repository.
 
-- **Author**: Revoluc Team
+- **Author**: Nevobit Team
 - **Version**: 1.0.0
