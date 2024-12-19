@@ -1,0 +1,165 @@
+.header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  top: 0px;
+  padding: 1rem 0;
+  width: 100vw;
+  height: 40px;
+  overflow: hidden;
+  position: fixed;
+  align-items: center;
+  left: 0;
+  z-index: 99999999999999;
+  /* background: #F9FAFB; */
+ }
+ 
+ .logo{
+  justify-self: flex-start;
+  margin-left: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 999;
+  cursor: pointer;
+  object-fit: cover;
+ }
+ 
+ .menu{
+  margin-right: 1.5rem;
+  justify-self: end;
+  cursor: pointer;
+ }
+ 
+ .menu_bar{
+  height: .2rem;
+  width: 2.5rem;
+  background-color: #8596AD;
+  transition: .3s ease;
+  display: block;
+ }
+ 
+ .menu_bar:first-child{
+  margin-bottom: .9rem;
+ }
+ 
+ .menucontent{
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 100vh;
+  position: fixed;
+  width: 0vw;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: .6s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ }
+ 
+ .menucontentopen{
+  background-color: rgba(255, 255, 255, .3);
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  right: 0;
+  backdrop-filter: blur(10px);
+  top: 0;
+  z-index: -1;
+  transition: .6s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ }
+ 
+ .menulinks{
+  margin-top: 120px;
+  margin-left: 50px;
+  cursor: pointer;
+ }
+ 
+ .pageone{
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 9px 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+ }
+ 
+ 
+ .menulinks a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+ }
+ 
+ .menulinks p{
+  text-align: left;
+  margin-left: 15px;
+ }
+ 
+ .menulinks i{
+  font-size: 2.2rem;
+ }
+ 
+ .menulinks a:hover{
+  color: #1971e4;
+ }
+ 
+ 
+ .menucontact{
+  width: 250px;
+  border-top: 1px solid rgba(133, 150, 173, 0.2);
+  margin-left: 80px;
+  margin-bottom: 120px;
+  padding-top: 72px;
+  font-size: 1.5rem;
+ }
+ 
+ 
+ .menucontact::before{
+  content: '';
+  width: 250px;
+  height: 1px;
+  background: crimson;
+ }
+ 
+ 
+ .menucontact a{
+  text-decoration: none;
+  display: grid;
+  grid-template-columns:  0 1fr;
+  justify-content: center;
+  align-self: center;
+  cursor: pointer;
+ }
+ 
+ .menucontact i{
+  align-self: center;
+  transform: translate(-20px, 0px);
+  opacity: 1;
+  transition: .3s ease;
+  font-size: 2.2rem;
+  color: #1971e4;
+ }
+ 
+ 
+ .menucontact a p{
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.8rem;
+  color: #1971e4;
+  margin: 8px 0 8px 0;
+  text-align: left;
+ }
+ 
+ .select_language select{
+  font-size: 1.8rem;
+  color: #8596AD;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  width: auto;
+  cursor: pointer;
+ }

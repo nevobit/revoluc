@@ -1,0 +1,52 @@
+.sidemenu{
+  right: 0;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px;
+  z-index: 99;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 50px;
+  z-index: 0;
+ }
+ 
+ .btn{
+  height: 24px;
+  display: flex;
+  cursor: pointer;
+  z-index: 0;
+ }
+ 
+ .btn p{
+  font-size: 1.4rem;
+  font-weight: 300;
+ }
+ 
+ .btn1{
+  position: relative;
+  height: 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 0;
+  gap: .5rem;
+  margin-left: auto;
+  margin-right: 2.5rem;
+ }
+ 
+ 
+ .dot{
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  background-color: #1971ea;
+  transition: .2s ease-in;
+  z-index: 0;
+ }
+
+ @media screen and (max-width: 768px) {
+  .btn p{
+    display: none;
+   }
+ }

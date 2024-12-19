@@ -1,0 +1,102 @@
+.about{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+ }
+ 
+ .aboutcontent{
+  justify-self: start;
+  align-self: center;
+  margin-left: 28px;
+ }
+ 
+ .abouttext{
+  width: 300px;
+  padding-right: 10px;
+  transform: translateY(-35px);
+ }
+ 
+ .about h1{
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #1F3047;
+  transition: .5s ease 0s;
+  margin-bottom: 24px;
+  font-style: 2.4rem;
+ }
+ 
+ .about p{
+  font-size: 1.2rem;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  color: #8596AD;
+  text-align: left;
+  margin-bottom: 20px;
+  text-align: justify;
+ }
+ 
+ .newsletterbtn{
+  width: 263px;
+  padding: 15px 0;
+  background: linear-gradient(180deg, #F9FAFB 0%, #EDF1F2 100%);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: none;
+  font-style: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: .2em;
+  transition: .3s ease;
+  text-transform: uppercase;
+  color: #1F3047;
+  margin-top: 20px;
+  cursor: pointer;
+ }
+ 
+ .missionimgpng{
+  display: none;
+ }
+ 
+ @media screen and (min-width: 900px) {
+  .about{
+      grid-template-columns: 1fr 1fr;
+  }
+ 
+  .aboutcontent{
+      justify-self: end;
+      align-self: center;
+  }
+ 
+  
+  .abouttext{
+      width: 458px;
+      padding-right: 15px;
+  }
+ 
+  .about h1{
+      font-size: 3.2rem;
+      transition: .5s ease 0s;
+  }
+ 
+  .about p{
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+      font-weight: 300;
+      margin-bottom: 2.8rem;
+  }
+ 
+  .missionimgpng{
+      display: block;
+      width: 650px;
+  }
+  
+  .missionimgpng img{
+      width: 100%;
+  }
+ 
+ }
