@@ -43,13 +43,13 @@ export default async function Root({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://helebba.com.co'),
+  metadataBase: new URL('https://revoluc.com'),
   title: {
-    default: 'Revoluc - Aceleradora de Startups y Transformación Empresarial',
-    template: '%s | Revoluc - Aceleradora de Startups y Transformación Empresarial'
+    default: 'Revoluc - Recursos para Startups y Transformación Empresarial',
+    template: '%s | Revoluc - Recursos para Startups y Transformación Empresarial'
   },
   description: 'Revoluc es una aceleradora que impulsa el crecimiento de startups y empresas emergentes a través de mentoría, inversión y estrategias innovadoras. Nos especializamos en desarrollo tecnológico, marketing digital y optimización de modelos de negocio, ayudando a los emprendedores a escalar y alcanzar el éxito en el mercado.',
-  applicationName: 'Helebba Software',
+  applicationName: 'Revoluc Inc.',
   keywords: ['aceleradora de startups', 'mentoría para startups', 'desarrollo tecnológico', 'Revoluc', 'soluciones empresariales', 'transformación digital', "desarrollo tecnológico", "marketing digital", "innovación"],
   authors: [ { name: 'Nevobit', url: 'https://nevobit.co'} ],
   creator: 'Nevobit Software',
@@ -62,18 +62,18 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'Helebba - El software de gestión para emprendedores',
-    description:'Helebba es el software de gestión de negocios que te permite gestionar desde un mismo sitio tu facturación, contabilidad, inventario, CRM, proyectos y RRHH.',
-    url: 'https://helebba.com.co',
-    siteName: 'Helebba Software',
+    title: 'Revoluc - Recursos para Startups y Transformación Empresarial',
+    description:'Revoluc es una aceleradora que impulsa el crecimiento de startups y empresas emergentes a través de mentoría, inversión y estrategias innovadoras. Nos especializamos en desarrollo tecnológico, marketing digital y optimización de modelos de negocio, ayudando a los emprendedores a escalar y alcanzar el éxito en el mercado.',
+    url: 'https://revoluc.com',
+    siteName: 'Revoluc Inc.',
     type: 'website',
     locale: 'es-ES',
   },
   twitter: {
-    title: 'Helebba - El software de gestión para emprendedores',
-    description:'Helebba es el software de gestión de negocios que te permite gestionar desde un mismo sitio tu facturación, contabilidad, inventario, CRM, proyectos y RRHH.',
+    title: 'Revoluc - Recursos para Startups y Transformación Empresarial',
+    description:'Revoluc es una aceleradora que impulsa el crecimiento de startups y empresas emergentes a través de mentoría, inversión y estrategias innovadoras. Nos especializamos en desarrollo tecnológico, marketing digital y optimización de modelos de negocio, ayudando a los emprendedores a escalar y alcanzar el éxito en el mercado.',
     creator: '@nevobitsoftware',
-    site: 'Helebba',
+    site: 'Revoluc Inc.',
     card: 'summary_large_image',
   }
 }
