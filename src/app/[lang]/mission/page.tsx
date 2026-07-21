@@ -1,7 +1,6 @@
-import React from 'react'
-import styles from './Mission.module.css';
-import { Locale } from '../../../../i18n-config';
-import { getTranslations } from '@/dictionaries';
+import { Locale } from "../../../../i18n-config";
+import { localize, missionContent } from "@/content/site";
+import styles from "../ContentPage.module.css";
 
 interface PageProps {
   params: Promise<{
@@ -11,28 +10,20 @@ interface PageProps {
 
 const Mission = async ({ params }: PageProps) => {
   const lang = (await params).lang;
-  const t = await getTranslations(lang);
+
   return (
-    <div className={styles.mainsections}>
-    <div className={styles.about}>
-        <div className={styles.aboutcontent}>
-            <div className={styles.abouttext}>
-                <h1> {t['banner'].mission}</h1>
-                <p>
-                    {t.p3}
-                </p>
-                <p>
-                    {t.p4}
-                </p>
-            </div>
+    <main className={styles.page}>
+      <section className={`${styles.content} ${styles.narrow}`}>
+        <p className={styles.eyebrow}>Company building</p>
+        <h1>{localize(missionContent.title, lang)}</h1>
+        <div className={styles.paragraphs}>
+          {missionContent.paragraphs[lang].map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
         </div>
-        <div className={styles.missionimgpng}>
-            <img src="/img/mission-img.png" alt="" />
-        </div>
-    </div>
+      </section>
+    </main>
+  );
+};
 
-</div>
-  )
-}
-
-export default Mission
+export default Mission;

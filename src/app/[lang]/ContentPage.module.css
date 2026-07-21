@@ -1,0 +1,146 @@
+.page {
+  min-height: 100vh;
+  width: 100vw;
+  background: #ffffff;
+  color: #1f3047;
+  padding: 12rem 0 10rem;
+}
+
+.content {
+  width: min(94rem, calc(100% - 5.6rem));
+  margin: 0 auto;
+}
+
+.narrow {
+  max-width: 64rem;
+}
+
+.eyebrow {
+  margin: 0 0 2rem;
+  color: #8596ad;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.content h1 {
+  margin: 0;
+  color: #1f3047;
+  font-size: clamp(3.2rem, 6vw, 5.8rem);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.lead {
+  margin: 2.6rem 0 0;
+  color: #8596ad;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.9;
+}
+
+.paragraphs {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.paragraphs p {
+  margin: 0;
+  color: #8596ad;
+  font-size: 1.55rem;
+  font-weight: 300;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.panel {
+  margin-top: 4rem;
+  border-top: 1px solid rgba(133, 150, 173, 0.2);
+  border-bottom: 1px solid rgba(133, 150, 173, 0.2);
+  padding: 2.8rem 0;
+}
+
+.profile {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: #edf1f2;
+  color: #1971e4;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.panel h2 {
+  margin: 0;
+  color: #1f3047;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.role {
+  margin: 0.8rem 0 0;
+  color: #1971e4;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.panel p {
+  margin: 1.4rem 0 0;
+  color: #8596ad;
+  font-size: 1.45rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  border-radius: 0;
+  background: transparent;
+  color: #1f3047;
+  padding: 0 0 .9rem;
+  border-bottom: 1px solid rgba(25, 113, 228, 0.42);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .3s ease;
+}
+
+.button:hover {
+  color: #1971e4;
+  border-bottom-color: #1971e4;
+  transform: translateY(-0.2rem);
+}
+
+@media screen and (min-width: 720px) {
+  .page {
+    display: grid;
+    align-items: center;
+  }
+
+  .profile {
+    grid-template-columns: auto 1fr;
+  }
+}

@@ -25,26 +25,32 @@ const Header = () => {
   
   return (
     <header className={styles.header}>
-      <Link href="/">
+      <Link href={`/${locale}`}>
           <Image
           className={styles.logo}
             src="/img/logo192.png"
-            alt="Real Vision Enterprise Logo"
+            alt="Revoluc logo"
             height={100}
             width={100}
           />
       </Link>
-      <div className={styles.menu} onClick={() => setOpenMenu(!openMenu)}>
+      <button
+        className={styles.menu}
+        type="button"
+        aria-label={openMenu ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={openMenu}
+        onClick={() => setOpenMenu(!openMenu)}
+      >
         <span className={styles.menu_bar}></span>
         <span className={styles.menu_bar}></span>
-      </div>
+      </button>
 
       <div className={openMenu? styles.menucontentopen : styles.menucontent}>
         <div className={styles.menulinks}>
           <div className={styles.pageone}>
             <i className="bx bx-chevron-right"></i>
             <p>
-              <Link href="/">
+              <Link href={`/${locale}`}>
                 {t['banner'].home}
               </Link>
             </p>
@@ -52,8 +58,8 @@ const Header = () => {
           <div className={styles.pageone}>
             <i className="bx bx-chevron-right"></i>
             <p>
-              <Link href={`/${locale}/mission`}>
-                {t['banner'].mission}
+              <Link href={`/${locale}/portfolio`}>
+                {t['banner'].portfolio}
               </Link>
             </p>
           </div>
@@ -76,19 +82,43 @@ const Header = () => {
           <div className={styles.pageone}>
             <i className="bx bx-chevron-right"></i>
             <p>
+              <Link href={`/${locale}/mission`}>
+                {t['banner'].mission}
+              </Link>
+            </p>
+          </div>
+          <div className={styles.pageone}>
+            <i className="bx bx-chevron-right"></i>
+            <p>
+              <Link href={`/${locale}/startups`}>
+                {t['banner'].startups}
+              </Link>
+            </p>
+          </div>
+          <div className={styles.pageone}>
+            <i className="bx bx-chevron-right"></i>
+            <p>
               <Link href={`/${locale}/team`} >
                 {t['banner'].team}
               </Link>
             </p>
           </div>
-          {/* <div className={styles.pageone}>
+          <div className={styles.pageone}>
             <i className="bx bx-chevron-right"></i>
             <p>
-              <Link href="/contact">
+              <Link href={`/${locale}/social`}>
+                {t['banner'].social}
+              </Link>
+            </p>
+          </div>
+          <div className={styles.pageone}>
+            <i className="bx bx-chevron-right"></i>
+            <p>
+              <Link href={`/${locale}/contact`}>
                 {t['banner'].contact}
               </Link>
             </p>
-          </div> */}
+          </div>
           
           <div className={styles.select_language}>
             <select onChange={changeLanguage} value={locale} >
@@ -100,16 +130,19 @@ const Header = () => {
         </div>
         
         <div className={styles.menucontact}>
-          <Link href="mailto:hi@revoluc.com">
-            <i className="bx bx-chevron-right"></i> <p>hi@revoluc.com</p>              
-          </Link>
-          <Link href="tel:+12567156920<">
-            <i className="bx bx-chevron-right"></i> <p> +1 (256) 715-6920</p>              
-          </Link>
-          <a href="https://goo.gl/maps/8VfDrMoDQbmUJ4vT8">
-            <i className="bx bx-chevron-right"></i> <p> 2261 Market Street STE 22620
+          <a href="mailto:hi@revoluc.com">
+            <i className="bx bx-chevron-right"></i> <p>hi@revoluc.com</p>
+          </a>
+          <a href="tel:+12567156920">
+            <i className="bx bx-chevron-right"></i> <p>+1 (256) 715-6920</p>
+          </a>
+          <a href="https://goo.gl/maps/8VfDrMoDQbmUJ4vT8" target="_blank" rel="noopener noreferrer">
+            <i className="bx bx-chevron-right"></i>
+            <p>
+              2261 Market Street STE 22620
               <br />
-            San Francisco, CA 94114</p>
+              San Francisco, CA 94114
+            </p>
           </a>
         </div>
       </div>

@@ -1,11 +1,11 @@
-.header{
+ .header{
   display: grid;
   grid-template-columns: 1fr 1fr;
   top: 0px;
   padding: 1rem 0;
   width: 100vw;
   height: 40px;
-  overflow: hidden;
+  overflow: visible;
   position: fixed;
   align-items: center;
   left: 0;
@@ -20,20 +20,34 @@
   width: 3rem;
   position: relative;
   overflow: hidden;
-  z-index: 999;
+  z-index: 2;
   cursor: pointer;
   object-fit: cover;
  }
  
- .menu{
+.menu{
   margin-right: 1.5rem;
   justify-self: end;
   cursor: pointer;
+  width: 3.6rem;
+  height: 3.6rem;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .3s ease;
+  position: relative;
+  z-index: 2;
  }
+
+.menu:hover{
+  transform: translateY(-.1rem);
+}
  
  .menu_bar{
   height: .2rem;
-  width: 2.5rem;
+  width: 2.4rem;
   background-color: #8596AD;
   transition: .3s ease;
   display: block;
@@ -44,29 +58,35 @@
  }
  
  .menucontent{
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.96);
   height: 100vh;
   position: fixed;
-  width: 0vw;
+  width: 100vw;
   right: 0;
   top: 0;
-  z-index: -1;
-  transition: .6s ease;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: .45s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
  }
  
  .menucontentopen{
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, .88);
   height: 100vh;
   position: fixed;
   width: 100vw;
   right: 0;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(14px);
   top: 0;
-  z-index: -1;
-  transition: .6s ease;
+  z-index: 1;
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+  transition: .45s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -91,7 +111,10 @@
  
  .menulinks a{
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.6);
+  color: #1F3047;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: .22em;
   text-transform: uppercase;
  }
  
@@ -114,16 +137,8 @@
   border-top: 1px solid rgba(133, 150, 173, 0.2);
   margin-left: 80px;
   margin-bottom: 120px;
-  padding-top: 72px;
+  padding-top: 32px;
   font-size: 1.5rem;
- }
- 
- 
- .menucontact::before{
-  content: '';
-  width: 250px;
-  height: 1px;
-  background: crimson;
  }
  
  
@@ -134,6 +149,7 @@
   justify-content: center;
   align-self: center;
   cursor: pointer;
+  margin-bottom: .8rem;
  }
  
  .menucontact i{
@@ -149,17 +165,35 @@
  .menucontact a p{
   font-style: normal;
   font-weight: 300;
-  line-height: 2.8rem;
+  line-height: 2.4rem;
   color: #1971e4;
-  margin: 8px 0 8px 0;
+  margin: 6px 0;
   text-align: left;
  }
  
  .select_language select{
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: #8596AD;
   margin-left: 2rem;
   margin-top: 1rem;
   width: auto;
   cursor: pointer;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(133, 150, 173, .28);
+  border-radius: 0;
+  padding: .4rem 0;
+ }
+
+ @media screen and (max-width: 640px) {
+  .menulinks{
+    margin-left: 32px;
+  }
+
+  .menucontact{
+    margin-left: 62px;
+    margin-bottom: 84px;
+  }
  }

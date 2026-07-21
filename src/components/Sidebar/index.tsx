@@ -32,10 +32,26 @@ export default async function Sidebar({ params }: PageProps) {
                         </div>    
                     </div>        
             </Link>
+            <Link href={`/${lang}/portfolio`} title='Companies'>
+                    <div className={styles.btn}>
+                        <div className={styles.btn1}>
+                        <p>{t['banner'].portfolio}</p>
+                            <div className={styles.dot}></div>
+                        </div>    
+                    </div>        
+            </Link>
             <Link href={`/${lang}/mission`} title='Mission'>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>
                         <p>{t['banner'].mission}</p>
+                            <div className={styles.dot}></div>
+                        </div>    
+                    </div>        
+            </Link>
+            <Link href={`/${lang}/startups`} title='Startups'>
+                    <div className={styles.btn}>
+                        <div className={styles.btn1}>
+                        <p>{t['banner'].startups}</p>
                             <div className={styles.dot}></div>
                         </div>    
                     </div>        
@@ -57,15 +73,22 @@ export default async function Sidebar({ params }: PageProps) {
                         </div>    
                     </div>        
             </Link>
-            {/* <Link href={`/${lang}/contact`} title='Contact'>
+            <Link href={`/${lang}/social`} title='Social'>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>
-                        <p>{t['banner'].contact}</p>
-
+                        <p>{t['banner'].social}</p>
                             <div className={styles.dot}></div>
                         </div>    
                     </div>        
-            </Link> */}
+            </Link>
+            <Link href={`/${lang}/contact`} title='Contact'>
+                    <div className={styles.btn}>
+                        <div className={styles.btn1}>
+                        <p>{t['banner'].contact}</p>
+                            <div className={styles.dot}></div>
+                        </div>    
+                    </div>        
+            </Link>
               
         </div>
     )

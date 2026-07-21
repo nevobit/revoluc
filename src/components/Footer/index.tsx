@@ -1,6 +1,12 @@
+'use client'
+
+import Link from 'next/link'
+import { useLocale } from '@/hooks/useLocale'
 import styles from './Footer.module.css'
 
 const Footer = () => {
+  const { t, locale } = useLocale()
+
   return (
     <footer className={styles.footer}>
     <div className={styles.copyrights}>
@@ -14,11 +20,11 @@ const Footer = () => {
     </div>
     <div className={styles.socials}>
         <p className={styles.socialsP}>
-            <a href="https://www.linkedin.com/company/92734934" title='Linkedin' target="_blank" rel="noopener noreferrer">
-                In
-            </a>
+            <Link href={`/${locale}/social`} aria-label="Revoluc social channels" title='Revoluc social channels'>
+                {t['banner'].social}
+            </Link>
             <span>/</span>
-            <a href="https://www.linkedin.com/company/92734934" title='Twitter'>Tw</a>
+            <a href="mailto:hi@revoluc.com" aria-label="Email Revoluc" title='Email Revoluc'>Email</a>
         </p>
     </div>
 </footer>

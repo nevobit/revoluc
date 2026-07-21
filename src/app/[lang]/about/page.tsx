@@ -1,7 +1,6 @@
-import { getTranslations } from '@/dictionaries';
-import React from 'react'
-import { Locale } from '../../../../i18n-config';
-import styles from './About.module.css';
+import { Locale } from "../../../../i18n-config";
+import { aboutContent, localize } from "@/content/site";
+import styles from "../ContentPage.module.css";
 
 interface PageProps {
   params: Promise<{
@@ -9,25 +8,22 @@ interface PageProps {
   }>;
 }
 
-const About = async({ params }: PageProps) => {
+const About = async ({ params }: PageProps) => {
   const lang = (await params).lang;
-  const t = await getTranslations(lang);
+
   return (
-    <div className={styles.mainsections}>
-
-    <div className={styles.about}>
-        <div className={styles.aboutcontent}>
-            <div className={styles.abouttext}>
-                <h1>{t['banner'].about}</h1>
-                <p>{t['p1']}</p>
-                <p >
-                {t.p2}
-                </p>
-            </div>
+    <main className={styles.page}>
+      <section className={`${styles.content} ${styles.narrow}`}>
+        <p className={styles.eyebrow}>Technology holding</p>
+        <h1>{localize(aboutContent.title, lang)}</h1>
+        <div className={styles.paragraphs}>
+          {aboutContent.paragraphs[lang].map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
         </div>
-    </div>
-</div>
-  )
-}
+      </section>
+    </main>
+  );
+};
 
-export default About
+export default About;

@@ -1,122 +1,281 @@
-.banner{
-  height: 100vh;
+.page {
+  min-height: 100vh;
   width: 100vw;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: #1f3047;
 }
 
-.title{
-  width: 80%;
-  margin:  16rem auto 8rem auto;
-  line-height: 135%;
-  font-weight: 500;
-  text-align: center;
-  letter-spacing: 1rem;
-  text-transform: uppercase;
-  color: #1F3047;
-  font-size: 3rem;
-}
-
-.callToAction{
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.callToActionBackground{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  align-items: center;
-  z-index: -2;
-  margin-top: -12rem;
-}
-
-
-.callToActionBtn{
-  width: 12rem;
-  height: 12rem;
-  position: relative;
+.hero {
+  min-height: 100vh;
+  width: min(112rem, calc(100% - 4rem));
+  margin: 0 auto;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: .5s;
+  place-items: center;
+  padding: 9rem 0 6rem;
+  position: relative;
 }
 
-.callToActionBtn::before{
-  content: '';
-  width: 60px;
-  height: 1px;
-  background-color: #1971e4;;
-  position: absolute;
-  right: -65px;
-  top: 50%;
-  transition: .3s ease;
+.heroContent {
+  width: min(92rem, 100%);
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-.callToActionBtn::after {
-  content: "";
-  width: 60px;
-  height: 1px;
-  background-color: #1971e4;;
-  position: absolute;
-  left: -65px;
-  top: 50%;
+.eyebrow,
+.companyStatus {
+  margin: 0 0 2rem;
+  color: #8596ad;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  width: min(92rem, 100%);
+  margin: 0 auto;
+  color: #1f3047;
+  font-size: clamp(3.6rem, 7vw, 7.2rem);
+  font-weight: 500;
+  line-height: 1.24;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  width: min(64rem, 100%);
+  margin: 2.8rem auto 0;
+  color: #8596ad;
+  font-size: clamp(1.45rem, 1.8vw, 1.8rem);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  margin-top: 4.2rem;
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: auto;
+  min-height: auto;
+  border-radius: 0;
+  padding: 0 0 .9rem;
+  color: #1f3047;
+  background: transparent;
+  border-bottom: 1px solid rgba(25, 113, 228, 0.42);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
   transition: 0.3s ease;
 }
 
-.callToActionCopy{
-  font-size: 1.4rem;
-  margin: 0;
-  line-height: 12rem;
-  text-align: center;
-  color: #EDF1F2;
-  letter-spacing: .3em;
-  text-transform: uppercase;
-  width: 100%;
-  height: 100%;
-  z-index: 99999999;
+.secondaryAction {
+  color: #8596ad;
+  border-bottom-color: rgba(133, 150, 173, 0.36);
 }
 
-.seeMoreHolder::after{
-  content: 'njac';
-  width: 100px;
-  height: 12px;
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  background-color: #1F3047;
-  transform: translateX(-50%);
-  opacity: .2;
-  filter: blur(16px);
-  z-index: 999;
-}
-
-
-
-.callToActionBtnIcon{
-  margin-top: 1.5rem;
-  justify-self: center;
-  transition: .3s ease;
-  font-size: 3rem;
-  font-weight: 100;
+.primaryAction:hover,
+.secondaryAction:hover {
+  transform: translateY(-0.2rem);
   color: #1971e4;
+  border-bottom-color: #1971e4;
 }
 
-
-.callToActionBtn div:hover ~ .callToActionBtnIcon{
-  margin-top: 5rem;
+.portfolioSignal {
+  width: min(88rem, 100%);
+  margin: 5rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem 2rem;
+  position: relative;
+  z-index: 2;
 }
 
-.callToActionBtn:hover{
-  width: 200px;
+.signalCard {
+  min-height: 8rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 1.2rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(133, 150, 173, 0.18);
 }
 
-@media screen and (min-width: 900px) {
-  .title{
-    font-size: 6rem;
+.signalCard span,
+.companyLogo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 50%;
+  background: #edf1f2;
+  color: #1971e4;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.signalCard strong,
+.signalCard small {
+  display: block;
+  text-align: left;
+}
+
+.signalCard strong {
+  color: #1f3047;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.signalCard small {
+  margin-top: 0.4rem;
+  color: #8596ad;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero::after {
+  content: "";
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 20%, #34e9ff 0%, #1971e4 54%, rgba(25, 113, 228, 0) 72%);
+  opacity: 0.08;
+  position: absolute;
+  bottom: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.portfolioPreview {
+  width: min(96rem, calc(100% - 4rem));
+  margin: 0 auto;
+  padding: 2rem 0 12rem;
+}
+
+.sectionHeader {
+  max-width: 62rem;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #1f3047;
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sectionHeader p {
+  margin: 1.8rem 0 0;
+  color: #8596ad;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.companyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(133, 150, 173, 0.2);
+}
+
+.companyCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.8rem;
+  padding: 2.4rem 0;
+  border-bottom: 1px solid rgba(133, 150, 173, 0.2);
+}
+
+.companyCard h3 {
+  margin: 0;
+  color: #1f3047;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.companyCard p {
+  margin: 0.8rem 0 0;
+  color: #8596ad;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.companyCard dl {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.companyCard dt {
+  color: #1f3047;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.companyCard dd {
+  margin: 0.2rem 0 0;
+  color: #8596ad;
+  font-size: 1.25rem;
+}
+
+.textLink {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 2.8rem;
+  color: #1971e4;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 760px) {
+  .portfolioSignal {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .companyGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero h1 {
+    letter-spacing: 0.06em;
+  }
+
+  .portfolioSignal {
+    grid-template-columns: 1fr;
   }
 }

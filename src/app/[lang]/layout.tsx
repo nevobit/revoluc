@@ -45,34 +45,34 @@ export default async function Root({
 export const metadata: Metadata = {
   metadataBase: new URL('https://revoluc.com'),
   title: {
-    default: 'Revoluc - Recursos para Startups y Transformación Empresarial',
-    template: '%s | Revoluc - Recursos para Startups y Transformación Empresarial'
+    default: 'Revoluc - Technology Holding and Venture Builder',
+    template: '%s | Revoluc'
   },
-  description: 'Revoluc es una aceleradora que impulsa el crecimiento de startups y empresas emergentes a través de mentoría, inversión y estrategias innovadoras. Nos especializamos en desarrollo tecnológico, marketing digital y optimización de modelos de negocio, ayudando a los emprendedores a escalar y alcanzar el éxito en el mercado.',
+  description: 'Revoluc is a technology holding company that builds, owns and scales digital products and businesses for Latin American and global markets.',
   applicationName: 'Revoluc Inc.',
-  keywords: ['aceleradora de startups', 'mentoría para startups', 'desarrollo tecnológico', 'Revoluc', 'soluciones empresariales', 'transformación digital', "desarrollo tecnológico", "marketing digital", "innovación"],
+  keywords: ['technology holding', 'venture builder', 'company builder', 'Revoluc', 'digital products', 'Latin America technology'],
   authors: [ { name: 'Nevobit', url: 'https://nevobit.co'} ],
   creator: 'Nevobit Software',
   publisher: 'Nevobit Software',
   alternates: {
     canonical: '/',
     languages: {
-      'es-ES': '/es-ES',
-      'de-DE': '/de-DE',
+      'en': '/en',
+      'es': '/es',
+      'fr': '/fr',
     }
   },
   openGraph: {
-    title: 'Revoluc - Recursos para Startups y Transformación Empresarial',
-    description:'Revoluc es una aceleradora que impulsa el crecimiento de startups y empresas emergentes a través de mentoría, inversión y estrategias innovadoras. Nos especializamos en desarrollo tecnológico, marketing digital y optimización de modelos de negocio, ayudando a los emprendedores a escalar y alcanzar el éxito en el mercado.',
+    title: 'Revoluc - Technology Holding and Venture Builder',
+    description:'Revoluc builds, owns and scales digital products and businesses for Latin American and global markets.',
     url: 'https://revoluc.com',
     siteName: 'Revoluc Inc.',
     type: 'website',
-    locale: 'es-ES',
+    locale: 'en',
   },
   twitter: {
-    title: 'Revoluc - Recursos para Startups y Transformación Empresarial',
-    description:'Revoluc es una aceleradora que impulsa el crecimiento de startups y empresas emergentes a través de mentoría, inversión y estrategias innovadoras. Nos especializamos en desarrollo tecnológico, marketing digital y optimización de modelos de negocio, ayudando a los emprendedores a escalar y alcanzar el éxito en el mercado.',
-    creator: '@nevobitsoftware',
+    title: 'Revoluc - Technology Holding and Venture Builder',
+    description:'Revoluc builds, owns and scales digital products and businesses for Latin American and global markets.',
     site: 'Revoluc Inc.',
     card: 'summary_large_image',
   }
