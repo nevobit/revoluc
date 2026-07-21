@@ -5,12 +5,12 @@ import styles from "./Home.module.css";
 
 interface PageProps {
   params: Promise<{
-    lang: Locale;
+    lang: string;
   }>;
 }
 
 export default async function IndexPage({ params }: PageProps) {
-  const lang = (await params).lang;
+  const lang = (await params).lang as Locale;
   const featuredCompanies = companies.slice(0, 6);
 
   return (

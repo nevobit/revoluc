@@ -6,12 +6,12 @@ import { Locale } from '../../../i18n-config';
 
 interface PageProps {
   params: Promise<{
-    lang: Locale;
+    lang: string;
   }>;
 }
 
 export default async function Sidebar({ params }: PageProps) {
-  const lang = (await params).lang;
+  const lang = (await params).lang as Locale;
   const t = await getTranslations(lang);
 
     return (

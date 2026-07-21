@@ -25,10 +25,10 @@ export default async function Root({
   params,
   children
 }: {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
   children: React.ReactNode;
 }) {
-  const lang = (await params).lang;
+  const lang = (await params).lang as Locale;
   return (
     <html lang={lang}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

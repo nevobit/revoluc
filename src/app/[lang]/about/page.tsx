@@ -4,12 +4,12 @@ import styles from "../ContentPage.module.css";
 
 interface PageProps {
   params: Promise<{
-    lang: Locale;
+    lang: string;
   }>;
 }
 
 const About = async ({ params }: PageProps) => {
-  const lang = (await params).lang;
+  const lang = (await params).lang as Locale;
 
   return (
     <main className={styles.page}>

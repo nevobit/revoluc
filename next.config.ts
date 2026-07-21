@@ -1,9 +1,5 @@
-// import type { NextConfig } from "next";
-//@typescript-eslint/no-var-requires
-import nextTranslate from 'next-translate';
+import type { NextConfig } from "next";
 
-const nextConfig = {
-  ...nextTranslate(),
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;
