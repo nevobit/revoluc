@@ -224,9 +224,9 @@ export const portfolioContent = {
 
 export const socialContent = {
   title: {
-    en: "Social Impact",
-    es: "Impacto Social",
-    fr: "Impact Social",
+    en: "Revoluc Foundation",
+    es: "Revoluc Foundation",
+    fr: "Revoluc Foundation",
   },
   intro: {
     en: "Revoluc is committed to using technology, capital and company-building experience to support nonprofit organizations and social initiatives.",
