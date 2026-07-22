@@ -4,13 +4,16 @@ import React, { useState } from 'react';
 import styles from './Header.module.css';
 import Image from 'next/image';
 import { useLocale } from '@/hooks/useLocale';
+import { corporateTruth } from '@/content/site';
 import { usePathname, useRouter } from 'next/navigation'
+import { Locale } from '../../../i18n-config';
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
 
   const { t, locale } = useLocale();
+  const activeLocale = locale as Locale;
   
   const changeLanguage = (e: { target: { value: string; }; }) => {
     const locale = e.target.value;
@@ -58,7 +61,7 @@ const Header = () => {
           <div className={styles.pageone}>
             <i className="bx bx-chevron-right"></i>
             <p>
-              <Link href={`/${locale}/portfolio`}>
+              <Link href={`/${locale}/companies`}>
                 {t['banner'].portfolio}
               </Link>
             </p>
@@ -139,6 +142,7 @@ const Header = () => {
           <a href="https://goo.gl/maps/8VfDrMoDQbmUJ4vT8" target="_blank" rel="noopener noreferrer">
             <i className="bx bx-chevron-right"></i>
             <p>
+              <span>{corporateTruth.addressLabel[activeLocale]}</span>
               2261 Market Street STE 22620
               <br />
               San Francisco, CA 94114

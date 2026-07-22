@@ -15,7 +15,7 @@ const Footer = () => {
             <i className='bx bx-dots-horizontal-rounded' ></i>
         </div>
         <div className={styles.copyrightstypingp}>
-            <p>Revoluc <span className={styles.footerall}><span className={styles.footerbar}>/</span> All rights reserved</span></p>
+            <p>2026 Revoluc Inc. <span className={styles.footerall}>All rights reserved.</span></p>
         </div>
     </div>
     <div className={styles.socials}>
@@ -25,6 +25,16 @@ const Footer = () => {
             </Link>
             <span>/</span>
             <a href="mailto:hi@revoluc.com" aria-label="Email Revoluc" title='Email Revoluc'>Email</a>
+            <span>/</span>
+            <Link href={`/${locale}/legal/privacy-policy`}>Privacy</Link>
+            <span>/</span>
+            <Link href={`/${locale}/legal/terms-of-use`}>Terms</Link>
+            <span>/</span>
+            <Link href={`/${locale}/legal/cookie-policy`}>Cookies</Link>
+            <span>/</span>
+            <Link href={`/${locale}/legal/security-policy`}>Security</Link>
+            <span>/</span>
+            <Link href={`/${locale}/legal/accessibility-statement`}>Accessibility</Link>
         </p>
     </div>
 </footer>

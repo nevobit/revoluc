@@ -14,7 +14,7 @@ const Mission = async ({ params }: PageProps) => {
   return (
     <main className={styles.page}>
       <section className={`${styles.content} ${styles.narrow}`}>
-        <p className={styles.eyebrow}>Company building</p>
+        <p className={styles.eyebrow}>{localize(eyebrowLabel, lang)}</p>
         <h1>{localize(missionContent.title, lang)}</h1>
         <div className={styles.paragraphs}>
           {missionContent.paragraphs[lang].map((paragraph) => (
@@ -27,3 +27,9 @@ const Mission = async ({ params }: PageProps) => {
 };
 
 export default Mission;
+
+const eyebrowLabel = {
+  en: "Company building",
+  es: "Construcción de compañías",
+  fr: "Construction d'entreprises",
+};

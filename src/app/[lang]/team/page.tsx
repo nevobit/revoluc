@@ -1,5 +1,5 @@
 import { Locale } from "../../../../i18n-config";
-import { localize, teamContent } from "@/content/site";
+import { founderProfile, localize, teamContent } from "@/content/site";
 import styles from "../ContentPage.module.css";
 
 interface PageProps {
@@ -15,7 +15,7 @@ const Team = async ({ params }: PageProps) => {
     <main className={styles.page}>
       <section className={styles.content}>
         <div className={styles.narrow}>
-          <p className={styles.eyebrow}>Leadership</p>
+          <p className={styles.eyebrow}>{localize(eyebrowLabel, lang)}</p>
           <h1>{localize(teamContent.title, lang)}</h1>
           <p className={styles.lead}>{localize(teamContent.intro, lang)}</p>
         </div>
@@ -23,12 +23,25 @@ const Team = async ({ params }: PageProps) => {
         <article className={styles.panel}>
           <div className={styles.profile}>
             <div className={styles.avatar} aria-hidden="true">
-              RV
+              NM
             </div>
             <div>
-              <h2>{localize(teamContent.placeholderName, lang)}</h2>
-              <p className={styles.role}>{localize(teamContent.placeholderRole, lang)}</p>
-              <p>{localize(teamContent.placeholderBio, lang)}</p>
+              <h2>{founderProfile.name}</h2>
+              <p className={styles.role}>{founderProfile.role}</p>
+              <p>{localize(founderProfile.bio, lang)}</p>
+              <ul className={styles.inlineList}>
+                {founderProfile.responsibilities.map((responsibility) => (
+                  <li key={responsibility}>{responsibility}</li>
+                ))}
+              </ul>
+              <a
+                className={styles.button}
+                href={founderProfile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
         </article>
@@ -38,3 +51,9 @@ const Team = async ({ params }: PageProps) => {
 };
 
 export default Team;
+
+const eyebrowLabel = {
+  en: "Leadership",
+  es: "Liderazgo",
+  fr: "Direction",
+};

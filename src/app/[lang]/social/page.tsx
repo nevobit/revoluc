@@ -14,7 +14,7 @@ const Social = async ({ params }: PageProps) => {
   return (
     <main className={styles.page}>
       <section className={styles.content}>
-        <p className={styles.eyebrow}>Social commitment</p>
+        <p className={styles.eyebrow}>{localize(eyebrowLabel, lang)}</p>
         <h1>{localize(socialContent.title, lang)}</h1>
         <p className={styles.intro}>{localize(socialContent.intro, lang)}</p>
 
@@ -36,3 +36,9 @@ const Social = async ({ params }: PageProps) => {
 };
 
 export default Social;
+
+const eyebrowLabel = {
+  en: "Social commitment",
+  es: "Compromiso social",
+  fr: "Engagement social",
+};

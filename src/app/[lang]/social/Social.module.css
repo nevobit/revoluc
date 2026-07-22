@@ -70,6 +70,24 @@
   line-height: 1.7;
 }
 
+.itemList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.itemList li {
+  border: 1px solid rgba(133, 150, 173, 0.24);
+  color: #5f718a;
+  padding: .7rem .9rem;
+  font-size: 1.05rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
 .link span {
   color: #1971e4;
   font-size: 1.2rem;

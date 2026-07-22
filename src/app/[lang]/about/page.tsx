@@ -14,7 +14,7 @@ const About = async ({ params }: PageProps) => {
   return (
     <main className={styles.page}>
       <section className={`${styles.content} ${styles.narrow}`}>
-        <p className={styles.eyebrow}>Technology holding</p>
+        <p className={styles.eyebrow}>{localize(eyebrowLabel, lang)}</p>
         <h1>{localize(aboutContent.title, lang)}</h1>
         <div className={styles.paragraphs}>
           {aboutContent.paragraphs[lang].map((paragraph) => (
@@ -27,3 +27,9 @@ const About = async ({ params }: PageProps) => {
 };
 
 export default About;
+
+const eyebrowLabel = {
+  en: "Technology holding",
+  es: "Holding tecnológica",
+  fr: "Holding technologique",
+};

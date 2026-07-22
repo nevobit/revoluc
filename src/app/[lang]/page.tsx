@@ -1,6 +1,16 @@
 import Link from "next/link";
 import { Locale } from "../../../i18n-config";
-import { companies, homeContent, localize, statusLabels } from "@/content/site";
+import {
+  companies,
+  focusAreas,
+  homeContent,
+  localize,
+  operationalModel,
+  placeholderCompanyLogo,
+  relationshipLabels,
+  sharedInfrastructure,
+  statusLabels,
+} from "@/content/site";
 import styles from "./Home.module.css";
 
 interface PageProps {
@@ -21,7 +31,7 @@ export default async function IndexPage({ params }: PageProps) {
           <h1>{localize(homeContent.headline, lang)}</h1>
           <p className={styles.subtitle}>{localize(homeContent.subtitle, lang)}</p>
           <div className={styles.actions}>
-            <Link className={styles.primaryAction} href={`/${lang}/portfolio`}>
+            <Link className={styles.primaryAction} href={`/${lang}/companies`}>
               {localize(homeContent.primaryCta, lang)}
             </Link>
             <Link className={styles.secondaryAction} href={`/${lang}/startups`}>
@@ -29,15 +39,60 @@ export default async function IndexPage({ params }: PageProps) {
             </Link>
           </div>
         </div>
+      </section>
 
-        <div className={styles.portfolioSignal} aria-label={localize(homeContent.portfolioTitle, lang)}>
-          {featuredCompanies.map((company) => (
-            <div className={styles.signalCard} key={company.name}>
-              <span>{company.name.slice(0, 2)}</span>
-              <strong>{company.name}</strong>
-              <small>{company.category}</small>
-            </div>
+      <section className={styles.groupBand} aria-label="Revoluc group companies">
+        <p className={styles.groupBandTitle}>{localize(groupBandLabel, lang)}</p>
+        <div className={styles.groupLogoViewport}>
+          <div className={styles.groupLogoTrack}>
+            {[0, 1].map((set) => (
+              <div className={styles.groupLogoSet} aria-hidden={set === 1} key={set}>
+                {featuredCompanies.map((company) => (
+                  <div className={styles.groupLogoSlot} data-logo={company.slug} key={`${company.slug}-${set}`}>
+                    {company.logo !== placeholderCompanyLogo ? (
+                      <img className={styles.groupLogoImage} src={company.logo} alt={`${company.name} logo`} />
+                    ) : (
+                      <span className={styles.groupLogoWordmark}>{company.name}</span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.modelSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.eyebrow}>{localize(modelLabels.eyebrow, lang)}</p>
+          <h2>{localize(modelLabels.title, lang)}</h2>
+          <p>{localize(modelLabels.copy, lang)}</p>
+        </div>
+        <div className={styles.modelGrid}>
+          {operationalModel.map((item) => (
+            <article className={styles.modelItem} key={item.label}>
+              <strong>{item.label}</strong>
+              <p>{localize(item.description, lang)}</p>
+            </article>
           ))}
+        </div>
+        <div className={styles.listColumns}>
+          <div>
+            <h3>{localize(modelLabels.infrastructure, lang)}</h3>
+            <ul>
+              {sharedInfrastructure.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3>{localize(modelLabels.focus, lang)}</h3>
+            <ul>
+              {focusAreas.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -59,19 +114,23 @@ export default async function IndexPage({ params }: PageProps) {
                 <p>{localize(company.description, lang)}</p>
                 <dl>
                   <div>
+                    <dt>{localize(fieldLabels.relationship, lang)}</dt>
+                    <dd>{localize(relationshipLabels[company.relationship], lang)}</dd>
+                  </div>
+                  <div>
                     <dt>{localize(fieldLabels.market, lang)}</dt>
                     <dd>{company.market}</dd>
                   </div>
                   <div>
                     <dt>{localize(fieldLabels.product, lang)}</dt>
-                    <dd>{company.product}</dd>
+                    <dd>{company.productName}</dd>
                   </div>
                 </dl>
               </div>
             </article>
           ))}
         </div>
-        <Link className={styles.textLink} href={`/${lang}/portfolio`}>
+        <Link className={styles.textLink} href={`/${lang}/companies`}>
           {localize(homeContent.primaryCta, lang)}
         </Link>
       </section>
@@ -85,7 +144,18 @@ const portfolioCountLabel = {
   fr: "Structure du portefeuille",
 };
 
+const groupBandLabel = {
+  en: "Revoluc group",
+  es: "Grupo Revoluc",
+  fr: "Groupe Revoluc",
+};
+
 const fieldLabels = {
+  relationship: {
+    en: "Relationship",
+    es: "Relación",
+    fr: "Relation",
+  },
   market: {
     en: "Market",
     es: "Mercado",
@@ -95,5 +165,33 @@ const fieldLabels = {
     en: "Product",
     es: "Producto",
     fr: "Produit",
+  },
+};
+
+const modelLabels = {
+  eyebrow: {
+    en: "Operating model",
+    es: "Modelo operativo",
+    fr: "Modèle opérationnel",
+  },
+  title: {
+    en: "How Revoluc builds",
+    es: "Cómo construye Revoluc",
+    fr: "Comment Revoluc construit",
+  },
+  copy: {
+    en: "Revoluc contributes execution, shared infrastructure and operating responsibility across the companies it builds and supports.",
+    es: "Revoluc aporta ejecución, infraestructura compartida y responsabilidad operativa a las compañías que construye y acompaña.",
+    fr: "Revoluc apporte exécution, infrastructure partagée et responsabilité opérationnelle aux entreprises qu'il construit et soutient.",
+  },
+  infrastructure: {
+    en: "Shared infrastructure",
+    es: "Infraestructura compartida",
+    fr: "Infrastructure partagée",
+  },
+  focus: {
+    en: "Focus areas",
+    es: "Áreas de enfoque",
+    fr: "Domaines d'intervention",
   },
 };

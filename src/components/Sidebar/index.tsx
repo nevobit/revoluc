@@ -32,7 +32,7 @@ export default async function Sidebar({ params }: PageProps) {
                         </div>    
                     </div>        
             </Link>
-            <Link href={`/${lang}/portfolio`} title='Companies'>
+            <Link href={`/${lang}/companies`} title='Companies'>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>
                         <p>{t['banner'].portfolio}</p>

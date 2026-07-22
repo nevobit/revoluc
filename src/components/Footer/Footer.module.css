@@ -1,13 +1,13 @@
  .footer{
-  width: 100vw;
-  position: fixed;
-  left: 0;
+  width: 100%;
+  position: static;
   z-index: 99;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  pointer-events: none;
-  bottom: 0;
-  padding: 1rem 0 1.4rem;
+  pointer-events: all;
+  padding: 2.8rem 0;
+  background: #ffffff;
+  border-top: 1px solid rgba(133, 150, 173, 0.16);
  }
  
  .footerscroll{
@@ -52,10 +52,14 @@
   margin-right: 28px;
   justify-self: end;
   align-self: end;
-  pointer-events: all;
  }
  
  .socials p{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .2rem;
+  max-width: min(68rem, calc(100vw - 5.6rem));
   font-weight: normal;
   font-size: 1.15rem;
   text-align: left;
@@ -82,9 +86,19 @@
 
  @media screen and (max-width: 640px) {
   .footer{
-    position: static;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
     padding: 2rem 0;
-    margin-top: -7rem;
+  }
+
+  .socials{
+    margin-left: 28px;
+    margin-right: 28px;
+    justify-self: start;
+  }
+
+  .socials p{
+    justify-content: flex-start;
   }
 
   .footerall{

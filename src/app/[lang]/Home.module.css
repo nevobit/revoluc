@@ -7,12 +7,12 @@
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 92vh;
   width: min(112rem, calc(100% - 4rem));
   margin: 0 auto;
   display: grid;
   place-items: center;
-  padding: 9rem 0 6rem;
+  padding: 2rem 0 6rem;
   position: relative;
 }
 
@@ -37,10 +37,10 @@
   width: min(92rem, 100%);
   margin: 0 auto;
   color: #1f3047;
-  font-size: clamp(3.6rem, 7vw, 7.2rem);
+  font-size: 6.2rem;
   font-weight: 500;
-  line-height: 1.24;
-  letter-spacing: 0.12em;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -58,8 +58,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 3.2rem;
-  margin-top: 4.2rem;
+  gap: 2.6rem;
+  margin-top: 3.8rem;
 }
 
 .primaryAction,
@@ -76,7 +76,7 @@
   border-bottom: 1px solid rgba(25, 113, 228, 0.42);
   font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
@@ -95,27 +95,124 @@
   border-bottom-color: #1971e4;
 }
 
-.portfolioSignal {
-  width: min(88rem, 100%);
-  margin: 5rem auto 0;
+.groupBand {
+  width: min(104rem, calc(100% - 4rem));
+  min-height: 10.8rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.2rem 2rem;
+  align-content: start;
+  gap: 2rem;
+  margin: -3rem auto 8.4rem;
+  padding: 2.2rem 0 2.8rem;
+  border-top: 1px solid rgba(133, 150, 173, 0.18);
+  border-bottom: 1px solid rgba(133, 150, 173, 0.18);
   position: relative;
   z-index: 2;
 }
 
-.signalCard {
-  min-height: 8rem;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  column-gap: 1.2rem;
-  padding: 1.2rem 0;
-  border-top: 1px solid rgba(133, 150, 173, 0.18);
+.groupBand::before {
+  content: "";
+  width: 5.6rem;
+  height: .1rem;
+  background: rgba(25, 113, 228, .36);
+  position: absolute;
+  left: 0;
+  top: -1px;
 }
 
-.signalCard span,
+.groupBandTitle {
+  margin: 0;
+  color: #8f98a8;
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: .36em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.groupLogoViewport {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+.groupLogoTrack {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: groupLogoScroll 42s linear infinite;
+  will-change: transform;
+}
+
+.groupLogoViewport:hover .groupLogoTrack {
+  animation-play-state: paused;
+}
+
+.groupLogoSet {
+  display: flex;
+  align-items: center;
+  gap: clamp(3.8rem, 6vw, 7.2rem);
+  padding-right: clamp(3.8rem, 6vw, 7.2rem);
+}
+
+.groupLogoSlot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 11rem;
+  min-height: 3.4rem;
+}
+
+.groupLogoWordmark {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(31, 48, 71, 0.34);
+  font-size: clamp(1.55rem, 2vw, 2.15rem);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  filter: grayscale(1);
+}
+
+.groupLogoImage {
+  display: block;
+  width: auto;
+  max-width: clamp(9.6rem, 11vw, 14rem);
+  max-height: 3.8rem;
+  object-fit: contain;
+  opacity: .44;
+  filter: grayscale(1);
+}
+
+.groupLogoSlot[data-logo="loobic"] .groupLogoWordmark,
+.groupLogoSlot[data-logo="lytos"] .groupLogoWordmark {
+  font-size: clamp(1.35rem, 1.7vw, 1.85rem);
+  color: rgba(31, 48, 71, 0.3);
+}
+
+.groupLogoSlot[data-logo="helebba"] .groupLogoWordmark,
+.groupLogoSlot[data-logo="prooving"] .groupLogoWordmark {
+  font-size: clamp(1.85rem, 2.35vw, 2.6rem);
+  font-weight: 600;
+}
+
+.groupLogoSlot[data-logo="itaaj-realty"] .groupLogoWordmark {
+  font-size: clamp(1.35rem, 1.85vw, 2rem);
+}
+
+@keyframes groupLogoScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .companyLogo {
   display: inline-flex;
   align-items: center;
@@ -128,28 +225,6 @@
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.signalCard strong,
-.signalCard small {
-  display: block;
-  text-align: left;
-}
-
-.signalCard strong {
-  color: #1f3047;
-  font-size: 1.35rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.signalCard small {
-  margin-top: 0.4rem;
-  color: #8596ad;
-  font-size: 1.1rem;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -173,6 +248,12 @@
   padding: 2rem 0 12rem;
 }
 
+.modelSection {
+  width: min(96rem, calc(100% - 4rem));
+  margin: 0 auto;
+  padding: 0 0 10rem;
+}
+
 .sectionHeader {
   max-width: 62rem;
 }
@@ -193,6 +274,64 @@
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.8;
+}
+
+.modelGrid {
+  display: grid;
+  gap: 0;
+  margin-top: 3.4rem;
+  border-top: 1px solid rgba(133, 150, 173, 0.2);
+}
+
+.modelItem {
+  padding: 2.2rem 0;
+  border-bottom: 1px solid rgba(133, 150, 173, 0.2);
+}
+
+.modelItem strong,
+.listColumns h3 {
+  display: block;
+  color: #1f3047;
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.modelItem p {
+  margin: .9rem 0 0;
+  color: #8596ad;
+  font-size: 1.35rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.listColumns {
+  display: grid;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.listColumns h3 {
+  margin: 0 0 1.2rem;
+}
+
+.listColumns ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listColumns li {
+  border: 1px solid rgba(133, 150, 173, 0.24);
+  color: #5f718a;
+  padding: .8rem 1rem;
+  font-size: 1.1rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
 
 .companyGrid {
@@ -260,22 +399,55 @@
 }
 
 @media screen and (min-width: 760px) {
-  .portfolioSignal {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .companyGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 4rem;
   }
 
-  .companyGrid {
+  .modelGrid,
+  .listColumns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 4rem;
   }
 }
 
+@media screen and (max-width: 1080px) {
+  .hero h1 {
+    font-size: 5.2rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .hero {
+    min-height: auto;
+    padding: 8.8rem 0 7rem;
+  }
+
+  .hero h1 {
+    font-size: 4.2rem;
+    letter-spacing: 0.06em;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .hero h1 {
+    font-size: 3.35rem;
     letter-spacing: 0.06em;
   }
 
-  .portfolioSignal {
-    grid-template-columns: 1fr;
+  .groupBand {
+    width: min(100% - 3.2rem, 104rem);
+    margin: -1.2rem auto 7rem;
+    padding: 2rem 0 2.4rem;
+  }
+
+  .groupLogoSet {
+    gap: 3.4rem;
+    padding-right: 3.4rem;
+  }
+
+  .groupLogoWordmark {
+    font-size: 1.55rem;
   }
 }
