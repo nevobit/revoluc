@@ -35,6 +35,9 @@
   --color-blog: #042c54;
   --color-text: #81AFDD;
   --color-subtext: #ff8a71;
+  --rvl-page-gutter: 2.8rem;
+  --rvl-page-block: 8rem;
+  --rvl-page-content: 104rem;
 }
 
 *,
@@ -198,5 +201,12 @@ textarea {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    :root {
+        --rvl-page-gutter: 1.6rem;
+        --rvl-page-block: 6.4rem;
     }
 }

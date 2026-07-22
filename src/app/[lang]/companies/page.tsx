@@ -10,6 +10,7 @@ import {
   statusLabels,
 } from "@/content/site";
 import { pageMetadata } from "@/content/seo";
+import pageStyles from "../ContentPage.module.css";
 import styles from "../portfolio/Portfolio.module.css";
 
 interface PageProps {
@@ -41,12 +42,12 @@ const Companies = async ({ params }: PageProps) => {
   const lang = (await params).lang as Locale;
 
   return (
-    <main className={styles.page}>
-      <section className={styles.content}>
-        <div className={styles.header}>
-          <p className={styles.eyebrow}>{localize(eyebrowLabel, lang)}</p>
+    <main className={pageStyles.page}>
+      <section className={pageStyles.content}>
+        <div className={pageStyles.narrow}>
+          <p className={pageStyles.eyebrow}>{localize(eyebrowLabel, lang)}</p>
           <h1>{localize(portfolioContent.title, lang)}</h1>
-          <p>{localize(portfolioContent.intro, lang)}</p>
+          <p className={pageStyles.lead}>{localize(portfolioContent.intro, lang)}</p>
         </div>
 
         <div className={styles.groups}>

@@ -1,21 +1,29 @@
 .page {
-  min-height: 100vh;
+  min-height: calc(100dvh - 65px);
   width: 100vw;
   background: #ffffff;
   color: #1f3047;
-  padding: 12rem 0 10rem;
+  padding-block: var(--rvl-page-block);
 }
 
 .content {
-  width: min(104rem, calc(100% - 5.6rem));
+  width: min(var(--rvl-page-content), calc(100% - (var(--rvl-page-gutter) * 2)));
   margin: 0 auto;
 }
 
 .header {
-  max-width: 68rem;
+  max-width: 64rem;
 }
 
-.eyebrow,
+.eyebrow {
+  margin: 0 0 2rem;
+  color: #8596ad;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
 .status {
   margin: 0 0 1.6rem;
   color: #8596ad;
@@ -28,15 +36,15 @@
 .header h1 {
   margin: 0;
   color: #1f3047;
-  font-size: 5.6rem;
+  font-size: 5.2rem;
   font-weight: 500;
-  line-height: 1.16;
+  line-height: 1.18;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .header p {
-  margin: 2.4rem 0 0;
+  margin: 2.6rem 0 0;
   color: #8596ad;
   font-size: 1.6rem;
   font-weight: 300;
@@ -313,10 +321,6 @@
 }
 
 @media screen and (max-width: 820px) {
-  .content {
-    width: min(100% - 3.2rem, 104rem);
-  }
-
   .header h1,
   .detailHeader h1 {
     font-size: 4rem;

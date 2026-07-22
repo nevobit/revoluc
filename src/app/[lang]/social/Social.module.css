@@ -3,11 +3,11 @@
   width: 100vw;
   background: #ffffff;
   color: #1f3047;
-  padding: 12rem 0 10rem;
+  padding-block: var(--rvl-page-block);
 }
 
 .content {
-  width: min(84rem, calc(100% - 5.6rem));
+  width: min(var(--rvl-page-content), calc(100% - (var(--rvl-page-gutter) * 2)));
   margin: 0 auto;
 }
 
@@ -23,15 +23,15 @@
 .content h1 {
   margin: 0;
   color: #1f3047;
-  font-size: clamp(3.4rem, 6vw, 6.2rem);
+  font-size: 5.2rem;
   font-weight: 500;
-  line-height: 1.16;
-  letter-spacing: 0.14em;
+  line-height: 1.18;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .intro {
-  margin: 2.4rem 0 0;
+  margin: 2.6rem 0 0;
   color: #8596ad;
   font-size: 1.6rem;
   font-weight: 300;
@@ -128,14 +128,12 @@
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 720px) {
-  .page {
-    display: grid;
-    align-items: center;
-  }
-}
-
 @media screen and (max-width: 640px) {
+  .content h1 {
+    font-size: 3.2rem;
+    letter-spacing: .06em;
+  }
+
   .link {
     grid-template-columns: 1fr;
     gap: 1rem;

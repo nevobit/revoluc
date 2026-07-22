@@ -3,11 +3,11 @@
   width: 100vw;
   background: #ffffff;
   color: #1f3047;
-  padding-block: 8rem;
+  padding-block: var(--rvl-page-block);
 }
 
 .content {
-  width: min(94rem, calc(100% - 5.6rem));
+  width: min(var(--rvl-page-content), calc(100% - (var(--rvl-page-gutter) * 2)));
   margin: 0 auto;
 }
 
@@ -291,11 +291,6 @@
 }
 
 @media screen and (min-width: 720px) {
-  .page {
-    display: grid;
-    align-items: center;
-  }
-
   .profile {
     grid-template-columns: auto 1fr;
   }
@@ -317,10 +312,6 @@
 }
 
 @media screen and (max-width: 520px) {
-  .content {
-    width: min(100% - 3.2rem, 94rem);
-  }
-
   .content h1 {
     font-size: 3.2rem;
     letter-spacing: .06em;

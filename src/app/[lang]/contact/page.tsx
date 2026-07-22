@@ -41,11 +41,13 @@ const Contact = async ({ params, searchParams }: PageProps) => {
 
   return (
     <main className={styles.page}>
-      <section className={`${styles.content} ${styles.narrow}`}>
-        <p className={styles.eyebrow}>{localize(eyebrowLabel, lang)}</p>
-        <h1>{localize(contactContent.title, lang)}</h1>
-        <p className={styles.lead}>{localize(contactContent.copy, lang)}</p>
-        <ContactForm lang={lang} initialReason={initialReason} initialCompany={initialCompany} />
+      <section className={styles.content}>
+        <div className={styles.narrow}>
+          <p className={styles.eyebrow}>{localize(eyebrowLabel, lang)}</p>
+          <h1>{localize(contactContent.title, lang)}</h1>
+          <p className={styles.lead}>{localize(contactContent.copy, lang)}</p>
+          <ContactForm lang={lang} initialReason={initialReason} initialCompany={initialCompany} />
+        </div>
       </section>
     </main>
   );

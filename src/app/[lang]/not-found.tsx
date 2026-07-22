@@ -12,15 +12,17 @@ export default function NotFound() {
 
   return (
     <main className={styles.page}>
-      <section className={`${styles.content} ${styles.narrow}`}>
-        <p className={styles.eyebrow}>404</p>
-        <h1>{localize(copy.title, locale)}</h1>
-        <p className={styles.lead}>
-          {localize(copy.lead, locale)}
-        </p>
-        <Link className={styles.button} href={`/${locale}`}>
-          {localize(copy.cta, locale)}
-        </Link>
+      <section className={styles.content}>
+        <div className={styles.narrow}>
+          <p className={styles.eyebrow}>404</p>
+          <h1>{localize(copy.title, locale)}</h1>
+          <p className={styles.lead}>
+            {localize(copy.lead, locale)}
+          </p>
+          <Link className={styles.button} href={`/${locale}`}>
+            {localize(copy.cta, locale)}
+          </Link>
+        </div>
       </section>
     </main>
   );

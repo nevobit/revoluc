@@ -354,19 +354,21 @@ const LegalPage = async ({ params }: PageProps) => {
 
   return (
     <main className={styles.page}>
-      <section className={`${styles.content} ${styles.narrow}`}>
-        <p className={styles.eyebrow}>{corporateTruth.legalName}</p>
-        <h1>{localize(document.title, lang)}</h1>
-        <p className={styles.lead}>
-          {localize(lastUpdatedLabel, lang)} July 21, 2026
-        </p>
-        <div className={styles.paragraphs}>
-          {document.sections.map((section) => (
-            <section key={section.heading.en}>
-              <h2 className={styles.sectionTitle}>{localize(section.heading, lang)}</h2>
-              <p>{localize(section.body, lang)}</p>
-            </section>
-          ))}
+      <section className={styles.content}>
+        <div className={styles.narrow}>
+          <p className={styles.eyebrow}>{corporateTruth.legalName}</p>
+          <h1>{localize(document.title, lang)}</h1>
+          <p className={styles.lead}>
+            {localize(lastUpdatedLabel, lang)} July 21, 2026
+          </p>
+          <div className={styles.paragraphs}>
+            {document.sections.map((section) => (
+              <section key={section.heading.en}>
+                <h2 className={styles.sectionTitle}>{localize(section.heading, lang)}</h2>
+                <p>{localize(section.body, lang)}</p>
+              </section>
+            ))}
+          </div>
         </div>
       </section>
     </main>
