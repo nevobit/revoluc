@@ -1,11 +1,31 @@
 import { Locale } from "../../../../i18n-config";
 import { localize, startupContent, ventureBuildingSections } from "@/content/site";
+import { pageMetadata } from "@/content/seo";
 import styles from "../social/Social.module.css";
 
 interface PageProps {
   params: Promise<{
     lang: string;
   }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const lang = (await params).lang as Locale;
+
+  return pageMetadata({
+    lang,
+    path: "/startups",
+    title: {
+      en: "Venture Building - Revoluc",
+      es: "Construcción de empresas - Revoluc",
+      fr: "Construction d'entreprises - Revoluc",
+    },
+    description: {
+      en: "Revoluc works with founders, early-stage teams and businesses that need an active company-building partner for validation, product strategy, engineering, operations and growth.",
+      es: "Revoluc trabaja con fundadores, equipos en etapa temprana y empresas que necesitan un socio activo para validación, estrategia de producto, ingeniería, operaciones y crecimiento.",
+      fr: "Revoluc travaille avec des fondateurs, des équipes en phase initiale et des entreprises qui ont besoin d'un partenaire actif pour la validation, la stratégie produit, l'ingénierie, les opérations et la croissance.",
+    },
+  });
 }
 
 const Startups = async ({ params }: PageProps) => {

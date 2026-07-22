@@ -23,7 +23,7 @@ const Footer = () => {
     </div>
     <div className={styles.socials}>
         <p className={styles.socialsP}>
-            <Link href={`/${locale}/social`} aria-label={localize(footerLabels.foundation, activeLocale)} title={localize(footerLabels.foundation, activeLocale)}>
+            <Link href={`https://linkedin.com/company/revoluc-inc/`} aria-label={localize(footerLabels.foundation, activeLocale)} title={localize(footerLabels.foundation, activeLocale)}>
                 IN
             </Link>
             <span>/</span>

@@ -1,11 +1,31 @@
 import { Locale } from "../../../../i18n-config";
 import { founderProfile, localize, teamContent } from "@/content/site";
+import { pageMetadata } from "@/content/seo";
 import styles from "../ContentPage.module.css";
 
 interface PageProps {
   params: Promise<{
     lang: string;
   }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const lang = (await params).lang as Locale;
+
+  return pageMetadata({
+    lang,
+    path: "/team",
+    title: {
+      en: "Leadership - Revoluc",
+      es: "Liderazgo - Revoluc",
+      fr: "Direction - Revoluc",
+    },
+    description: {
+      en: "Meet Revoluc's leadership and the responsibilities behind group strategy, technology and portfolio development.",
+      es: "Conoce el liderazgo de Revoluc y las responsabilidades detrás de la estrategia del grupo, tecnología y desarrollo del portafolio.",
+      fr: "Découvrez la direction de Revoluc et les responsabilités liées à la stratégie du groupe, à la technologie et au développement du portefeuille.",
+    },
+  });
 }
 
 const Team = async ({ params }: PageProps) => {

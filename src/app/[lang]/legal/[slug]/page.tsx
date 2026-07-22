@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { i18n, Locale } from "../../../../../i18n-config";
 import { corporateTruth, localize } from "@/content/site";
+import { pageMetadata } from "@/content/seo";
 import styles from "../../ContentPage.module.css";
 
 const documents = {
@@ -42,9 +43,9 @@ const documents = {
           fr: "Utilisation des données",
         },
         body: {
-          en: "Revoluc uses contact information to review inquiries, classify the opportunity type, respond to the sender and route the conversation to the appropriate internal reviewer.",
-          es: "Revoluc usa la información de contacto para revisar solicitudes, clasificar el tipo de oportunidad, responder al remitente y dirigir la conversación al responsable interno adecuado.",
-          fr: "Revoluc utilise les informations de contact pour examiner les demandes, classer le type d'opportunité, répondre à l'expéditeur et orienter la conversation vers le responsable interne approprié.",
+          en: "Revoluc uses contact information to review inquiries, classify the opportunity type, respond to the sender and route the conversation to the appropriate team.",
+          es: "Revoluc usa la información de contacto para revisar solicitudes, clasificar el tipo de oportunidad, responder al remitente y dirigir la conversación al equipo adecuado.",
+          fr: "Revoluc utilise les informations de contact pour examiner les demandes, classer le type d'opportunité, répondre à l'expéditeur et orienter la conversation vers l'équipe appropriée.",
         },
       },
       {
@@ -112,8 +113,8 @@ const documents = {
         },
         body: {
           en: "This website provides corporate information about Revoluc Inc., its public companies, venture building work and contact channels.",
-          es: "Este sitio web proporciona información corporativa sobre Revoluc Inc., sus compañías públicas, su trabajo de venture building y sus canales de contacto.",
-          fr: "Ce site web fournit des informations corporatives sur Revoluc Inc., ses sociétés publiques, son travail de venture building et ses canaux de contact.",
+          es: "Este sitio web proporciona información corporativa sobre Revoluc Inc., sus compañías públicas, su trabajo de construcción de empresas y sus canales de contacto.",
+          fr: "Ce site web fournit des informations corporatives sur Revoluc Inc., ses sociétés publiques, son travail de construction d'entreprises et ses canaux de contact.",
         },
       },
       {
@@ -309,6 +310,27 @@ export function generateStaticParams() {
   );
 }
 
+export async function generateMetadata({ params }: PageProps) {
+  const { lang: rawLang, slug } = await params;
+  const lang = rawLang as Locale;
+  const document = documents[slug as LegalSlug];
+
+  if (!document) {
+    return {};
+  }
+
+  return pageMetadata({
+    lang,
+    path: `/legal/${slug}`,
+    title: {
+      en: `${document.title.en} - Revoluc`,
+      es: `${document.title.es} - Revoluc`,
+      fr: `${document.title.fr} - Revoluc`,
+    },
+    description: legalDescriptions[slug as LegalSlug],
+  });
+}
+
 const LegalPage = async ({ params }: PageProps) => {
   const { lang: rawLang, slug } = await params;
   const lang = rawLang as Locale;
@@ -345,4 +367,32 @@ const lastUpdatedLabel = {
   en: "Last updated:",
   es: "Última actualización:",
   fr: "Dernière mise à jour :",
+};
+
+const legalDescriptions: Record<LegalSlug, Record<Locale, string>> = {
+  "privacy-policy": {
+    en: "Privacy information for Revoluc Inc.'s website and contact inquiry flow.",
+    es: "Información de privacidad para el sitio web de Revoluc Inc. y su flujo de solicitudes de contacto.",
+    fr: "Informations de confidentialité pour le site web de Revoluc Inc. et son flux de demandes de contact.",
+  },
+  "terms-of-use": {
+    en: "Terms governing use of Revoluc Inc.'s public corporate website.",
+    es: "Términos que rigen el uso del sitio corporativo público de Revoluc Inc.",
+    fr: "Conditions régissant l'utilisation du site corporatif public de Revoluc Inc.",
+  },
+  "cookie-policy": {
+    en: "Cookie information for Revoluc Inc.'s public website.",
+    es: "Información sobre cookies para el sitio web público de Revoluc Inc.",
+    fr: "Informations sur les cookies pour le site web public de Revoluc Inc.",
+  },
+  "security-policy": {
+    en: "Security information for Revoluc Inc.'s public website and contact intake flow.",
+    es: "Información de seguridad para el sitio web público de Revoluc Inc. y su flujo de recepción de contacto.",
+    fr: "Informations de sécurité pour le site public de Revoluc Inc. et son flux de réception des contacts.",
+  },
+  "accessibility-statement": {
+    en: "Accessibility statement for Revoluc Inc.'s public website.",
+    es: "Declaración de accesibilidad para el sitio web público de Revoluc Inc.",
+    fr: "Déclaration d'accessibilité pour le site web public de Revoluc Inc.",
+  },
 };

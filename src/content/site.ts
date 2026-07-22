@@ -184,9 +184,9 @@ export const homeContent = {
     fr: "Portefeuille organisé par maturité",
   },
   portfolioCopy: {
-    en: "A company appears publicly only when it has a defined product, market, relationship with Revoluc, internal owner and proof of existence.",
-    es: "Una compañía aparece públicamente solo cuando tiene producto definido, mercado, relación con Revoluc, responsable interno y prueba de existencia.",
-    fr: "Une entreprise apparaît publiquement uniquement lorsqu'elle a un produit défini, un marché, une relation avec Revoluc, un responsable interne et une preuve d'existence.",
+    en: "A company appears publicly only when it has a defined product, market, relationship with Revoluc, portfolio lead and proof of existence.",
+    es: "Una compañía aparece públicamente solo cuando tiene producto definido, mercado, relación con Revoluc, líder de portafolio y prueba de existencia.",
+    fr: "Une entreprise apparaît publiquement uniquement lorsqu'elle a un produit défini, un marché, une relation avec Revoluc, un responsable de portefeuille et une preuve d'existence.",
   },
 };
 
@@ -224,17 +224,17 @@ export const missionContent = {
   paragraphs: {
     en: [
       "Our mission is to build technology companies that solve operational problems and create durable economic value.",
-      "We do not treat ventures as logos. Each public company must have a product, market, operating context and clear relationship with Revoluc.",
+      "We only present ventures with a defined product, market, operating context and clear relationship with Revoluc.",
       "The group gives its ventures focus, governance, product direction, engineering support and commercial discipline over time.",
     ],
     es: [
       "Nuestra misión es construir compañías tecnológicas que resuelvan problemas operativos y creen valor económico duradero.",
-      "No tratamos los ventures como logos. Cada compañía pública debe tener producto, mercado, contexto operativo y una relación clara con Revoluc.",
+      "Solo presentamos proyectos con producto definido, mercado, contexto operativo y una relación clara con Revoluc.",
       "El grupo aporta foco, gobernanza, dirección de producto, soporte de ingeniería y disciplina comercial a largo plazo.",
     ],
     fr: [
       "Notre mission est de bâtir des entreprises technologiques qui résolvent des problèmes opérationnels et créent une valeur économique durable.",
-      "Nous ne traitons pas les ventures comme des logos. Chaque entreprise publique doit avoir un produit, un marché, un contexte opérationnel et une relation claire avec Revoluc.",
+      "Nous présentons uniquement les projets avec un produit défini, un marché, un contexte opérationnel et une relation claire avec Revoluc.",
       "Le groupe apporte concentration, gouvernance, direction produit, soutien d'ingénierie et discipline commerciale dans la durée.",
     ],
   },
@@ -765,9 +765,9 @@ export const companies: PortfolioCompany[] = [
         fr: "Cas réel : exécution logicielle pour les sociétés du portefeuille Revoluc et des projets clients externes.",
       },
       {
-        en: "Public website: nevobit.co.",
-        es: "Sitio público: nevobit.co.",
-        fr: "Site public : nevobit.co.",
+        en: "Public website: nevobit.com.",
+        es: "Sitio público: nevobit.com.",
+        fr: "Site public : nevobit.com.",
       },
     ],
     ctaLabel: {
@@ -866,7 +866,7 @@ export const companies: PortfolioCompany[] = [
       es: "Software empresarial",
       fr: "Logiciels d'entreprise",
     },
-    website: "https://prohelebbaoving.com",
+    website: "https://helebba.com",
     description: {
       en: "Modular business management platform for Latin American small and medium-sized companies.",
       es: "Plataforma modular de gestión empresarial para pymes latinoamericanas.",

@@ -9,12 +9,31 @@ import {
   placeholderCompanyLogo,
   sharedInfrastructure,
 } from "@/content/site";
+import { pageMetadata } from "@/content/seo";
 import styles from "./Home.module.css";
 
 interface PageProps {
   params: Promise<{
     lang: string;
   }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const lang = (await params).lang as Locale;
+
+  return pageMetadata({
+    lang,
+    title: {
+      en: "Revoluc - Technology Holding and Venture Builder",
+      es: "Revoluc - Holding tecnológica y constructora de empresas",
+      fr: "Revoluc - Holding technologique et construction d'entreprises",
+    },
+    description: {
+      en: "Revoluc Inc. builds, operates, supports and scales technology companies across software, commerce, real estate technology, professional networks and customer operations.",
+      es: "Revoluc Inc. crea, opera, apoya y escala compañías tecnológicas en software, comercio, tecnología inmobiliaria, redes profesionales y operaciones de clientes.",
+      fr: "Revoluc Inc. crée, exploite, soutient et développe des entreprises technologiques dans le logiciel, le commerce, la technologie immobilière, les réseaux professionnels et les opérations client.",
+    },
+  });
 }
 
 export default async function IndexPage({ params }: PageProps) {

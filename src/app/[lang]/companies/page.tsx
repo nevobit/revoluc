@@ -9,12 +9,32 @@ import {
   relationshipLabels,
   statusLabels,
 } from "@/content/site";
+import { pageMetadata } from "@/content/seo";
 import styles from "../portfolio/Portfolio.module.css";
 
 interface PageProps {
   params: Promise<{
     lang: string;
   }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const lang = (await params).lang as Locale;
+
+  return pageMetadata({
+    lang,
+    path: "/companies",
+    title: {
+      en: "Companies and Ventures - Revoluc",
+      es: "Compañías y proyectos - Revoluc",
+      fr: "Entreprises et projets - Revoluc",
+    },
+    description: {
+      en: "Explore Revoluc's public portfolio organized by operating maturity, including operating companies, products in market, ventures in development and partner ventures.",
+      es: "Explora el portafolio público de Revoluc organizado por madurez operativa: compañías operativas, productos en mercado, proyectos en desarrollo y ventures aliados.",
+      fr: "Explorez le portefeuille public de Revoluc organisé par maturité opérationnelle : entreprises opérationnelles, produits sur le marché, projets en développement et ventures partenaires.",
+    },
+  });
 }
 
 const Companies = async ({ params }: PageProps) => {

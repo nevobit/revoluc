@@ -8,6 +8,7 @@ import {
   relationshipLabels,
   statusLabels,
 } from "@/content/site";
+import { pageMetadata } from "@/content/seo";
 import styles from "../../portfolio/Portfolio.module.css";
 
 interface PageProps {
@@ -24,6 +25,27 @@ export function generateStaticParams() {
       slug: company.slug,
     })),
   );
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { lang: rawLang, slug } = await params;
+  const lang = rawLang as Locale;
+  const company = getCompanyBySlug(slug);
+
+  if (!company) {
+    return {};
+  }
+
+  return pageMetadata({
+    lang,
+    path: `/companies/${company.slug}`,
+    title: {
+      en: `${company.name} - Revoluc Portfolio`,
+      es: `${company.name} - Portafolio Revoluc`,
+      fr: `${company.name} - Portefeuille Revoluc`,
+    },
+    description: company.description,
+  });
 }
 
 const CompanyProfile = async ({ params }: PageProps) => {
@@ -164,9 +186,9 @@ const labels = {
     fr: "Relation",
   },
   responsible: {
-    en: "Internal responsible",
-    es: "Responsable interno",
-    fr: "Responsable interne",
+    en: "Portfolio lead",
+    es: "Líder de portafolio",
+    fr: "Responsable de portefeuille",
   },
   headquarters: {
     en: "Headquarters",
