@@ -40,14 +40,6 @@ export default async function Sidebar({ params }: PageProps) {
                         </div>    
                     </div>        
             </Link>
-            <Link href={`/${lang}/mission`} title={t['banner'].mission}>
-                    <div className={styles.btn}>
-                        <div className={styles.btn1}>
-                        <p>{t['banner'].mission}</p>
-                            <div className={styles.dot}></div>
-                        </div>    
-                    </div>        
-            </Link>
             <Link href={`/${lang}/startups`} title={t['banner'].startups}>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>

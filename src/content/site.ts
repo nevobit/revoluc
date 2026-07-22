@@ -56,9 +56,9 @@ export const corporateTruth = {
     fr: "Adresse postale commerciale",
   },
   incorporationYear: {
-    en: "Pending public verification",
-    es: "Pendiente de verificación pública",
-    fr: "En attente de vérification publique",
+    en: "2024",
+    es: "2024",
+    fr: "2024",
   },
 };
 
@@ -239,6 +239,207 @@ export const missionContent = {
     ],
   },
 };
+
+export const aboutSections = [
+  {
+    id: "who-we-are",
+    title: {
+      en: "Who we are",
+      es: "Quiénes somos",
+      fr: "Qui nous sommes",
+    },
+    paragraphs: [
+      {
+        en: "Revoluc Inc. is a Delaware technology holding company and venture builder that builds, operates, supports and scales technology companies.",
+        es: "Revoluc Inc. es una holding tecnológica y venture builder de Delaware que crea, opera, apoya y escala compañías tecnológicas.",
+        fr: "Revoluc Inc. est une holding technologique et venture builder du Delaware qui crée, exploite, soutient et développe des entreprises technologiques.",
+      },
+      {
+        en: "The group is organized around companies with defined products, markets, operating context and a clear relationship with Revoluc.",
+        es: "El grupo se organiza alrededor de compañías con productos definidos, mercados claros, contexto operativo y una relación verificable con Revoluc.",
+        fr: "Le groupe s'organise autour d'entreprises avec des produits définis, des marchés clairs, un contexte opérationnel et une relation vérifiable avec Revoluc.",
+      },
+    ],
+  },
+  {
+    id: "origin",
+    title: {
+      en: "Our origin",
+      es: "Nuestro origen",
+      fr: "Notre origine",
+    },
+    paragraphs: [
+      {
+        en: "Revoluc was created from software, product and company-building work led by Néstor Mosquera, with the goal of turning execution capacity into a structured technology group.",
+        es: "Revoluc nace del trabajo de software, producto y construcción de compañías liderado por Néstor Mosquera, con el objetivo de convertir capacidad de ejecución en un grupo tecnológico estructurado.",
+        fr: "Revoluc est né du travail logiciel, produit et de construction d'entreprises mené par Néstor Mosquera, avec l'objectif de transformer la capacité d'exécution en un groupe technologique structuré.",
+      },
+      {
+        en: "Its portfolio has grown around practical operating needs: enterprise software, digital commerce, real estate technology, professional networks, customer operations and digital services.",
+        es: "Su portafolio ha crecido alrededor de necesidades operativas reales: software empresarial, comercio digital, tecnología inmobiliaria, redes profesionales, operaciones de clientes y servicios digitales.",
+        fr: "Son portefeuille s'est développé autour de besoins opérationnels concrets : logiciels d'entreprise, commerce numérique, technologie immobilière, réseaux professionnels, opérations client et services numériques.",
+      },
+    ],
+  },
+  {
+    id: "mission",
+    title: {
+      en: "Mission",
+      es: "Misión",
+      fr: "Mission",
+    },
+    paragraphs: [
+      {
+        en: "Our mission is to build technology companies that solve operational problems and create durable economic value.",
+        es: "Nuestra misión es construir compañías tecnológicas que resuelvan problemas operativos y creen valor económico duradero.",
+        fr: "Notre mission est de bâtir des entreprises technologiques qui résolvent des problèmes opérationnels et créent une valeur économique durable.",
+      },
+      {
+        en: "Revoluc gives its ventures focus, governance, product direction, engineering support and commercial discipline over time.",
+        es: "Revoluc aporta foco, gobernanza, dirección de producto, soporte de ingeniería y disciplina comercial a largo plazo.",
+        fr: "Revoluc apporte concentration, gouvernance, direction produit, soutien d'ingénierie et discipline commerciale dans la durée.",
+      },
+    ],
+  },
+  {
+    id: "operating-model",
+    title: {
+      en: "Operating model",
+      es: "Modelo operativo",
+      fr: "Modèle opérationnel",
+    },
+    paragraphs: [
+      {
+        en: "Revoluc works through four operating capabilities: build, operate, support and scale. This means defining products, running real responsibilities, sharing infrastructure and turning validated products into repeatable operations.",
+        es: "Revoluc trabaja mediante cuatro capacidades operativas: construir, operar, apoyar y escalar. Esto significa definir productos, asumir responsabilidades reales, compartir infraestructura y convertir productos validados en operaciones repetibles.",
+        fr: "Revoluc travaille à travers quatre capacités opérationnelles : construire, exploiter, soutenir et développer. Cela signifie définir les produits, assumer de vraies responsabilités, partager l'infrastructure et transformer les produits validés en opérations répétables.",
+      },
+    ],
+    items: [
+      { en: "Build", es: "Construir", fr: "Construire" },
+      { en: "Operate", es: "Operar", fr: "Exploiter" },
+      { en: "Support", es: "Apoyar", fr: "Soutenir" },
+      { en: "Scale", es: "Escalar", fr: "Développer" },
+    ],
+  },
+  {
+    id: "principles",
+    title: {
+      en: "Principles",
+      es: "Principios",
+      fr: "Principes",
+    },
+    paragraphs: [
+      {
+        en: "The group favors operational truth over logo collecting, evidence over vague claims, shared systems over isolated work and long-term responsibility over short-term announcements.",
+        es: "El grupo prioriza verdad operativa sobre acumulación de logos, evidencia sobre afirmaciones vagas, sistemas compartidos sobre trabajo aislado y responsabilidad de largo plazo sobre anuncios de corto plazo.",
+        fr: "Le groupe privilégie la vérité opérationnelle plutôt que l'accumulation de logos, la preuve plutôt que les affirmations vagues, les systèmes partagés plutôt que le travail isolé et la responsabilité à long terme plutôt que les annonces à court terme.",
+      },
+    ],
+    items: [
+      {
+        en: "Defined product and market",
+        es: "Producto y mercado definidos",
+        fr: "Produit et marché définis",
+      },
+      {
+        en: "Clear relationship with Revoluc",
+        es: "Relación clara con Revoluc",
+        fr: "Relation claire avec Revoluc",
+      },
+      {
+        en: "Evidence before stronger claims",
+        es: "Evidencia antes de afirmaciones fuertes",
+        fr: "Preuve avant les affirmations fortes",
+      },
+      {
+        en: "Long-term operating discipline",
+        es: "Disciplina operativa de largo plazo",
+        fr: "Discipline opérationnelle à long terme",
+      },
+    ],
+  },
+  {
+    id: "infrastructure",
+    title: {
+      en: "Shared infrastructure",
+      es: "Infraestructura compartida",
+      fr: "Infrastructure partagée",
+    },
+    paragraphs: [
+      {
+        en: "Revoluc supports portfolio companies with shared product strategy, software engineering, design, finance, administration, brand, growth, governance, operations and technology systems.",
+        es: "Revoluc apoya a las compañías del portafolio con estrategia de producto, ingeniería de software, diseño, finanzas, administración, marca, crecimiento, gobernanza, operaciones y tecnología compartida.",
+        fr: "Revoluc soutient les entreprises du portefeuille avec stratégie produit, ingénierie logicielle, design, finance, administration, marque, croissance, gouvernance, opérations et systèmes technologiques partagés.",
+      },
+    ],
+    items: [
+      {
+        en: "Product strategy",
+        es: "Estrategia de producto",
+        fr: "Stratégie produit",
+      },
+      {
+        en: "Software engineering",
+        es: "Ingeniería de software",
+        fr: "Ingénierie logicielle",
+      },
+      { en: "Design", es: "Diseño", fr: "Design" },
+      {
+        en: "Finance and administration",
+        es: "Finanzas y administración",
+        fr: "Finance et administration",
+      },
+      {
+        en: "Brand and growth",
+        es: "Marca y crecimiento",
+        fr: "Marque et croissance",
+      },
+      {
+        en: "Shared technology",
+        es: "Tecnología compartida",
+        fr: "Technologie partagée",
+      },
+      { en: "Governance", es: "Gobernanza", fr: "Gouvernance" },
+      { en: "Operations", es: "Operaciones", fr: "Opérations" },
+    ],
+  },
+  {
+    id: "geography",
+    title: {
+      en: "Geographic reach",
+      es: "Alcance geográfico",
+      fr: "Portée géographique",
+    },
+    paragraphs: [
+      {
+        en: "Revoluc is incorporated in Delaware, uses a business mailing address in San Francisco and is led from Colombia, while its portfolio serves markets across Latin America, the United States and the specific geographies of each venture.",
+        es: "Revoluc está constituida en Delaware, utiliza una dirección postal comercial en San Francisco y es liderada desde Colombia, mientras su portafolio atiende mercados en América Latina, Estados Unidos y las geografías específicas de cada venture.",
+        fr: "Revoluc est constituée au Delaware, utilise une adresse postale commerciale à San Francisco et est dirigée depuis la Colombie, tandis que son portefeuille sert des marchés en Amérique latine, aux États-Unis et dans les géographies propres à chaque venture.",
+      },
+    ],
+  },
+  {
+    id: "leadership",
+    title: {
+      en: "Leadership",
+      es: "Liderazgo",
+      fr: "Direction",
+    },
+    paragraphs: [
+      {
+        en: "Revoluc is led by Néstor Mosquera, Founder & CEO, a software developer and technology entrepreneur responsible for group strategy, product direction, technology and portfolio development.",
+        es: "Revoluc es liderada por Néstor Mosquera, Founder & CEO, software developer y emprendedor tecnológico responsable de estrategia del grupo, dirección de producto, tecnología y desarrollo del portafolio.",
+        fr: "Revoluc est dirigée par Néstor Mosquera, Founder & CEO, software developer et entrepreneur technologique responsable de la stratégie du groupe, de la direction produit, de la technologie et du développement du portefeuille.",
+      },
+    ],
+  },
+] satisfies {
+  id: string;
+  title: LocalizedString;
+  paragraphs: LocalizedString[];
+  items?: LocalizedString[];
+}[];
 
 export const operationalModel = [
   {
@@ -848,7 +1049,7 @@ export const companies: PortfolioCompany[] = [
     name: "Helebba",
     slug: "helebba",
     relationship: "built",
-    status: "venture-in-development",
+    status: "product-in-market",
     category: {
       en: "Enterprise software",
       es: "Software empresarial",
@@ -856,19 +1057,19 @@ export const companies: PortfolioCompany[] = [
     },
     website: "https://helebba.com",
     description: {
-      en: "Modular business management platform for Latin American small and medium-sized companies.",
-      es: "Plataforma modular de gestión empresarial para pymes latinoamericanas.",
-      fr: "Plateforme modulaire de gestion d'entreprise pour les PME latino-américaines.",
+      en: "Cloud business management software for SMEs and entrepreneurs, publicly presented with invoicing, accounting, inventory, CRM, projects, HR, payments, scanning, apps and integrations.",
+      es: "Software de gestión empresarial en la nube para pymes y emprendedores, presentado públicamente con facturación, contabilidad, inventario, CRM, proyectos, RR. HH., pagos, escaneo, apps e integraciones.",
+      fr: "Logiciel cloud de gestion d'entreprise pour PME et entrepreneurs, présenté publiquement avec facturation, comptabilité, inventaire, CRM, projets, RH, paiements, scan, apps et intégrations.",
     },
     market: {
-      en: "Latin America",
-      es: "América Latina",
-      fr: "Amérique latine",
+      en: "Spain and Latin America",
+      es: "España y América Latina",
+      fr: "Espagne et Amérique latine",
     },
     productName: {
-      en: "Helebba platform",
-      es: "Plataforma Helebba",
-      fr: "Plateforme Helebba",
+      en: "Helebba business management software",
+      es: "Software de gestión empresarial Helebba",
+      fr: "Logiciel de gestion d'entreprise Helebba",
     },
     logo: placeholderCompanyLogo,
     internalResponsible: {
@@ -877,9 +1078,9 @@ export const companies: PortfolioCompany[] = [
       fr: "Néstor Mosquera",
     },
     proof: {
-      en: "Defined product scope, roadmap and active platform work.",
-      es: "Alcance de producto, roadmap y trabajo activo de plataforma definidos.",
-      fr: "Périmètre produit, roadmap et travail actif de plateforme définis.",
+      en: "Public commercial website presenting Helebba as available software with product claims, access links and a defined feature ecosystem.",
+      es: "Sitio comercial público que presenta Helebba como software disponible, con afirmaciones de producto, enlaces de acceso y un ecosistema de funcionalidades definido.",
+      fr: "Site commercial public présentant Helebba comme un logiciel disponible, avec des affirmations produit, des liens d'accès et un écosystème fonctionnel défini.",
     },
     problem: {
       en: "Small and medium-sized companies often manage customers, sales, inventory and operations across disconnected tools.",
@@ -887,31 +1088,31 @@ export const companies: PortfolioCompany[] = [
       fr: "De nombreuses PME gèrent clients, ventes, stocks et opérations avec des outils déconnectés.",
     },
     solution: {
-      en: "Helebba is being built as a modular platform that centralizes core business workflows for Latin American SMEs.",
-      es: "Helebba se construye como una plataforma modular que centraliza flujos empresariales clave para pymes latinoamericanas.",
-      fr: "Helebba est construite comme une plateforme modulaire qui centralise les flux clés des PME latino-américaines.",
+      en: "Helebba presents a cloud platform intended to centralize invoicing, accounting, inventory, CRM, projects, HR, treasury, ticket scanning, payments and operational integrations.",
+      es: "Helebba presenta una plataforma en la nube para centralizar facturación, contabilidad, inventario, CRM, proyectos, RR. HH., tesorería, escaneo de tickets, pagos e integraciones operativas.",
+      fr: "Helebba présente une plateforme cloud destinée à centraliser facturation, comptabilité, inventaire, CRM, projets, RH, trésorerie, scan de tickets, paiements et intégrations opérationnelles.",
     },
     evidenceItems: [
       {
-        en: "Modules: dashboard, invoicing, contacts, products, expenses and payments.",
-        es: "Módulos: dashboard, facturación, contactos, productos, gastos y pagos.",
-        fr: "Modules : tableau de bord, facturation, contacts, produits, dépenses et paiements.",
+        en: "Public site claims: more than 900,000 users, certified software, 160x faster invoicing and 80% faster collections.",
+        es: "El sitio público afirma: más de 900.000 usuarios, software certificado, facturación 160 veces más rápida y cobros 80 % más rápidos.",
+        fr: "Le site public affirme : plus de 900 000 utilisateurs, logiciel certifié, facturation 160 fois plus rapide et encaissements 80 % plus rapides.",
       },
       {
-        en: "Target users: Latin American SMEs that need connected operational and administrative workflows.",
-        es: "Usuarios objetivo: pymes latinoamericanas que necesitan flujos operativos y administrativos conectados.",
-        fr: "Utilisateurs cible : PME latino-américaines qui ont besoin de flux opérationnels et administratifs connectés.",
+        en: "Compliance and fiscal scope presented publicly includes Verifactu, SII, electronic invoicing, AEAT, SAT, AFIP, anti-fraud law and GDPR.",
+        es: "El alcance fiscal y de cumplimiento presentado públicamente incluye Verifactu, SII, factura electrónica, AEAT, SAT, AFIP, Ley Antifraude y RGPD.",
+        fr: "Le périmètre fiscal et de conformité présenté publiquement inclut Verifactu, SII, facturation électronique, AEAT, SAT, AFIP, loi antifraude et RGPD.",
       },
       {
-        en: "Current status: venture in development with defined product scope and roadmap.",
-        es: "Estado actual: venture en desarrollo con alcance de producto y roadmap definidos.",
-        fr: "Statut actuel : venture en développement avec périmètre produit et roadmap définis.",
+        en: "Product ecosystem presented publicly includes 47 currencies, ticket scanning with 96% precision, Helebba Wallet, App Store and Google Play availability, and integrations with banks, commerce platforms, CRM, communication and automation tools.",
+        es: "El ecosistema de producto presentado públicamente incluye 47 monedas, escaneo de tickets con 96 % de precisión, Helebba Wallet, disponibilidad en App Store y Google Play, e integraciones con bancos, comercio, CRM, comunicación y automatización.",
+        fr: "L'écosystème produit présenté publiquement inclut 47 devises, scan de tickets avec 96 % de précision, Helebba Wallet, disponibilité App Store et Google Play, et intégrations avec banques, commerce, CRM, communication et automatisation.",
       },
     ],
     ctaLabel: {
-      en: "Ask about Helebba",
-      es: "Consultar sobre Helebba",
-      fr: "Demander à propos de Helebba",
+      en: "Visit Helebba",
+      es: "Visitar Helebba",
+      fr: "Visiter Helebba",
     },
   },
   {

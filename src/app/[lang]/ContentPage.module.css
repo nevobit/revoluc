@@ -66,6 +66,55 @@
   text-transform: uppercase;
 }
 
+.sectionStack {
+  display: grid;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+
+.infoBlock {
+  max-width: 78rem;
+  scroll-margin-top: 4rem;
+}
+
+.infoBlock .paragraphs {
+  margin-top: 1.4rem;
+}
+
+.factGrid {
+  display: grid;
+  gap: 1.4rem;
+  margin: 2.4rem 0 0;
+}
+
+.factGrid div {
+  border-top: 1px solid rgba(133, 150, 173, 0.24);
+  padding-top: 1.4rem;
+}
+
+.factGrid dt {
+  color: #8596ad;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.factGrid dd {
+  margin: .7rem 0 0;
+  color: #1f3047;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.factGrid a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(25, 113, 228, 0.42);
+}
+
 .panel {
   margin-top: 4rem;
   padding: 2.8rem 0;
@@ -252,6 +301,10 @@
   }
 
   .formGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .factGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

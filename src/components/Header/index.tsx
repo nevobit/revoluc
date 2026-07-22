@@ -85,14 +85,6 @@ const Header = () => {
           <div className={styles.pageone}>
             <i className="bx bx-chevron-right"></i>
             <p>
-              <Link href={`/${locale}/mission`}>
-                {t['banner'].mission}
-              </Link>
-            </p>
-          </div>
-          <div className={styles.pageone}>
-            <i className="bx bx-chevron-right"></i>
-            <p>
               <Link href={`/${locale}/startups`}>
                 {t['banner'].startups}
               </Link>
