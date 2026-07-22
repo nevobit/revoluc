@@ -83,22 +83,22 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
       const reason = String(payload.reason ?? "General inquiry");
       const body = [
-        `Full name: ${payload.fullName ?? ""}`,
-        `Work email: ${payload.workEmail ?? ""}`,
-        `Company or project: ${payload.companyOrProject ?? ""}`,
-        `Country: ${payload.country ?? ""}`,
-        `Reason: ${reason}`,
+        `${localize(emailLabels.fullName, lang)}: ${payload.fullName ?? ""}`,
+        `${localize(emailLabels.workEmail, lang)}: ${payload.workEmail ?? ""}`,
+        `${localize(emailLabels.company, lang)}: ${payload.companyOrProject ?? ""}`,
+        `${localize(emailLabels.country, lang)}: ${payload.country ?? ""}`,
+        `${localize(emailLabels.reason, lang)}: ${reason}`,
         "",
-        "Message:",
+        `${localize(emailLabels.message, lang)}:`,
         `${payload.message ?? ""}`,
         "",
-        `Source: ${window.location.pathname}${window.location.search}`,
+        `${localize(emailLabels.source, lang)}: ${window.location.pathname}${window.location.search}`,
       ].join("\n");
 
       form.reset();
       setSubmitted(true);
       window.location.href = `mailto:${corporateTruth.publicEmail}?${new URLSearchParams({
-        subject: `Revoluc inquiry: ${reason}`,
+        subject: `${localize(emailLabels.subject, lang)}: ${reason}`,
         body,
       }).toString()}`;
     } catch {
@@ -152,7 +152,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
       </label>
 
       <label className={styles.honeyField} aria-hidden="true">
-        Company website
+        {localize(emailLabels.website, lang)}
         <input name="website" tabIndex={-1} autoComplete="off" />
       </label>
 
@@ -165,3 +165,51 @@ export default function ContactForm({ lang }: ContactFormProps) {
     </form>
   );
 }
+
+const emailLabels = {
+  fullName: {
+    en: "Full name",
+    es: "Nombre completo",
+    fr: "Nom complet",
+  },
+  workEmail: {
+    en: "Work email",
+    es: "Correo de trabajo",
+    fr: "Email professionnel",
+  },
+  company: {
+    en: "Company or project",
+    es: "Compañía o proyecto",
+    fr: "Entreprise ou projet",
+  },
+  country: {
+    en: "Country",
+    es: "País",
+    fr: "Pays",
+  },
+  reason: {
+    en: "Reason",
+    es: "Motivo",
+    fr: "Motif",
+  },
+  message: {
+    en: "Message",
+    es: "Mensaje",
+    fr: "Message",
+  },
+  source: {
+    en: "Source",
+    es: "Origen",
+    fr: "Source",
+  },
+  subject: {
+    en: "Revoluc inquiry",
+    es: "Solicitud para Revoluc",
+    fr: "Demande pour Revoluc",
+  },
+  website: {
+    en: "Company website",
+    es: "Sitio web de la compañía",
+    fr: "Site web de l'entreprise",
+  },
+};

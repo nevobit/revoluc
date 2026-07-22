@@ -5,107 +5,287 @@ import styles from "../../ContentPage.module.css";
 
 const documents = {
   "privacy-policy": {
-    title: "Privacy Policy",
+    title: {
+      en: "Privacy Policy",
+      es: "Política de Privacidad",
+      fr: "Politique de confidentialité",
+    },
     sections: [
       {
-        heading: "Controller",
-        body: `${corporateTruth.legalName}, a Delaware company, is responsible for this website and contact inquiries submitted through it.`,
+        heading: {
+          en: "Controller",
+          es: "Responsable",
+          fr: "Responsable du traitement",
+        },
+        body: {
+          en: `${corporateTruth.legalName}, a Delaware company, is responsible for this website and contact inquiries submitted through it.`,
+          es: `${corporateTruth.legalName}, una compañía de Delaware, es responsable de este sitio web y de las solicitudes de contacto enviadas a través de él.`,
+          fr: `${corporateTruth.legalName}, une société du Delaware, est responsable de ce site web et des demandes de contact envoyées par son intermédiaire.`,
+        },
       },
       {
-        heading: "Data collected",
-        body: "The contact form asks for full name, work email, company or project, country, reason for contacting, message, privacy consent, source path and query parameters such as UTM values when present.",
+        heading: {
+          en: "Data collected",
+          es: "Datos recopilados",
+          fr: "Données collectées",
+        },
+        body: {
+          en: "The contact form asks for full name, work email, company or project, country, reason for contacting, message, privacy consent, source path and query parameters such as UTM values when present.",
+          es: "El formulario de contacto solicita nombre completo, correo de trabajo, compañía o proyecto, país, motivo de contacto, mensaje, consentimiento de privacidad, ruta de origen y parámetros de consulta como valores UTM cuando existan.",
+          fr: "Le formulaire de contact demande le nom complet, l'email professionnel, l'entreprise ou le projet, le pays, le motif de contact, le message, le consentement de confidentialité, le chemin d'origine et les paramètres de requête tels que les valeurs UTM lorsqu'ils existent.",
+        },
       },
       {
-        heading: "Use of data",
-        body: "Revoluc uses contact information to review inquiries, classify the opportunity type, respond to the sender and route the conversation to the appropriate internal reviewer.",
+        heading: {
+          en: "Use of data",
+          es: "Uso de los datos",
+          fr: "Utilisation des données",
+        },
+        body: {
+          en: "Revoluc uses contact information to review inquiries, classify the opportunity type, respond to the sender and route the conversation to the appropriate internal reviewer.",
+          es: "Revoluc usa la información de contacto para revisar solicitudes, clasificar el tipo de oportunidad, responder al remitente y dirigir la conversación al responsable interno adecuado.",
+          fr: "Revoluc utilise les informations de contact pour examiner les demandes, classer le type d'opportunité, répondre à l'expéditeur et orienter la conversation vers le responsable interne approprié.",
+        },
       },
       {
-        heading: "Form submission and storage",
-        body: "Contact form submissions are validated by the website and prepared as an email addressed to Revoluc. Revoluc receives the inquiry when the sender sends that email. The website does not currently store submissions in a database, CRM or automated email delivery provider.",
+        heading: {
+          en: "Form submission and storage",
+          es: "Envío y almacenamiento del formulario",
+          fr: "Envoi et stockage du formulaire",
+        },
+        body: {
+          en: "Contact form submissions are validated by the website and prepared as an email addressed to Revoluc. Revoluc receives the inquiry when the sender sends that email. The website does not currently store submissions in a database, CRM or automated email delivery provider.",
+          es: "Las solicitudes del formulario se validan en el sitio y se preparan como un correo dirigido a Revoluc. Revoluc recibe la solicitud cuando el remitente envía ese correo. El sitio web actualmente no almacena solicitudes en una base de datos, CRM o proveedor automatizado de envío de correo.",
+          fr: "Les demandes du formulaire sont validées par le site et préparées sous forme d'email adressé à Revoluc. Revoluc reçoit la demande lorsque l'expéditeur envoie cet email. Le site ne stocke actuellement pas les demandes dans une base de données, un CRM ou un fournisseur d'envoi d'emails automatisé.",
+        },
       },
       {
-        heading: "Cookies and analytics",
-        body: "Revoluc does not currently use non-essential analytics or advertising cookies on this website. Essential platform behavior may depend on the hosting provider.",
+        heading: {
+          en: "Cookies and analytics",
+          es: "Cookies y analítica",
+          fr: "Cookies et analytique",
+        },
+        body: {
+          en: "Revoluc does not currently use non-essential analytics or advertising cookies on this website. Essential platform behavior may depend on the hosting provider.",
+          es: "Revoluc actualmente no usa cookies no esenciales de analítica o publicidad en este sitio web. El funcionamiento esencial de la plataforma puede depender del proveedor de hosting.",
+          fr: "Revoluc n'utilise actuellement pas de cookies non essentiels d'analyse ou de publicité sur ce site web. Le fonctionnement essentiel de la plateforme peut dépendre du fournisseur d'hébergement.",
+        },
       },
       {
-        heading: "Retention and access",
-        body: "When an inquiry is sent by email, it may be retained in Revoluc email records for as long as needed to review, respond to and document the conversation. Access is limited to people responsible for reviewing Revoluc inquiries.",
+        heading: {
+          en: "Retention and access",
+          es: "Retención y acceso",
+          fr: "Conservation et accès",
+        },
+        body: {
+          en: "When an inquiry is sent by email, it may be retained in Revoluc email records for as long as needed to review, respond to and document the conversation. Access is limited to people responsible for reviewing Revoluc inquiries.",
+          es: "Cuando una solicitud se envía por correo, puede conservarse en los registros de correo de Revoluc durante el tiempo necesario para revisar, responder y documentar la conversación. El acceso se limita a personas responsables de revisar solicitudes de Revoluc.",
+          fr: "Lorsqu'une demande est envoyée par email, elle peut être conservée dans les archives email de Revoluc aussi longtemps que nécessaire pour examiner, répondre et documenter la conversation. L'accès est limité aux personnes responsables de l'examen des demandes Revoluc.",
+        },
       },
       {
-        heading: "Deletion requests",
-        body: `Requests about personal information can be sent to ${corporateTruth.publicEmail}.`,
+        heading: {
+          en: "Deletion requests",
+          es: "Solicitudes de eliminación",
+          fr: "Demandes de suppression",
+        },
+        body: {
+          en: `Requests about personal information can be sent to ${corporateTruth.publicEmail}.`,
+          es: `Las solicitudes sobre información personal pueden enviarse a ${corporateTruth.publicEmail}.`,
+          fr: `Les demandes concernant les informations personnelles peuvent être envoyées à ${corporateTruth.publicEmail}.`,
+        },
       },
     ],
   },
   "terms-of-use": {
-    title: "Terms of Use",
+    title: {
+      en: "Terms of Use",
+      es: "Términos de Uso",
+      fr: "Conditions d'utilisation",
+    },
     sections: [
       {
-        heading: "Website use",
-        body: "This website provides corporate information about Revoluc Inc., its public companies, venture building work and contact channels.",
+        heading: {
+          en: "Website use",
+          es: "Uso del sitio web",
+          fr: "Utilisation du site web",
+        },
+        body: {
+          en: "This website provides corporate information about Revoluc Inc., its public companies, venture building work and contact channels.",
+          es: "Este sitio web proporciona información corporativa sobre Revoluc Inc., sus compañías públicas, su trabajo de venture building y sus canales de contacto.",
+          fr: "Ce site web fournit des informations corporatives sur Revoluc Inc., ses sociétés publiques, son travail de venture building et ses canaux de contact.",
+        },
       },
       {
-        heading: "No investment offer",
-        body: "Information on this website is not an offer to sell securities, solicit investment or guarantee any commercial outcome.",
+        heading: {
+          en: "No investment offer",
+          es: "No constituye oferta de inversión",
+          fr: "Aucune offre d'investissement",
+        },
+        body: {
+          en: "Information on this website is not an offer to sell securities, solicit investment or guarantee any commercial outcome.",
+          es: "La información de este sitio no constituye una oferta para vender valores, solicitar inversión o garantizar cualquier resultado comercial.",
+          fr: "Les informations de ce site ne constituent pas une offre de vente de titres, une sollicitation d'investissement ou une garantie de résultat commercial.",
+        },
       },
       {
-        heading: "Portfolio information",
-        body: "Company statuses describe operating maturity and may change as products, markets and legal relationships evolve.",
+        heading: {
+          en: "Portfolio information",
+          es: "Información del portafolio",
+          fr: "Informations sur le portefeuille",
+        },
+        body: {
+          en: "Company statuses describe operating maturity and may change as products, markets and legal relationships evolve.",
+          es: "Los estados de las compañías describen madurez operativa y pueden cambiar a medida que evolucionen productos, mercados y relaciones legales.",
+          fr: "Les statuts des sociétés décrivent leur maturité opérationnelle et peuvent évoluer avec les produits, les marchés et les relations juridiques.",
+        },
       },
       {
-        heading: "Contact",
-        body: `Questions about these terms can be sent to ${corporateTruth.publicEmail}.`,
+        heading: {
+          en: "Contact",
+          es: "Contacto",
+          fr: "Contact",
+        },
+        body: {
+          en: `Questions about these terms can be sent to ${corporateTruth.publicEmail}.`,
+          es: `Las preguntas sobre estos términos pueden enviarse a ${corporateTruth.publicEmail}.`,
+          fr: `Les questions concernant ces conditions peuvent être envoyées à ${corporateTruth.publicEmail}.`,
+        },
       },
     ],
   },
   "cookie-policy": {
-    title: "Cookie Policy",
+    title: {
+      en: "Cookie Policy",
+      es: "Política de Cookies",
+      fr: "Politique relative aux cookies",
+    },
     sections: [
       {
-        heading: "Current cookie use",
-        body: "Revoluc does not currently use non-essential analytics or advertising cookies on this website.",
+        heading: {
+          en: "Current cookie use",
+          es: "Uso actual de cookies",
+          fr: "Utilisation actuelle des cookies",
+        },
+        body: {
+          en: "Revoluc does not currently use non-essential analytics or advertising cookies on this website.",
+          es: "Revoluc actualmente no usa cookies no esenciales de analítica o publicidad en este sitio web.",
+          fr: "Revoluc n'utilise actuellement pas de cookies non essentiels d'analyse ou de publicité sur ce site web.",
+        },
       },
       {
-        heading: "Future services",
-        body: "If analytics, advertising, CRM, security or personalization tools are introduced, Revoluc will update this policy with provider names, purposes and retention details.",
+        heading: {
+          en: "Future services",
+          es: "Servicios futuros",
+          fr: "Services futurs",
+        },
+        body: {
+          en: "If analytics, advertising, CRM, security or personalization tools are introduced, Revoluc will update this policy with provider names, purposes and retention details.",
+          es: "Si se introducen herramientas de analítica, publicidad, CRM, seguridad o personalización, Revoluc actualizará esta política con nombres de proveedores, finalidades y detalles de retención.",
+          fr: "Si des outils d'analyse, de publicité, de CRM, de sécurité ou de personnalisation sont introduits, Revoluc mettra à jour cette politique avec les noms des fournisseurs, les finalités et les détails de conservation.",
+        },
       },
       {
-        heading: "Contact",
-        body: `Cookie questions can be sent to ${corporateTruth.publicEmail}.`,
+        heading: {
+          en: "Contact",
+          es: "Contacto",
+          fr: "Contact",
+        },
+        body: {
+          en: `Cookie questions can be sent to ${corporateTruth.publicEmail}.`,
+          es: `Las preguntas sobre cookies pueden enviarse a ${corporateTruth.publicEmail}.`,
+          fr: `Les questions sur les cookies peuvent être envoyées à ${corporateTruth.publicEmail}.`,
+        },
       },
     ],
   },
   "security-policy": {
-    title: "Security Policy",
+    title: {
+      en: "Security Policy",
+      es: "Política de Seguridad",
+      fr: "Politique de sécurité",
+    },
     sections: [
       {
-        heading: "Scope",
-        body: "This policy covers the public Revoluc website and contact intake flow.",
+        heading: {
+          en: "Scope",
+          es: "Alcance",
+          fr: "Portée",
+        },
+        body: {
+          en: "This policy covers the public Revoluc website and contact intake flow.",
+          es: "Esta política cubre el sitio web público de Revoluc y el flujo de recepción de contacto.",
+          fr: "Cette politique couvre le site public de Revoluc et le flux de réception des contacts.",
+        },
       },
       {
-        heading: "Current measures",
-        body: "Contact form submissions are validated and protected using basic anti-spam measures.",
+        heading: {
+          en: "Current measures",
+          es: "Medidas actuales",
+          fr: "Mesures actuelles",
+        },
+        body: {
+          en: "Contact form submissions are validated and protected using basic anti-spam measures.",
+          es: "Las solicitudes del formulario de contacto se validan y protegen con medidas básicas antispam.",
+          fr: "Les demandes du formulaire de contact sont validées et protégées par des mesures anti-spam de base.",
+        },
       },
       {
-        heading: "Responsible disclosure",
-        body: `Security issues can be reported to ${corporateTruth.publicEmail}.`,
+        heading: {
+          en: "Responsible disclosure",
+          es: "Divulgación responsable",
+          fr: "Divulgation responsable",
+        },
+        body: {
+          en: `Security issues can be reported to ${corporateTruth.publicEmail}.`,
+          es: `Los problemas de seguridad pueden reportarse a ${corporateTruth.publicEmail}.`,
+          fr: `Les problèmes de sécurité peuvent être signalés à ${corporateTruth.publicEmail}.`,
+        },
       },
     ],
   },
   "accessibility-statement": {
-    title: "Accessibility Statement",
+    title: {
+      en: "Accessibility Statement",
+      es: "Declaración de Accesibilidad",
+      fr: "Déclaration d'accessibilité",
+    },
     sections: [
       {
-        heading: "Commitment",
-        body: "Revoluc aims to maintain a website that is usable, readable and navigable across modern devices.",
+        heading: {
+          en: "Commitment",
+          es: "Compromiso",
+          fr: "Engagement",
+        },
+        body: {
+          en: "Revoluc aims to maintain a website that is usable, readable and navigable across modern devices.",
+          es: "Revoluc busca mantener un sitio web usable, legible y navegable en dispositivos modernos.",
+          fr: "Revoluc vise à maintenir un site web utilisable, lisible et navigable sur les appareils modernes.",
+        },
       },
       {
-        heading: "Known work",
-        body: "Revoluc reviews the website for keyboard navigation, semantic labels, color contrast, form errors and responsive layout issues as the site evolves.",
+        heading: {
+          en: "Ongoing review",
+          es: "Revisión continua",
+          fr: "Revue continue",
+        },
+        body: {
+          en: "Revoluc reviews the website for keyboard navigation, semantic labels, color contrast, form errors and responsive layout issues as the site evolves.",
+          es: "Revoluc revisa el sitio en navegación por teclado, etiquetas semánticas, contraste de color, errores de formulario y problemas de diseño responsive conforme el sitio evoluciona.",
+          fr: "Revoluc examine le site pour la navigation au clavier, les libellés sémantiques, le contraste des couleurs, les erreurs de formulaire et les problèmes de mise en page responsive à mesure que le site évolue.",
+        },
       },
       {
-        heading: "Feedback",
-        body: `Accessibility feedback can be sent to ${corporateTruth.publicEmail}.`,
+        heading: {
+          en: "Feedback",
+          es: "Comentarios",
+          fr: "Commentaires",
+        },
+        body: {
+          en: `Accessibility feedback can be sent to ${corporateTruth.publicEmail}.`,
+          es: `Los comentarios de accesibilidad pueden enviarse a ${corporateTruth.publicEmail}.`,
+          fr: `Les commentaires d'accessibilité peuvent être envoyés à ${corporateTruth.publicEmail}.`,
+        },
       },
     ],
   },
@@ -142,15 +322,15 @@ const LegalPage = async ({ params }: PageProps) => {
     <main className={styles.page}>
       <section className={`${styles.content} ${styles.narrow}`}>
         <p className={styles.eyebrow}>{corporateTruth.legalName}</p>
-        <h1>{document.title}</h1>
+        <h1>{localize(document.title, lang)}</h1>
         <p className={styles.lead}>
           {localize(lastUpdatedLabel, lang)} July 21, 2026
         </p>
         <div className={styles.paragraphs}>
           {document.sections.map((section) => (
-            <section key={section.heading}>
-              <h2 className={styles.sectionTitle}>{section.heading}</h2>
-              <p>{section.body}</p>
+            <section key={section.heading.en}>
+              <h2 className={styles.sectionTitle}>{localize(section.heading, lang)}</h2>
+              <p>{localize(section.body, lang)}</p>
             </section>
           ))}
         </div>

@@ -20,9 +20,9 @@ const Social = async ({ params }: PageProps) => {
 
         <div className={styles.links}>
           {socialImpactAreas.map((area) => (
-            <article className={styles.link} key={area.label}>
+            <article className={styles.link} key={area.label.en}>
               <div>
-                <strong>{area.label}</strong>
+                <strong>{localize(area.label, lang)}</strong>
                 <p>{localize(area.description, lang)}</p>
               </div>
             </article>

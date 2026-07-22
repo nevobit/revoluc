@@ -16,16 +16,16 @@ export type PortfolioCompany = {
   slug: string;
   relationship: "owned" | "operated" | "built" | "partner";
   status: PublicCompanyStatus;
-  category: string;
+  category: LocalizedString;
   description: LocalizedString;
-  market: string;
-  headquarters?: string;
+  market: LocalizedString;
+  headquarters?: LocalizedString;
   website?: string;
   foundedYear?: number;
-  productName: string;
+  productName: LocalizedString;
   logo: string;
   screenshot?: string;
-  internalResponsible: string;
+  internalResponsible: LocalizedString;
   proof: LocalizedString;
   problem: LocalizedString;
   solution: LocalizedString;
@@ -236,7 +236,11 @@ export const missionContent = {
 
 export const operationalModel = [
   {
-    label: "Build",
+    label: {
+      en: "Build",
+      es: "Construir",
+      fr: "Construire",
+    },
     description: {
       en: "Define the product, validate the problem, design the first operating system and build the technology foundation.",
       es: "Definir el producto, validar el problema, diseñar el primer sistema operativo y construir la base tecnológica.",
@@ -244,7 +248,11 @@ export const operationalModel = [
     },
   },
   {
-    label: "Operate",
+    label: {
+      en: "Operate",
+      es: "Operar",
+      fr: "Exploiter",
+    },
     description: {
       en: "Run the company with owners, responsibilities, systems, financial discipline and customer-facing execution.",
       es: "Operar la compañía con responsables, sistemas, disciplina financiera y ejecución frente al cliente.",
@@ -252,7 +260,11 @@ export const operationalModel = [
     },
   },
   {
-    label: "Support",
+    label: {
+      en: "Support",
+      es: "Apoyar",
+      fr: "Soutenir",
+    },
     description: {
       en: "Provide shared engineering, design, administration, growth and governance where a venture needs leverage.",
       es: "Aportar ingeniería, diseño, administración, crecimiento y gobernanza compartida donde el venture necesita apoyo.",
@@ -260,7 +272,11 @@ export const operationalModel = [
     },
   },
   {
-    label: "Scale",
+    label: {
+      en: "Scale",
+      es: "Escalar",
+      fr: "Développer",
+    },
     description: {
       en: "Turn validated products into repeatable operations, broader markets and stronger long-term structures.",
       es: "Convertir productos validados en operaciones repetibles, mercados más amplios y estructuras de largo plazo.",
@@ -270,23 +286,23 @@ export const operationalModel = [
 ];
 
 export const sharedInfrastructure = [
-  "Product strategy",
-  "Software engineering",
-  "Design",
-  "Finance and administration",
-  "Brand and growth",
-  "Shared technology",
-  "Governance",
-  "Operations",
+  { en: "Product strategy", es: "Estrategia de producto", fr: "Stratégie produit" },
+  { en: "Software engineering", es: "Ingeniería de software", fr: "Ingénierie logicielle" },
+  { en: "Design", es: "Diseño", fr: "Design" },
+  { en: "Finance and administration", es: "Finanzas y administración", fr: "Finance et administration" },
+  { en: "Brand and growth", es: "Marca y crecimiento", fr: "Marque et croissance" },
+  { en: "Shared technology", es: "Tecnología compartida", fr: "Technologie partagée" },
+  { en: "Governance", es: "Gobernanza", fr: "Gouvernance" },
+  { en: "Operations", es: "Operaciones", fr: "Opérations" },
 ];
 
 export const focusAreas = [
-  "Enterprise software",
-  "Digital commerce",
-  "Real estate technology",
-  "Professional networks",
-  "Customer operations",
-  "Digital services",
+  { en: "Enterprise software", es: "Software empresarial", fr: "Logiciels d'entreprise" },
+  { en: "Digital commerce", es: "Comercio digital", fr: "Commerce numérique" },
+  { en: "Real estate technology", es: "Tecnología inmobiliaria", fr: "Technologie immobilière" },
+  { en: "Professional networks", es: "Redes profesionales", fr: "Réseaux professionnels" },
+  { en: "Customer operations", es: "Operaciones de clientes", fr: "Opérations client" },
+  { en: "Digital services", es: "Servicios digitales", fr: "Services numériques" },
 ];
 
 export const teamContent = {
@@ -450,7 +466,11 @@ export const socialContent = {
 
 export const socialImpactAreas = [
   {
-    label: "Nonprofit support",
+    label: {
+      en: "Nonprofit support",
+      es: "Apoyo a organizaciones sin ánimo de lucro",
+      fr: "Soutien aux organisations à but non lucratif",
+    },
     description: {
       en: "Technology, operational systems or visibility for nonprofit organizations with clear needs.",
       es: "Tecnología, sistemas operativos o visibilidad para organizaciones sin ánimo de lucro con necesidades claras.",
@@ -458,7 +478,11 @@ export const socialImpactAreas = [
     },
   },
   {
-    label: "Donations",
+    label: {
+      en: "Donations",
+      es: "Donaciones",
+      fr: "Dons",
+    },
     description: {
       en: "Selective contributions to causes aligned with Revoluc's ability to help responsibly.",
       es: "Contribuciones selectivas a causas alineadas con la capacidad de Revoluc de ayudar responsablemente.",
@@ -466,7 +490,11 @@ export const socialImpactAreas = [
     },
   },
   {
-    label: "Evidence",
+    label: {
+      en: "Evidence",
+      es: "Evidencia",
+      fr: "Preuve",
+    },
     description: {
       en: "Supported initiatives are documented with the organization, contribution, timeframe and result.",
       es: "Las iniciativas apoyadas se documentan con organización, contribución, periodo y resultado.",
@@ -478,18 +506,18 @@ export const socialImpactAreas = [
 export const startupContent = {
   title: {
     en: "Venture Building",
-    es: "Venture Building",
-    fr: "Venture Building",
+    es: "Construcción de empresas",
+    fr: "Construction d'entreprises",
   },
   intro: {
     en: "Revoluc works with founders, early-stage teams and businesses that need an active company-building partner, not only advice.",
-    es: "Revoluc trabaja con founders, equipos en etapa temprana y negocios que necesitan un socio activo de construcción empresarial, no solo asesoría.",
+    es: "Revoluc trabaja con fundadores, equipos en etapa temprana y negocios que necesitan un socio activo para construir compañías, no solo asesoría.",
     fr: "Revoluc travaille avec des fondateurs, des équipes en phase initiale et des entreprises qui ont besoin d'un partenaire actif de construction, pas seulement de conseil.",
   },
   note: {
     en: "Each partnership is structured according to the work, capital, risk and long-term responsibilities involved.",
-    es: "Each partnership is structured according to the work, capital, risk and long-term responsibilities involved.",
-    fr: "Each partnership is structured according to the work, capital, risk and long-term responsibilities involved.",
+    es: "Cada alianza se estructura según el trabajo, capital, riesgo y responsabilidades de largo plazo involucradas.",
+    fr: "Chaque partenariat est structuré selon le travail, le capital, le risque et les responsabilités à long terme impliqués.",
   },
   cta: {
     en: "Start a conversation",
@@ -500,48 +528,88 @@ export const startupContent = {
 
 export const ventureBuildingSections = [
   {
-    title: "Who it is for",
+    title: {
+      en: "Who it is for",
+      es: "Para quién es",
+      fr: "À qui cela s'adresse",
+    },
     items: [
-      "Founders with a clear problem",
-      "Early-stage teams",
-      "Businesses that need to build a digital product",
-      "Projects where Revoluc can contribute active execution",
+      {
+        en: "Founders with a clear problem",
+        es: "Fundadores con un problema claro",
+        fr: "Fondateurs avec un problème clair",
+      },
+      {
+        en: "Early-stage teams",
+        es: "Equipos en etapa temprana",
+        fr: "Équipes en phase initiale",
+      },
+      {
+        en: "Businesses that need to build a digital product",
+        es: "Empresas que necesitan construir un producto digital",
+        fr: "Entreprises qui doivent construire un produit numérique",
+      },
+      {
+        en: "Projects where Revoluc can contribute active execution",
+        es: "Proyectos donde Revoluc pueda aportar ejecución activa",
+        fr: "Projets où Revoluc peut apporter une exécution active",
+      },
     ],
   },
   {
-    title: "What Revoluc contributes",
+    title: {
+      en: "What Revoluc contributes",
+      es: "Qué aporta Revoluc",
+      fr: "Ce que Revoluc apporte",
+    },
     items: [
-      "Validation",
-      "Product strategy",
-      "Design",
-      "Engineering",
-      "Automation",
-      "Operations",
-      "Brand",
-      "Commercialization",
-      "Corporate governance",
+      { en: "Validation", es: "Validación", fr: "Validation" },
+      { en: "Product strategy", es: "Estrategia de producto", fr: "Stratégie produit" },
+      { en: "Design", es: "Diseño", fr: "Design" },
+      { en: "Engineering", es: "Ingeniería", fr: "Ingénierie" },
+      { en: "Automation", es: "Automatización", fr: "Automatisation" },
+      { en: "Operations", es: "Operaciones", fr: "Opérations" },
+      { en: "Brand", es: "Marca", fr: "Marque" },
+      { en: "Commercialization", es: "Comercialización", fr: "Commercialisation" },
+      { en: "Corporate governance", es: "Gobierno empresarial", fr: "Gouvernance d'entreprise" },
     ],
   },
   {
-    title: "How we work",
+    title: {
+      en: "How we work",
+      es: "Cómo trabajamos",
+      fr: "Comment nous travaillons",
+    },
     items: [
-      "Initial review",
-      "Discovery",
-      "Venture assessment",
-      "Structure and responsibilities",
-      "Build and launch",
-      "Long-term operation",
+      { en: "Initial review", es: "Revisión inicial", fr: "Examen initial" },
+      { en: "Discovery", es: "Descubrimiento", fr: "Découverte" },
+      { en: "Venture assessment", es: "Evaluación del proyecto", fr: "Évaluation du projet" },
+      {
+        en: "Structure and responsibilities",
+        es: "Estructura y responsabilidades",
+        fr: "Structure et responsabilités",
+      },
+      { en: "Build and launch", es: "Construcción y lanzamiento", fr: "Construction et lancement" },
+      { en: "Long-term operation", es: "Operación de largo plazo", fr: "Exploitation à long terme" },
     ],
   },
   {
-    title: "Evaluation criteria",
+    title: {
+      en: "Evaluation criteria",
+      es: "Criterios de evaluación",
+      fr: "Critères d'évaluation",
+    },
     items: [
-      "Identifiable problem",
-      "Sufficiently broad market",
-      "Committed team",
-      "Execution capacity",
-      "Strategic fit",
-      "Potential to build a sustainable advantage",
+      { en: "Identifiable problem", es: "Problema identificable", fr: "Problème identifiable" },
+      { en: "Sufficiently broad market", es: "Mercado suficientemente amplio", fr: "Marché suffisamment large" },
+      { en: "Committed team", es: "Equipo comprometido", fr: "Équipe engagée" },
+      { en: "Execution capacity", es: "Capacidad de ejecución", fr: "Capacité d'exécution" },
+      { en: "Strategic fit", es: "Encaje estratégico", fr: "Alignement stratégique" },
+      {
+        en: "Potential to build a sustainable advantage",
+        es: "Posibilidad de construir una ventaja sostenible",
+        fr: "Potentiel de construire un avantage durable",
+      },
     ],
   },
 ];
@@ -552,17 +620,33 @@ export const companies: PortfolioCompany[] = [
     slug: "nevobit",
     relationship: "operated",
     status: "operating-company",
-    category: "Digital services",
+    category: {
+      en: "Digital services",
+      es: "Servicios digitales",
+      fr: "Services numériques",
+    },
     description: {
       en: "Software development company serving Revoluc group companies and external clients.",
       es: "Empresa de desarrollo de software para compañías del grupo Revoluc y clientes externos.",
       fr: "Entreprise de développement logiciel pour les sociétés du groupe Revoluc et des clients externes.",
     },
-    market: "Global",
+    market: {
+      en: "Global",
+      es: "Global",
+      fr: "Global",
+    },
     website: "https://nevobit.co",
-    productName: "Nevobit software services",
+    productName: {
+      en: "Nevobit software services",
+      es: "Servicios de software de Nevobit",
+      fr: "Services logiciels Nevobit",
+    },
     logo: placeholderCompanyLogo,
-    internalResponsible: "Néstor Mosquera",
+    internalResponsible: {
+      en: "Néstor Mosquera",
+      es: "Néstor Mosquera",
+      fr: "Néstor Mosquera",
+    },
     proof: {
       en: "Public website and active service offering.",
       es: "Sitio web público y oferta activa de servicios.",
@@ -611,18 +695,38 @@ export const companies: PortfolioCompany[] = [
     slug: "prooving",
     relationship: "built",
     status: "product-in-market",
-    category: "Digital commerce",
+    category: {
+      en: "Digital commerce",
+      es: "Comercio digital",
+      fr: "Commerce numérique",
+    },
     description: {
       en: "Colombian brand of computers and technology products.",
       es: "Marca colombiana de computadores y productos tecnológicos.",
       fr: "Marque colombienne d'ordinateurs et de produits technologiques.",
     },
-    market: "Colombia",
-    headquarters: "Colombia",
+    market: {
+      en: "Colombia",
+      es: "Colombia",
+      fr: "Colombie",
+    },
+    headquarters: {
+      en: "Colombia",
+      es: "Colombia",
+      fr: "Colombie",
+    },
     website: "https://prooving.com",
-    productName: "Prooving computers and technology products",
+    productName: {
+      en: "Prooving computers and technology products",
+      es: "Computadores y productos tecnológicos Prooving",
+      fr: "Ordinateurs et produits technologiques Prooving",
+    },
     logo: placeholderCompanyLogo,
-    internalResponsible: "Néstor Mosquera",
+    internalResponsible: {
+      en: "Néstor Mosquera",
+      es: "Néstor Mosquera",
+      fr: "Néstor Mosquera",
+    },
     proof: {
       en: "Defined product category and commercial market.",
       es: "Categoría de producto y mercado comercial definidos.",
@@ -671,16 +775,32 @@ export const companies: PortfolioCompany[] = [
     slug: "helebba",
     relationship: "built",
     status: "venture-in-development",
-    category: "Enterprise software",
+    category: {
+      en: "Enterprise software",
+      es: "Software empresarial",
+      fr: "Logiciels d'entreprise",
+    },
     description: {
       en: "Modular business management platform for Latin American small and medium-sized companies.",
       es: "Plataforma modular de gestión empresarial para pymes latinoamericanas.",
       fr: "Plateforme modulaire de gestion d'entreprise pour les PME latino-américaines.",
     },
-    market: "Latin America",
-    productName: "Helebba platform",
+    market: {
+      en: "Latin America",
+      es: "América Latina",
+      fr: "Amérique latine",
+    },
+    productName: {
+      en: "Helebba platform",
+      es: "Plataforma Helebba",
+      fr: "Plateforme Helebba",
+    },
     logo: placeholderCompanyLogo,
-    internalResponsible: "Néstor Mosquera",
+    internalResponsible: {
+      en: "Néstor Mosquera",
+      es: "Néstor Mosquera",
+      fr: "Néstor Mosquera",
+    },
     proof: {
       en: "Defined product scope, roadmap and active platform work.",
       es: "Alcance de producto, roadmap y trabajo activo de plataforma definidos.",
@@ -724,16 +844,32 @@ export const companies: PortfolioCompany[] = [
     slug: "loobic",
     relationship: "built",
     status: "venture-in-development",
-    category: "Professional networks",
+    category: {
+      en: "Professional networks",
+      es: "Redes profesionales",
+      fr: "Réseaux professionnels",
+    },
     description: {
       en: "Professional network for connecting people, companies and opportunities.",
       es: "Red profesional para conectar personas, empresas y oportunidades.",
       fr: "Réseau professionnel pour connecter personnes, entreprises et opportunités.",
     },
-    market: "Latin America",
-    productName: "Loobic network",
+    market: {
+      en: "Latin America",
+      es: "América Latina",
+      fr: "Amérique latine",
+    },
+    productName: {
+      en: "Loobic network",
+      es: "Red Loobic",
+      fr: "Réseau Loobic",
+    },
     logo: placeholderCompanyLogo,
-    internalResponsible: "Néstor Mosquera",
+    internalResponsible: {
+      en: "Néstor Mosquera",
+      es: "Néstor Mosquera",
+      fr: "Néstor Mosquera",
+    },
     proof: {
       en: "Defined product direction and venture roadmap.",
       es: "Dirección de producto y roadmap del venture definidos.",
@@ -777,16 +913,32 @@ export const companies: PortfolioCompany[] = [
     slug: "lytos",
     relationship: "built",
     status: "venture-in-development",
-    category: "Customer operations",
+    category: {
+      en: "Customer operations",
+      es: "Operaciones de clientes",
+      fr: "Opérations client",
+    },
     description: {
       en: "Support, requests and ticket management platform.",
       es: "Plataforma de soporte, solicitudes y gestión de tickets.",
       fr: "Plateforme de support, demandes et gestion de tickets.",
     },
-    market: "Latin America",
-    productName: "Lytos support platform",
+    market: {
+      en: "Latin America",
+      es: "América Latina",
+      fr: "Amérique latine",
+    },
+    productName: {
+      en: "Lytos support platform",
+      es: "Plataforma de soporte Lytos",
+      fr: "Plateforme de support Lytos",
+    },
     logo: placeholderCompanyLogo,
-    internalResponsible: "Néstor Mosquera",
+    internalResponsible: {
+      en: "Néstor Mosquera",
+      es: "Néstor Mosquera",
+      fr: "Néstor Mosquera",
+    },
     proof: {
       en: "Defined product category and operating use case.",
       es: "Categoría de producto y caso de uso operativo definidos.",
@@ -830,17 +982,37 @@ export const companies: PortfolioCompany[] = [
     slug: "itaaj-realty",
     relationship: "partner",
     status: "partner-venture",
-    category: "Real estate technology",
+    category: {
+      en: "Real estate technology",
+      es: "Tecnología inmobiliaria",
+      fr: "Technologie immobilière",
+    },
     description: {
       en: "Real estate marketplace for buying, renting and sharing housing in Mexico.",
       es: "Marketplace inmobiliario para comprar, rentar y compartir vivienda en México.",
       fr: "Marketplace immobilier pour acheter, louer et partager un logement au Mexique.",
     },
-    market: "Mexico",
-    headquarters: "Mexico",
-    productName: "Itaaj Realty marketplace",
+    market: {
+      en: "Mexico",
+      es: "México",
+      fr: "Mexique",
+    },
+    headquarters: {
+      en: "Mexico",
+      es: "México",
+      fr: "Mexique",
+    },
+    productName: {
+      en: "Itaaj Realty marketplace",
+      es: "Marketplace Itaaj Realty",
+      fr: "Marketplace Itaaj Realty",
+    },
     logo: placeholderCompanyLogo,
-    internalResponsible: "Partner leadership with Revoluc participation",
+    internalResponsible: {
+      en: "Partner leadership with Revoluc participation",
+      es: "Liderazgo del aliado con participación de Revoluc",
+      fr: "Direction partenaire avec participation de Revoluc",
+    },
     proof: {
       en: "Partner venture with defined real estate market and product scope.",
       es: "Venture aliado con mercado inmobiliario y alcance de producto definidos.",

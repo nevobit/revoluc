@@ -41,7 +41,7 @@ export default async function IndexPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className={styles.groupBand} aria-label="Revoluc group companies">
+      <section className={styles.groupBand} aria-label={localize(groupBandAriaLabel, lang)}>
         <p className={styles.groupBandTitle}>{localize(groupBandLabel, lang)}</p>
         <div className={styles.groupLogoViewport}>
           <div className={styles.groupLogoTrack}>
@@ -50,7 +50,11 @@ export default async function IndexPage({ params }: PageProps) {
                 {featuredCompanies.map((company) => (
                   <div className={styles.groupLogoSlot} data-logo={company.slug} key={`${company.slug}-${set}`}>
                     {company.logo !== placeholderCompanyLogo ? (
-                      <img className={styles.groupLogoImage} src={company.logo} alt={`${company.name} logo`} />
+                      <img
+                        className={styles.groupLogoImage}
+                        src={company.logo}
+                        alt={`${company.name} ${localize(logoAltLabel, lang)}`}
+                      />
                     ) : (
                       <span className={styles.groupLogoWordmark}>{company.name}</span>
                     )}
@@ -70,8 +74,8 @@ export default async function IndexPage({ params }: PageProps) {
         </div>
         <div className={styles.modelGrid}>
           {operationalModel.map((item) => (
-            <article className={styles.modelItem} key={item.label}>
-              <strong>{item.label}</strong>
+            <article className={styles.modelItem} key={item.label.en}>
+              <strong>{localize(item.label, lang)}</strong>
               <p>{localize(item.description, lang)}</p>
             </article>
           ))}
@@ -81,7 +85,7 @@ export default async function IndexPage({ params }: PageProps) {
             <h3>{localize(modelLabels.infrastructure, lang)}</h3>
             <ul>
               {sharedInfrastructure.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item.en}>{localize(item, lang)}</li>
               ))}
             </ul>
           </div>
@@ -89,7 +93,7 @@ export default async function IndexPage({ params }: PageProps) {
             <h3>{localize(modelLabels.focus, lang)}</h3>
             <ul>
               {focusAreas.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item.en}>{localize(item, lang)}</li>
               ))}
             </ul>
           </div>
@@ -119,11 +123,11 @@ export default async function IndexPage({ params }: PageProps) {
                   </div>
                   <div>
                     <dt>{localize(fieldLabels.market, lang)}</dt>
-                    <dd>{company.market}</dd>
+                    <dd>{localize(company.market, lang)}</dd>
                   </div>
                   <div>
                     <dt>{localize(fieldLabels.product, lang)}</dt>
-                    <dd>{company.productName}</dd>
+                    <dd>{localize(company.productName, lang)}</dd>
                   </div>
                 </dl>
               </div>
@@ -148,6 +152,18 @@ const groupBandLabel = {
   en: "Revoluc group",
   es: "Grupo Revoluc",
   fr: "Groupe Revoluc",
+};
+
+const groupBandAriaLabel = {
+  en: "Revoluc group companies",
+  es: "Compañías del grupo Revoluc",
+  fr: "Entreprises du groupe Revoluc",
+};
+
+const logoAltLabel = {
+  en: "logo",
+  es: "logo",
+  fr: "logo",
 };
 
 const fieldLabels = {

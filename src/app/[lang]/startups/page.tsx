@@ -20,12 +20,12 @@ const Startups = async ({ params }: PageProps) => {
 
         <div className={styles.links}>
           {ventureBuildingSections.map((section) => (
-            <article className={styles.link} key={section.title}>
+            <article className={styles.link} key={section.title.en}>
               <div>
-                <strong>{section.title}</strong>
+                <strong>{localize(section.title, lang)}</strong>
                 <ul className={styles.itemList}>
                   {section.items.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item.en}>{localize(item, lang)}</li>
                   ))}
                 </ul>
               </div>
@@ -46,6 +46,6 @@ export default Startups;
 
 const eyebrowLabel = {
   en: "Incubation and venture building",
-  es: "Incubación y venture building",
-  fr: "Incubation et venture building",
+  es: "Incubación y construcción de empresas",
+  fr: "Incubation et construction d'entreprises",
 };

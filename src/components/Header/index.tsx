@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import styles from './Header.module.css';
 import Image from 'next/image';
 import { useLocale } from '@/hooks/useLocale';
-import { corporateTruth } from '@/content/site';
+import { corporateTruth, localize } from '@/content/site';
 import { usePathname, useRouter } from 'next/navigation'
 import { Locale } from '../../../i18n-config';
 const Header = () => {
@@ -32,7 +32,7 @@ const Header = () => {
           <Image
           className={styles.logo}
             src="/img/logo192.png"
-            alt="Revoluc logo"
+            alt={localize(headerLabels.logoAlt, activeLocale)}
             height={100}
             width={100}
           />
@@ -40,7 +40,7 @@ const Header = () => {
       <button
         className={styles.menu}
         type="button"
-        aria-label={openMenu ? "Close navigation menu" : "Open navigation menu"}
+        aria-label={openMenu ? localize(headerLabels.closeMenu, activeLocale) : localize(headerLabels.openMenu, activeLocale)}
         aria-expanded={openMenu}
         onClick={() => setOpenMenu(!openMenu)}
       >
@@ -127,7 +127,7 @@ const Header = () => {
             <select onChange={changeLanguage} value={locale} >
               <option value="en">English</option>
               <option value="es">Español</option>
-              <option value="fr">French</option>
+              <option value="fr">Français</option>
             </select>
           </div>
         </div>
@@ -155,3 +155,21 @@ const Header = () => {
 };
 
 export default Header;
+
+const headerLabels = {
+  logoAlt: {
+    en: "Revoluc logo",
+    es: "Logo de Revoluc",
+    fr: "Logo Revoluc",
+  },
+  openMenu: {
+    en: "Open navigation menu",
+    es: "Abrir menú de navegación",
+    fr: "Ouvrir le menu de navigation",
+  },
+  closeMenu: {
+    en: "Close navigation menu",
+    es: "Cerrar menú de navegación",
+    fr: "Fermer le menu de navigation",
+  },
+};

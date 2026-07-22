@@ -61,7 +61,7 @@ const CompanyProfile = async ({ params }: PageProps) => {
           <section className={styles.detailSection}>
             <h2>{localize(labels.evidence, lang)}</h2>
             {company.screenshot ? (
-              <img src={company.screenshot} alt={`${company.name} screenshot`} />
+              <img src={company.screenshot} alt={`${company.name} ${localize(labels.screenshotAlt, lang)}`} />
             ) : null}
             <ul className={styles.evidenceList}>
               {company.evidenceItems.map((item) => (
@@ -78,11 +78,11 @@ const CompanyProfile = async ({ params }: PageProps) => {
               </div>
               <div>
                 <dt>{localize(labels.product, lang)}</dt>
-                <dd>{company.productName}</dd>
+                <dd>{localize(company.productName, lang)}</dd>
               </div>
               <div>
                 <dt>{localize(labels.market, lang)}</dt>
-                <dd>{company.market}</dd>
+                <dd>{localize(company.market, lang)}</dd>
               </div>
               <div>
                 <dt>{localize(labels.relationship, lang)}</dt>
@@ -90,12 +90,12 @@ const CompanyProfile = async ({ params }: PageProps) => {
               </div>
               <div>
                 <dt>{localize(labels.responsible, lang)}</dt>
-                <dd>{company.internalResponsible}</dd>
+                <dd>{localize(company.internalResponsible, lang)}</dd>
               </div>
               {company.headquarters ? (
                 <div>
                   <dt>{localize(labels.headquarters, lang)}</dt>
-                  <dd>{company.headquarters}</dd>
+                  <dd>{localize(company.headquarters, lang)}</dd>
                 </div>
               ) : null}
               <div>
@@ -177,5 +177,10 @@ const labels = {
     en: "Proof of existence",
     es: "Prueba de existencia",
     fr: "Preuve d'existence",
+  },
+  screenshotAlt: {
+    en: "screenshot",
+    es: "captura",
+    fr: "capture d'écran",
   },
 };

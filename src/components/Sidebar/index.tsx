@@ -16,7 +16,7 @@ export default async function Sidebar({ params }: PageProps) {
 
     return (
         <div className={styles.sidemenu}>
-            <Link href={`/${lang}`} title='Home'>
+            <Link href={`/${lang}`} title={t['banner'].home}>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>
                         <p>{t['banner'].home}</p>
@@ -24,7 +24,7 @@ export default async function Sidebar({ params }: PageProps) {
                         </div>    
                     </div>        
             </Link>
-            <Link href={`/${lang}/about`} title='About'>
+            <Link href={`/${lang}/about`} title={t['banner'].about}>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>
                         <p>{t['banner'].about}</p>
@@ -32,7 +32,7 @@ export default async function Sidebar({ params }: PageProps) {
                         </div>    
                     </div>        
             </Link>
-            <Link href={`/${lang}/companies`} title='Companies'>
+            <Link href={`/${lang}/companies`} title={t['banner'].portfolio}>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>
                         <p>{t['banner'].portfolio}</p>
@@ -40,7 +40,7 @@ export default async function Sidebar({ params }: PageProps) {
                         </div>    
                     </div>        
             </Link>
-            <Link href={`/${lang}/mission`} title='Mission'>
+            <Link href={`/${lang}/mission`} title={t['banner'].mission}>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>
                         <p>{t['banner'].mission}</p>
@@ -48,7 +48,7 @@ export default async function Sidebar({ params }: PageProps) {
                         </div>    
                     </div>        
             </Link>
-            <Link href={`/${lang}/startups`} title='Startups'>
+            <Link href={`/${lang}/startups`} title={t['banner'].startups}>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>
                         <p>{t['banner'].startups}</p>
@@ -65,7 +65,7 @@ export default async function Sidebar({ params }: PageProps) {
                     </div>        
             </a>
             </Link> */}
-            <Link href={`/${lang}/team`} title='Team'>
+            <Link href={`/${lang}/team`} title={t['banner'].team}>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>
                         <p>{t['banner'].team}</p>
@@ -73,7 +73,7 @@ export default async function Sidebar({ params }: PageProps) {
                         </div>    
                     </div>        
             </Link>
-            <Link href={`/${lang}/social`} title='Social'>
+            <Link href={`/${lang}/social`} title={t['banner'].social}>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>
                         <p>{t['banner'].social}</p>
@@ -81,7 +81,7 @@ export default async function Sidebar({ params }: PageProps) {
                         </div>    
                     </div>        
             </Link>
-            <Link href={`/${lang}/contact`} title='Contact'>
+            <Link href={`/${lang}/contact`} title={t['banner'].contact}>
                     <div className={styles.btn}>
                         <div className={styles.btn1}>
                         <p>{t['banner'].contact}</p>

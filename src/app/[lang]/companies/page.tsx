@@ -47,7 +47,7 @@ const Companies = async ({ params }: PageProps) => {
                       <div>
                         <p className={styles.status}>{localize(statusLabels[company.status], lang)}</p>
                         <h3>{company.name}</h3>
-                        <p className={styles.category}>{company.category}</p>
+                        <p className={styles.category}>{localize(company.category, lang)}</p>
                         <p className={styles.description}>{localize(company.description, lang)}</p>
                         <dl className={styles.meta}>
                           <div>
@@ -56,11 +56,11 @@ const Companies = async ({ params }: PageProps) => {
                           </div>
                           <div>
                             <dt>{localize(fieldLabels.market, lang)}</dt>
-                            <dd>{company.market}</dd>
+                            <dd>{localize(company.market, lang)}</dd>
                           </div>
                           <div>
                             <dt>{localize(fieldLabels.product, lang)}</dt>
-                            <dd>{company.productName}</dd>
+                            <dd>{localize(company.productName, lang)}</dd>
                           </div>
                         </dl>
                         <Link className={styles.link} href={`/${lang}/companies/${company.slug}`}>
