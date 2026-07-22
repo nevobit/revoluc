@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { contactContent, contactReasons, localize } from "@/content/site";
+import { contactContent, contactReasons, corporateTruth, localize } from "@/content/site";
 import { Locale } from "../../../../i18n-config";
 import styles from "../ContentPage.module.css";
 
@@ -81,8 +81,26 @@ export default function ContactForm({ lang }: ContactFormProps) {
         throw new Error("Contact request failed");
       }
 
+      const reason = String(payload.reason ?? "General inquiry");
+      const body = [
+        `Full name: ${payload.fullName ?? ""}`,
+        `Work email: ${payload.workEmail ?? ""}`,
+        `Company or project: ${payload.companyOrProject ?? ""}`,
+        `Country: ${payload.country ?? ""}`,
+        `Reason: ${reason}`,
+        "",
+        "Message:",
+        `${payload.message ?? ""}`,
+        "",
+        `Source: ${window.location.pathname}${window.location.search}`,
+      ].join("\n");
+
       form.reset();
       setSubmitted(true);
+      window.location.href = `mailto:${corporateTruth.publicEmail}?${new URLSearchParams({
+        subject: `Revoluc inquiry: ${reason}`,
+        body,
+      }).toString()}`;
     } catch {
       setFailed(true);
     }

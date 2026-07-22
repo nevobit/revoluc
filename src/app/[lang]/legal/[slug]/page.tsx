@@ -17,19 +17,19 @@ const documents = {
       },
       {
         heading: "Use of data",
-        body: "Revoluc uses contact information to review inquiries, classify the opportunity type, respond to the sender and route the conversation internally.",
+        body: "Revoluc uses contact information to review inquiries, classify the opportunity type, respond to the sender and route the conversation to the appropriate internal reviewer.",
       },
       {
-        heading: "Storage and providers",
-        body: "The current website source does not include a connected CRM, database, analytics provider or email delivery provider. This policy must be updated before those services are enabled.",
+        heading: "Form submission and storage",
+        body: "Contact form submissions are validated by the website and prepared as an email addressed to Revoluc. Revoluc receives the inquiry when the sender sends that email. The website does not currently store submissions in a database, CRM or automated email delivery provider.",
       },
       {
         heading: "Cookies and analytics",
-        body: "The current website source does not include custom analytics scripts or custom cookie-setting code. Essential platform behavior may depend on the hosting provider.",
+        body: "Revoluc does not currently use non-essential analytics or advertising cookies on this website. Essential platform behavior may depend on the hosting provider.",
       },
       {
         heading: "Retention and access",
-        body: "Only people responsible for reviewing Revoluc inquiries should access submitted information. Retention periods should be defined before persistent lead storage is enabled.",
+        body: "When an inquiry is sent by email, it may be retained in Revoluc email records for as long as needed to review, respond to and document the conversation. Access is limited to people responsible for reviewing Revoluc inquiries.",
       },
       {
         heading: "Deletion requests",
@@ -63,11 +63,11 @@ const documents = {
     sections: [
       {
         heading: "Current cookie use",
-        body: "The current website source does not include custom cookie-setting code or custom analytics tags.",
+        body: "Revoluc does not currently use non-essential analytics or advertising cookies on this website.",
       },
       {
         heading: "Future services",
-        body: "If analytics, advertising, CRM, security or personalization tools are added, this policy should be updated with provider names, purposes and retention details.",
+        body: "If analytics, advertising, CRM, security or personalization tools are introduced, Revoluc will update this policy with provider names, purposes and retention details.",
       },
       {
         heading: "Contact",
@@ -84,7 +84,7 @@ const documents = {
       },
       {
         heading: "Current measures",
-        body: "The contact endpoint validates required fields and includes a basic honeypot field for spam reduction. Additional rate limiting, storage controls and alerting should be added when persistent lead capture is connected.",
+        body: "Contact form submissions are validated and protected using basic anti-spam measures.",
       },
       {
         heading: "Responsible disclosure",
@@ -101,7 +101,7 @@ const documents = {
       },
       {
         heading: "Known work",
-        body: "The site should continue to be reviewed for keyboard navigation, semantic labels, color contrast, form errors and responsive layout issues.",
+        body: "Revoluc reviews the website for keyboard navigation, semantic labels, color contrast, form errors and responsive layout issues as the site evolves.",
       },
       {
         heading: "Feedback",

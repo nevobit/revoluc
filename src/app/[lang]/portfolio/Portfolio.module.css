@@ -233,6 +233,34 @@
   border: 1px solid rgba(133, 150, 173, 0.2);
 }
 
+.evidenceList {
+  display: grid;
+  gap: 1.2rem;
+  margin: 1.6rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.evidenceList li {
+  position: relative;
+  padding-left: 1.8rem;
+  color: #5f718a;
+  font-size: 1.35rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.evidenceList li::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background: #1971e4;
+}
+
 .screenshotPlaceholder {
   display: grid;
   place-items: center;

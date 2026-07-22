@@ -59,15 +59,15 @@ const CompanyProfile = async ({ params }: PageProps) => {
           </section>
 
           <section className={styles.detailSection}>
-            <h2>{localize(labels.screenshots, lang)}</h2>
+            <h2>{localize(labels.evidence, lang)}</h2>
             {company.screenshot ? (
               <img src={company.screenshot} alt={`${company.name} screenshot`} />
-            ) : (
-              <div className={styles.screenshotPlaceholder}>
-                <span>{company.name.slice(0, 2)}</span>
-                <p>{localize(labels.realAssetsPending, lang)}</p>
-              </div>
-            )}
+            ) : null}
+            <ul className={styles.evidenceList}>
+              {company.evidenceItems.map((item) => (
+                <li key={item.en}>{localize(item, lang)}</li>
+              ))}
+            </ul>
           </section>
 
           <aside className={styles.factPanel}>
@@ -138,15 +138,10 @@ const labels = {
     es: "Solución",
     fr: "Solution",
   },
-  screenshots: {
-    en: "Product evidence",
-    es: "Evidencia del producto",
-    fr: "Preuve produit",
-  },
-  realAssetsPending: {
-    en: "Real screenshots or product photos should be added here before making stronger visual claims.",
-    es: "Aquí deben agregarse capturas reales o fotos de producto antes de hacer afirmaciones visuales más fuertes.",
-    fr: "Des captures réelles ou photos produit doivent être ajoutées ici avant des affirmations visuelles plus fortes.",
+  evidence: {
+    en: "Evidence and scope",
+    es: "Evidencia y alcance",
+    fr: "Preuve et périmètre",
   },
   status: {
     en: "Status",

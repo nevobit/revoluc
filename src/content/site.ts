@@ -29,6 +29,7 @@ export type PortfolioCompany = {
   proof: LocalizedString;
   problem: LocalizedString;
   solution: LocalizedString;
+  evidenceItems: LocalizedString[];
   ctaLabel: LocalizedString;
 };
 
@@ -295,9 +296,9 @@ export const teamContent = {
     fr: "Direction",
   },
   intro: {
-    en: "Revoluc's public leadership page presents active responsibility inside the group, not internal placeholders.",
-    es: "La página pública de liderazgo presenta responsabilidad real dentro del grupo, no instrucciones internas.",
-    fr: "La page publique de direction présente les responsabilités actives du groupe, pas des notes internes.",
+    en: "Revoluc is led by operators responsible for the group's strategy, technology and portfolio development.",
+    es: "Revoluc es liderada por operadores responsables de la estrategia del grupo, la tecnología y el desarrollo del portafolio.",
+    fr: "Revoluc est dirigée par des opérateurs responsables de la stratégie du groupe, de la technologie et du développement du portefeuille.",
   },
 };
 
@@ -332,14 +333,14 @@ export const contactContent = {
     fr: "Partagez le contexte afin que la bonne personne puisse examiner l'opportunité et répondre avec une prochaine étape utile.",
   },
   submit: {
-    en: "Send inquiry",
-    es: "Enviar solicitud",
-    fr: "Envoyer la demande",
+    en: "Prepare inquiry",
+    es: "Preparar solicitud",
+    fr: "Préparer la demande",
   },
   confirmation: {
-    en: "Thanks. Your inquiry is ready for Revoluc's team to review.",
-    es: "Gracias. Tu solicitud quedó lista para revisión por el equipo de Revoluc.",
-    fr: "Merci. Votre demande est prête à être examinée par l'équipe Revoluc.",
+    en: "Your inquiry has been prepared in your email client. Please send it so Revoluc can receive and review it.",
+    es: "Tu solicitud se preparó en tu cliente de correo. Por favor envíala para que Revoluc pueda recibirla y revisarla.",
+    fr: "Votre demande a été préparée dans votre client email. Veuillez l'envoyer afin que Revoluc puisse la recevoir et l'examiner.",
   },
   privacyConsent: {
     en: "I agree that Revoluc Inc. may use this information to respond to my inquiry.",
@@ -441,9 +442,9 @@ export const socialContent = {
     fr: "Revoluc Foundation est la plateforme d'engagement social du groupe pour soutenir les organisations à but non lucratif, les dons et les initiatives appuyées par la technologie.",
   },
   note: {
-    en: "Impact claims should be published with evidence: partner, contribution type, period and measurable outcome.",
-    es: "Las afirmaciones de impacto deben publicarse con evidencia: aliado, tipo de contribución, periodo y resultado medible.",
-    fr: "Les affirmations d'impact doivent être publiées avec des preuves : partenaire, type de contribution, période et résultat mesurable.",
+    en: "We publish supported initiatives with clear information about the organization, contribution, timeframe and measurable outcome.",
+    es: "Publicamos iniciativas apoyadas con información clara sobre la organización, contribución, periodo y resultado medible.",
+    fr: "Nous publions les initiatives soutenues avec des informations claires sur l'organisation, la contribution, la période et le résultat mesurable.",
   },
 };
 
@@ -467,9 +468,9 @@ export const socialImpactAreas = [
   {
     label: "Evidence",
     description: {
-      en: "Each public initiative should include the organization supported, contribution, timeframe and result.",
-      es: "Cada iniciativa pública debe incluir organización apoyada, contribución, periodo y resultado.",
-      fr: "Chaque initiative publique doit inclure l'organisation soutenue, la contribution, la période et le résultat.",
+      en: "Supported initiatives are documented with the organization, contribution, timeframe and result.",
+      es: "Las iniciativas apoyadas se documentan con organización, contribución, periodo y resultado.",
+      fr: "Les initiatives soutenues sont documentées avec l'organisation, la contribution, la période et le résultat.",
     },
   },
 ];
@@ -577,6 +578,28 @@ export const companies: PortfolioCompany[] = [
       es: "Nevobit entrega estrategia de software, desarrollo y soporte técnico para compañías del grupo y aliados externos.",
       fr: "Nevobit fournit stratégie logicielle, développement et support technique aux sociétés du groupe et partenaires externes.",
     },
+    evidenceItems: [
+      {
+        en: "Services: product strategy, custom software development, web platforms, integrations and technical support.",
+        es: "Servicios: estrategia de producto, desarrollo de software a la medida, plataformas web, integraciones y soporte técnico.",
+        fr: "Services : stratégie produit, développement logiciel sur mesure, plateformes web, intégrations et support technique.",
+      },
+      {
+        en: "Technologies: modern web applications, APIs, databases, cloud deployment and business workflow automation.",
+        es: "Tecnologías: aplicaciones web modernas, APIs, bases de datos, despliegue cloud y automatización de flujos empresariales.",
+        fr: "Technologies : applications web modernes, API, bases de données, déploiement cloud et automatisation de flux métier.",
+      },
+      {
+        en: "Case work: software execution for Revoluc portfolio companies and external client projects.",
+        es: "Caso real: ejecución de software para compañías del portafolio Revoluc y proyectos de clientes externos.",
+        fr: "Cas réel : exécution logicielle pour les sociétés du portefeuille Revoluc et des projets clients externes.",
+      },
+      {
+        en: "Public website: nevobit.co.",
+        es: "Sitio público: nevobit.co.",
+        fr: "Site public : nevobit.co.",
+      },
+    ],
     ctaLabel: {
       en: "Visit Nevobit",
       es: "Visitar Nevobit",
@@ -596,6 +619,7 @@ export const companies: PortfolioCompany[] = [
     },
     market: "Colombia",
     headquarters: "Colombia",
+    website: "https://prooving.com",
     productName: "Prooving computers and technology products",
     logo: placeholderCompanyLogo,
     internalResponsible: "Néstor Mosquera",
@@ -614,10 +638,32 @@ export const companies: PortfolioCompany[] = [
       es: "Prooving opera como una marca de productos tecnológicos para computadores y dispositivos relacionados en Colombia.",
       fr: "Prooving opère comme une marque de produits technologiques pour ordinateurs et appareils associés en Colombie.",
     },
+    evidenceItems: [
+      {
+        en: "Product lines: Aurora, Wolf, Vortex and additional Prooving computer configurations when available.",
+        es: "Líneas de producto: Aurora, Wolf, Vortex y configuraciones adicionales de computadores Prooving cuando estén disponibles.",
+        fr: "Lignes produit : Aurora, Wolf, Vortex et configurations d'ordinateurs Prooving supplémentaires selon disponibilité.",
+      },
+      {
+        en: "Categories: computers, technology products and related accessories for the Colombian market.",
+        es: "Categorías: computadores, productos tecnológicos y accesorios relacionados para el mercado colombiano.",
+        fr: "Catégories : ordinateurs, produits technologiques et accessoires associés pour le marché colombien.",
+      },
+      {
+        en: "Availability: product in market through Prooving's commercial website and active sales channels.",
+        es: "Disponibilidad: producto en mercado a través del sitio comercial de Prooving y canales de venta activos.",
+        fr: "Disponibilité : produit sur le marché via le site commercial Prooving et des canaux de vente actifs.",
+      },
+      {
+        en: "Public website: prooving.com.",
+        es: "Sitio público: prooving.com.",
+        fr: "Site public : prooving.com.",
+      },
+    ],
     ctaLabel: {
-      en: "Contact about Prooving",
-      es: "Consultar sobre Prooving",
-      fr: "Contacter à propos de Prooving",
+      en: "Visit Prooving",
+      es: "Visitar Prooving",
+      fr: "Visiter Prooving",
     },
   },
   {
@@ -650,6 +696,23 @@ export const companies: PortfolioCompany[] = [
       es: "Helebba se construye como una plataforma modular que centraliza flujos empresariales clave para pymes latinoamericanas.",
       fr: "Helebba est construite comme une plateforme modulaire qui centralise les flux clés des PME latino-américaines.",
     },
+    evidenceItems: [
+      {
+        en: "Modules: dashboard, invoicing, contacts, products, expenses and payments.",
+        es: "Módulos: dashboard, facturación, contactos, productos, gastos y pagos.",
+        fr: "Modules : tableau de bord, facturation, contacts, produits, dépenses et paiements.",
+      },
+      {
+        en: "Target users: Latin American SMEs that need connected operational and administrative workflows.",
+        es: "Usuarios objetivo: pymes latinoamericanas que necesitan flujos operativos y administrativos conectados.",
+        fr: "Utilisateurs cible : PME latino-américaines qui ont besoin de flux opérationnels et administratifs connectés.",
+      },
+      {
+        en: "Current status: venture in development with defined product scope and roadmap.",
+        es: "Estado actual: venture en desarrollo con alcance de producto y roadmap definidos.",
+        fr: "Statut actuel : venture en développement avec périmètre produit et roadmap définis.",
+      },
+    ],
     ctaLabel: {
       en: "Ask about Helebba",
       es: "Consultar sobre Helebba",
@@ -686,6 +749,23 @@ export const companies: PortfolioCompany[] = [
       es: "Loobic se desarrolla como una red profesional centrada en personas, empresas y oportunidades.",
       fr: "Loobic est développé comme un réseau professionnel centré sur les personnes, les entreprises et les opportunités.",
     },
+    evidenceItems: [
+      {
+        en: "Core scope: professional profiles, company presence, opportunity discovery and relationship building.",
+        es: "Alcance central: perfiles profesionales, presencia de empresas, descubrimiento de oportunidades y construcción de relaciones.",
+        fr: "Périmètre central : profils professionnels, présence d'entreprises, découverte d'opportunités et création de relations.",
+      },
+      {
+        en: "Market: Latin American professional networks and digital opportunity discovery.",
+        es: "Mercado: redes profesionales latinoamericanas y descubrimiento digital de oportunidades.",
+        fr: "Marché : réseaux professionnels latino-américains et découverte numérique d'opportunités.",
+      },
+      {
+        en: "Current status: in development with defined product direction and venture roadmap.",
+        es: "Estado actual: en desarrollo con dirección de producto y roadmap del venture definidos.",
+        fr: "Statut actuel : en développement avec direction produit et roadmap du venture définies.",
+      },
+    ],
     ctaLabel: {
       en: "Ask about Loobic",
       es: "Consultar sobre Loobic",
@@ -722,6 +802,23 @@ export const companies: PortfolioCompany[] = [
       es: "Lytos se construye para organizar solicitudes, colas de soporte, tickets y flujos de seguimiento.",
       fr: "Lytos est conçu pour organiser demandes, files de support, tickets et flux de suivi.",
     },
+    evidenceItems: [
+      {
+        en: "Core scope: ticket intake, request management, support queues, assignments and follow-up workflows.",
+        es: "Alcance central: recepción de tickets, gestión de solicitudes, colas de soporte, asignaciones y flujos de seguimiento.",
+        fr: "Périmètre central : réception de tickets, gestion des demandes, files de support, affectations et suivis.",
+      },
+      {
+        en: "Use cases: customer operations, internal support, service requests and incident tracking.",
+        es: "Casos de uso: operaciones de clientes, soporte interno, solicitudes de servicio y seguimiento de incidentes.",
+        fr: "Cas d'usage : opérations client, support interne, demandes de service et suivi d'incidents.",
+      },
+      {
+        en: "Current status: in development with defined product category and operational use case.",
+        es: "Estado actual: en desarrollo con categoría de producto y caso de uso operativo definidos.",
+        fr: "Statut actuel : en développement avec catégorie produit et cas d'usage opérationnel définis.",
+      },
+    ],
     ctaLabel: {
       en: "Ask about Lytos",
       es: "Consultar sobre Lytos",
@@ -759,6 +856,23 @@ export const companies: PortfolioCompany[] = [
       es: "Itaaj Realty es un venture aliado enfocado en un marketplace para comprar, rentar y compartir vivienda en México.",
       fr: "Itaaj Realty est un venture partenaire axé sur un marketplace pour acheter, louer et partager un logement au Mexique.",
     },
+    evidenceItems: [
+      {
+        en: "Marketplace scope: property discovery for buying, renting and shared housing in Mexico.",
+        es: "Alcance del marketplace: descubrimiento de propiedades para comprar, rentar y compartir vivienda en México.",
+        fr: "Périmètre marketplace : découverte de biens pour acheter, louer et partager un logement au Mexique.",
+      },
+      {
+        en: "Initial market: Mexico, with city-level availability published through Itaaj Realty's own channels.",
+        es: "Mercado inicial: México, con disponibilidad por ciudad publicada en los canales propios de Itaaj Realty.",
+        fr: "Marché initial : Mexique, avec disponibilité par ville publiée sur les canaux propres d'Itaaj Realty.",
+      },
+      {
+        en: "Relationship: partner venture; Revoluc participates or collaborates but does not present Itaaj Realty as a fully controlled company.",
+        es: "Relación: venture aliado; Revoluc participa o colabora, pero no presenta Itaaj Realty como una compañía completamente controlada.",
+        fr: "Relation : venture partenaire ; Revoluc participe ou collabore sans présenter Itaaj Realty comme une société entièrement contrôlée.",
+      },
+    ],
     ctaLabel: {
       en: "Ask about Itaaj Realty",
       es: "Consultar sobre Itaaj Realty",
