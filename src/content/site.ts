@@ -1003,9 +1003,9 @@ export const companies: PortfolioCompany[] = [
       fr: "Néstor Mosquera",
     },
     proof: {
-      en: "Defined product category and commercial market.",
-      es: "Categoría de producto y mercado comercial definidos.",
-      fr: "Catégorie de produit et marché commercial définis.",
+      en: "Public commercial website, defined product lines and active sales channels in Colombia.",
+      es: "Sitio comercial público, líneas de producto definidas y canales de venta activos en Colombia.",
+      fr: "Site commercial public, lignes de produits définies et canaux de vente actifs en Colombie.",
     },
     problem: {
       en: "Buyers need accessible computers and technology products with a brand focused on the Colombian market.",

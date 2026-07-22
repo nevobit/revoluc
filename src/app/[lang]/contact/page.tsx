@@ -10,6 +10,7 @@ interface PageProps {
   }>;
   searchParams?: Promise<{
     reason?: string;
+    company?: string;
   }>;
 }
 
@@ -35,7 +36,8 @@ export async function generateMetadata({ params }: PageProps) {
 const Contact = async ({ params, searchParams }: PageProps) => {
   const lang = (await params).lang as Locale;
   const query = await searchParams;
-  const initialReason = query?.reason === "venture-building" ? "Build a company with Revoluc" : "";
+  const initialReason = getInitialReason(query?.reason);
+  const initialCompany = query?.company ?? "";
 
   return (
     <main className={styles.page}>
@@ -43,7 +45,7 @@ const Contact = async ({ params, searchParams }: PageProps) => {
         <p className={styles.eyebrow}>{localize(eyebrowLabel, lang)}</p>
         <h1>{localize(contactContent.title, lang)}</h1>
         <p className={styles.lead}>{localize(contactContent.copy, lang)}</p>
-        <ContactForm lang={lang} initialReason={initialReason} />
+        <ContactForm lang={lang} initialReason={initialReason} initialCompany={initialCompany} />
       </section>
     </main>
   );
@@ -55,4 +57,16 @@ const eyebrowLabel = {
   en: "Partnerships",
   es: "Alianzas",
   fr: "Partenariats",
+};
+
+const getInitialReason = (reason?: string) => {
+  if (reason === "venture-building") {
+    return "Build a company with Revoluc";
+  }
+
+  if (reason === "Portfolio company inquiry") {
+    return "Portfolio company inquiry";
+  }
+
+  return "";
 };

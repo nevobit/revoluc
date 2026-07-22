@@ -8,6 +8,7 @@ import styles from "../ContentPage.module.css";
 type ContactFormProps = {
   lang: Locale;
   initialReason?: string;
+  initialCompany?: string;
 };
 
 const labels = {
@@ -53,7 +54,7 @@ const labels = {
   },
 };
 
-export default function ContactForm({ lang, initialReason = "" }: ContactFormProps) {
+export default function ContactForm({ lang, initialReason = "", initialCompany = "" }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [failed, setFailed] = useState(false);
 
@@ -120,7 +121,7 @@ export default function ContactForm({ lang, initialReason = "" }: ContactFormPro
         </label>
         <label>
           <span>{localize(labels.company, lang)}</span>
-          <input name="companyOrProject" autoComplete="organization" required />
+          <input name="companyOrProject" autoComplete="organization" defaultValue={initialCompany} required />
         </label>
         <label>
           <span>{localize(labels.country, lang)}</span>

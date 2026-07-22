@@ -131,7 +131,13 @@ const CompanyProfile = async ({ params }: PageProps) => {
                 {localize(company.ctaLabel, lang)}
               </a>
             ) : (
-              <Link className={styles.link} href={`/${lang}/contact?reason=Portfolio%20company%20inquiry`}>
+              <Link
+                className={styles.link}
+                href={`/${lang}/contact?${new URLSearchParams({
+                  reason: "Portfolio company inquiry",
+                  company: company.name,
+                }).toString()}`}
+              >
                 {localize(company.ctaLabel, lang)}
               </Link>
             )}

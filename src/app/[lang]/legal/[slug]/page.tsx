@@ -226,9 +226,21 @@ const documents = {
           fr: "Mesures actuelles",
         },
         body: {
-          en: "Contact form submissions are validated and protected using basic anti-spam measures.",
-          es: "Las solicitudes del formulario de contacto se validan y protegen con medidas básicas antispam.",
-          fr: "Les demandes du formulaire de contact sont validées et protégées par des mesures anti-spam de base.",
+          en: "The public website is served over HTTPS in production. Contact form submissions are validated and protected using basic anti-spam measures.",
+          es: "El sitio público se sirve sobre HTTPS en producción. Las solicitudes del formulario de contacto se validan y protegen con medidas básicas antispam.",
+          fr: "Le site public est servi en HTTPS en production. Les demandes du formulaire de contact sont validées et protégées par des mesures anti-spam de base.",
+        },
+      },
+      {
+        heading: {
+          en: "Access and dependencies",
+          es: "Accesos y dependencias",
+          fr: "Accès et dépendances",
+        },
+        body: {
+          en: "Access to the website source, deployment configuration and related operational accounts is limited to authorized maintainers. Dependencies are reviewed during normal maintenance and deployment work.",
+          es: "El acceso al código fuente del sitio, configuración de despliegue y cuentas operativas relacionadas se limita a responsables autorizados. Las dependencias se revisan durante el mantenimiento y despliegue habitual.",
+          fr: "L'accès au code source du site, à la configuration de déploiement et aux comptes opérationnels associés est limité aux responsables autorisés. Les dépendances sont examinées lors de la maintenance et des déploiements habituels.",
         },
       },
       {
@@ -238,9 +250,9 @@ const documents = {
           fr: "Divulgation responsable",
         },
         body: {
-          en: `Security issues can be reported to ${corporateTruth.publicEmail}.`,
-          es: `Los problemas de seguridad pueden reportarse a ${corporateTruth.publicEmail}.`,
-          fr: `Les problèmes de sécurité peuvent être signalés à ${corporateTruth.publicEmail}.`,
+          en: `Security issues involving the public website, contact flow, domain configuration or exposed Revoluc systems can be reported to ${corporateTruth.publicEmail}. Revoluc aims to acknowledge valid reports within a reasonable timeframe and may request enough detail to reproduce and assess the issue.`,
+          es: `Los problemas de seguridad relacionados con el sitio público, flujo de contacto, configuración de dominio o sistemas expuestos de Revoluc pueden reportarse a ${corporateTruth.publicEmail}. Revoluc busca confirmar reportes válidos en un plazo razonable y puede solicitar detalle suficiente para reproducir y evaluar el problema.`,
+          fr: `Les problèmes de sécurité liés au site public, au flux de contact, à la configuration du domaine ou aux systèmes exposés de Revoluc peuvent être signalés à ${corporateTruth.publicEmail}. Revoluc vise à accuser réception des rapports valides dans un délai raisonnable et peut demander les détails nécessaires pour reproduire et évaluer le problème.`,
         },
       },
     ],
