@@ -7,7 +7,7 @@ import { Locale } from '../../../i18n-config'
 import styles from './Footer.module.css'
 
 const Footer = () => {
-  const { t, locale } = useLocale()
+  const { locale } = useLocale()
   const activeLocale = locale as Locale
 
   return (
@@ -24,12 +24,8 @@ const Footer = () => {
     <div className={styles.socials}>
         <p className={styles.socialsP}>
             <Link href={`/${locale}/social`} aria-label={localize(footerLabels.foundation, activeLocale)} title={localize(footerLabels.foundation, activeLocale)}>
-                {t['banner'].social}
+                IN
             </Link>
-            <span>/</span>
-            <a href="mailto:hi@revoluc.com" aria-label={localize(footerLabels.email, activeLocale)} title={localize(footerLabels.email, activeLocale)}>
-              {localize(footerLabels.emailShort, activeLocale)}
-            </a>
             <span>/</span>
             <Link href={`/${locale}/legal/privacy-policy`}>{localize(footerLabels.privacy, activeLocale)}</Link>
             <span>/</span>

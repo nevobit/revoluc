@@ -1,9 +1,9 @@
 .page {
-  min-height: 100vh;
+  min-height: calc(100dvh - 65px);
   width: 100vw;
   background: #ffffff;
   color: #1f3047;
-  padding: 12rem 0 10rem;
+  padding-block: 8rem;
 }
 
 .content {
@@ -68,15 +68,12 @@
 
 .panel {
   margin-top: 4rem;
-  border-top: 1px solid rgba(133, 150, 173, 0.2);
-  border-bottom: 1px solid rgba(133, 150, 173, 0.2);
   padding: 2.8rem 0;
 }
 
 .profile {
   display: grid;
   gap: 2rem;
-  align-items: center;
 }
 
 .avatar {

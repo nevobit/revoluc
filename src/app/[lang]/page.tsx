@@ -7,9 +7,7 @@ import {
   localize,
   operationalModel,
   placeholderCompanyLogo,
-  relationshipLabels,
   sharedInfrastructure,
-  statusLabels,
 } from "@/content/site";
 import styles from "./Home.module.css";
 
@@ -100,44 +98,6 @@ export default async function IndexPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className={styles.portfolioPreview}>
-        <div className={styles.sectionHeader}>
-          <p className={styles.eyebrow}>{localize(portfolioCountLabel, lang)}</p>
-          <h2>{localize(homeContent.portfolioTitle, lang)}</h2>
-          <p>{localize(homeContent.portfolioCopy, lang)}</p>
-        </div>
-        <div className={styles.companyGrid}>
-          {featuredCompanies.map((company) => (
-            <article className={styles.companyCard} key={company.name}>
-              <div className={styles.companyLogo} aria-hidden="true">
-                {company.name.slice(0, 2)}
-              </div>
-              <div>
-                <p className={styles.companyStatus}>{localize(statusLabels[company.status], lang)}</p>
-                <h3>{company.name}</h3>
-                <p>{localize(company.description, lang)}</p>
-                <dl>
-                  <div>
-                    <dt>{localize(fieldLabels.relationship, lang)}</dt>
-                    <dd>{localize(relationshipLabels[company.relationship], lang)}</dd>
-                  </div>
-                  <div>
-                    <dt>{localize(fieldLabels.market, lang)}</dt>
-                    <dd>{localize(company.market, lang)}</dd>
-                  </div>
-                  <div>
-                    <dt>{localize(fieldLabels.product, lang)}</dt>
-                    <dd>{localize(company.productName, lang)}</dd>
-                  </div>
-                </dl>
-              </div>
-            </article>
-          ))}
-        </div>
-        <Link className={styles.textLink} href={`/${lang}/companies`}>
-          {localize(homeContent.primaryCta, lang)}
-        </Link>
-      </section>
     </main>
   );
 }

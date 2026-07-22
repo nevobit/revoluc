@@ -9,7 +9,10 @@ export type PublicCompanyStatus =
   | "venture-in-development"
   | "partner-venture";
 
-export type InternalCompanyStatus = PublicCompanyStatus | "concept" | "archived";
+export type InternalCompanyStatus =
+  | PublicCompanyStatus
+  | "concept"
+  | "archived";
 
 export type PortfolioCompany = {
   name: string;
@@ -115,7 +118,10 @@ export const groupLabels: Record<PublicCompanyStatus, LocalizedString> = {
   },
 };
 
-export const relationshipLabels: Record<PortfolioCompany["relationship"], LocalizedString> = {
+export const relationshipLabels: Record<
+  PortfolioCompany["relationship"],
+  LocalizedString
+> = {
   owned: {
     en: "Owned by Revoluc",
     es: "Propiedad de Revoluc",
@@ -286,23 +292,63 @@ export const operationalModel = [
 ];
 
 export const sharedInfrastructure = [
-  { en: "Product strategy", es: "Estrategia de producto", fr: "Stratégie produit" },
-  { en: "Software engineering", es: "Ingeniería de software", fr: "Ingénierie logicielle" },
+  {
+    en: "Product strategy",
+    es: "Estrategia de producto",
+    fr: "Stratégie produit",
+  },
+  {
+    en: "Software engineering",
+    es: "Ingeniería de software",
+    fr: "Ingénierie logicielle",
+  },
   { en: "Design", es: "Diseño", fr: "Design" },
-  { en: "Finance and administration", es: "Finanzas y administración", fr: "Finance et administration" },
-  { en: "Brand and growth", es: "Marca y crecimiento", fr: "Marque et croissance" },
-  { en: "Shared technology", es: "Tecnología compartida", fr: "Technologie partagée" },
+  {
+    en: "Finance and administration",
+    es: "Finanzas y administración",
+    fr: "Finance et administration",
+  },
+  {
+    en: "Brand and growth",
+    es: "Marca y crecimiento",
+    fr: "Marque et croissance",
+  },
+  {
+    en: "Shared technology",
+    es: "Tecnología compartida",
+    fr: "Technologie partagée",
+  },
   { en: "Governance", es: "Gobernanza", fr: "Gouvernance" },
   { en: "Operations", es: "Operaciones", fr: "Opérations" },
 ];
 
 export const focusAreas = [
-  { en: "Enterprise software", es: "Software empresarial", fr: "Logiciels d'entreprise" },
+  {
+    en: "Enterprise software",
+    es: "Software empresarial",
+    fr: "Logiciels d'entreprise",
+  },
   { en: "Digital commerce", es: "Comercio digital", fr: "Commerce numérique" },
-  { en: "Real estate technology", es: "Tecnología inmobiliaria", fr: "Technologie immobilière" },
-  { en: "Professional networks", es: "Redes profesionales", fr: "Réseaux professionnels" },
-  { en: "Customer operations", es: "Operaciones de clientes", fr: "Opérations client" },
-  { en: "Digital services", es: "Servicios digitales", fr: "Services numériques" },
+  {
+    en: "Real estate technology",
+    es: "Tecnología inmobiliaria",
+    fr: "Technologie immobilière",
+  },
+  {
+    en: "Professional networks",
+    es: "Redes profesionales",
+    fr: "Réseaux professionnels",
+  },
+  {
+    en: "Customer operations",
+    es: "Operaciones de clientes",
+    fr: "Opérations client",
+  },
+  {
+    en: "Digital services",
+    es: "Servicios digitales",
+    fr: "Services numériques",
+  },
 ];
 
 export const teamContent = {
@@ -564,14 +610,26 @@ export const ventureBuildingSections = [
     },
     items: [
       { en: "Validation", es: "Validación", fr: "Validation" },
-      { en: "Product strategy", es: "Estrategia de producto", fr: "Stratégie produit" },
+      {
+        en: "Product strategy",
+        es: "Estrategia de producto",
+        fr: "Stratégie produit",
+      },
       { en: "Design", es: "Diseño", fr: "Design" },
       { en: "Engineering", es: "Ingeniería", fr: "Ingénierie" },
       { en: "Automation", es: "Automatización", fr: "Automatisation" },
       { en: "Operations", es: "Operaciones", fr: "Opérations" },
       { en: "Brand", es: "Marca", fr: "Marque" },
-      { en: "Commercialization", es: "Comercialización", fr: "Commercialisation" },
-      { en: "Corporate governance", es: "Gobierno empresarial", fr: "Gouvernance d'entreprise" },
+      {
+        en: "Commercialization",
+        es: "Comercialización",
+        fr: "Commercialisation",
+      },
+      {
+        en: "Corporate governance",
+        es: "Gobierno empresarial",
+        fr: "Gouvernance d'entreprise",
+      },
     ],
   },
   {
@@ -583,14 +641,26 @@ export const ventureBuildingSections = [
     items: [
       { en: "Initial review", es: "Revisión inicial", fr: "Examen initial" },
       { en: "Discovery", es: "Descubrimiento", fr: "Découverte" },
-      { en: "Venture assessment", es: "Evaluación del proyecto", fr: "Évaluation du projet" },
+      {
+        en: "Venture assessment",
+        es: "Evaluación del proyecto",
+        fr: "Évaluation du projet",
+      },
       {
         en: "Structure and responsibilities",
         es: "Estructura y responsabilidades",
         fr: "Structure et responsabilités",
       },
-      { en: "Build and launch", es: "Construcción y lanzamiento", fr: "Construction et lancement" },
-      { en: "Long-term operation", es: "Operación de largo plazo", fr: "Exploitation à long terme" },
+      {
+        en: "Build and launch",
+        es: "Construcción y lanzamiento",
+        fr: "Construction et lancement",
+      },
+      {
+        en: "Long-term operation",
+        es: "Operación de largo plazo",
+        fr: "Exploitation à long terme",
+      },
     ],
   },
   {
@@ -600,11 +670,27 @@ export const ventureBuildingSections = [
       fr: "Critères d'évaluation",
     },
     items: [
-      { en: "Identifiable problem", es: "Problema identificable", fr: "Problème identifiable" },
-      { en: "Sufficiently broad market", es: "Mercado suficientemente amplio", fr: "Marché suffisamment large" },
+      {
+        en: "Identifiable problem",
+        es: "Problema identificable",
+        fr: "Problème identifiable",
+      },
+      {
+        en: "Sufficiently broad market",
+        es: "Mercado suficientemente amplio",
+        fr: "Marché suffisamment large",
+      },
       { en: "Committed team", es: "Equipo comprometido", fr: "Équipe engagée" },
-      { en: "Execution capacity", es: "Capacidad de ejecución", fr: "Capacité d'exécution" },
-      { en: "Strategic fit", es: "Encaje estratégico", fr: "Alignement stratégique" },
+      {
+        en: "Execution capacity",
+        es: "Capacidad de ejecución",
+        fr: "Capacité d'exécution",
+      },
+      {
+        en: "Strategic fit",
+        es: "Encaje estratégico",
+        fr: "Alignement stratégique",
+      },
       {
         en: "Potential to build a sustainable advantage",
         es: "Posibilidad de construir una ventaja sostenible",
@@ -635,7 +721,7 @@ export const companies: PortfolioCompany[] = [
       es: "Global",
       fr: "Global",
     },
-    website: "https://nevobit.co",
+    website: "https://nevobit.com",
     productName: {
       en: "Nevobit software services",
       es: "Servicios de software de Nevobit",
@@ -715,7 +801,7 @@ export const companies: PortfolioCompany[] = [
       es: "Colombia",
       fr: "Colombie",
     },
-    website: "https://prooving.com",
+    website: "https://prooving.co",
     productName: {
       en: "Prooving computers and technology products",
       es: "Computadores y productos tecnológicos Prooving",
@@ -780,6 +866,7 @@ export const companies: PortfolioCompany[] = [
       es: "Software empresarial",
       fr: "Logiciels d'entreprise",
     },
+    website: "https://prohelebbaoving.com",
     description: {
       en: "Modular business management platform for Latin American small and medium-sized companies.",
       es: "Plataforma modular de gestión empresarial para pymes latinoamericanas.",
@@ -1113,4 +1200,5 @@ export const privatePortfolioItems: PrivatePortfolioItem[] = [
 export const getCompanyBySlug = (slug: string) =>
   companies.find((company) => company.slug === slug);
 
-export const localize = (value: LocalizedString, lang: Locale) => value[lang] ?? value.en;
+export const localize = (value: LocalizedString, lang: Locale) =>
+  value[lang] ?? value.en;
