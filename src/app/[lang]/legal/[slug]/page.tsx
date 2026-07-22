@@ -323,9 +323,9 @@ export async function generateMetadata({ params }: PageProps) {
     lang,
     path: `/legal/${slug}`,
     title: {
-      en: `${document.title.en} - Revoluc`,
-      es: `${document.title.es} - Revoluc`,
-      fr: `${document.title.fr} - Revoluc`,
+      en: `${document.title.en} — Revoluc`,
+      es: `${document.title.es} — Revoluc`,
+      fr: `${document.title.fr} — Revoluc`,
     },
     description: legalDescriptions[slug as LegalSlug],
   });

@@ -535,18 +535,6 @@ export const socialImpactAreas = [
       fr: "Contributions sélectives à des causes alignées avec la capacité de Revoluc à aider de manière responsable.",
     },
   },
-  {
-    label: {
-      en: "Evidence",
-      es: "Evidencia",
-      fr: "Preuve",
-    },
-    description: {
-      en: "Supported initiatives are documented with the organization, contribution, timeframe and result.",
-      es: "Las iniciativas apoyadas se documentan con organización, contribución, periodo y resultado.",
-      fr: "Les initiatives soutenues sont documentées avec l'organisation, la contribution, la période et le résultat.",
-    },
-  },
 ];
 
 export const startupContent = {
@@ -566,9 +554,9 @@ export const startupContent = {
     fr: "Chaque partenariat est structuré selon le travail, le capital, le risque et les responsabilités à long terme impliqués.",
   },
   cta: {
-    en: "Start a conversation",
-    es: "Iniciar conversación",
-    fr: "Démarrer une conversation",
+    en: "Submit your venture",
+    es: "Enviar tu proyecto",
+    fr: "Soumettre votre projet",
   },
 };
 
@@ -845,9 +833,9 @@ export const companies: PortfolioCompany[] = [
         fr: "Disponibilité : produit sur le marché via le site commercial Prooving et des canaux de vente actifs.",
       },
       {
-        en: "Public website: prooving.com.",
-        es: "Sitio público: prooving.com.",
-        fr: "Site public : prooving.com.",
+        en: "Public website: prooving.co.",
+        es: "Sitio público: prooving.co.",
+        fr: "Site public : prooving.co.",
       },
     ],
     ctaLabel: {

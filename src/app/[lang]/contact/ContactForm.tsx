@@ -7,6 +7,7 @@ import styles from "../ContentPage.module.css";
 
 type ContactFormProps = {
   lang: Locale;
+  initialReason?: string;
 };
 
 const labels = {
@@ -52,7 +53,7 @@ const labels = {
   },
 };
 
-export default function ContactForm({ lang }: ContactFormProps) {
+export default function ContactForm({ lang, initialReason = "" }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [failed, setFailed] = useState(false);
 
@@ -129,7 +130,7 @@ export default function ContactForm({ lang }: ContactFormProps) {
 
       <label>
         <span>{localize(labels.reason, lang)}</span>
-        <select name="reason" defaultValue="" required>
+        <select name="reason" defaultValue={initialReason} required>
           <option value="" disabled>
             {localize(labels.selectReason, lang)}
           </option>

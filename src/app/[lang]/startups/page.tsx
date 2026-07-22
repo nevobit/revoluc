@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Locale } from "../../../../i18n-config";
 import { localize, startupContent, ventureBuildingSections } from "@/content/site";
 import { pageMetadata } from "@/content/seo";
@@ -54,9 +55,9 @@ const Startups = async ({ params }: PageProps) => {
         </div>
 
         <p className={styles.note}>{localize(startupContent.note, lang)}</p>
-        <a className={styles.cta} href="mailto:hi@revoluc.com">
+        <Link className={styles.cta} href={`/${lang}/contact?reason=venture-building`}>
           {localize(startupContent.cta, lang)}
-        </a>
+        </Link>
       </section>
     </main>
   );

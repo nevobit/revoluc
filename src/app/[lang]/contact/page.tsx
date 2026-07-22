@@ -8,6 +8,9 @@ interface PageProps {
   params: Promise<{
     lang: string;
   }>;
+  searchParams?: Promise<{
+    reason?: string;
+  }>;
 }
 
 export async function generateMetadata({ params }: PageProps) {
@@ -29,8 +32,10 @@ export async function generateMetadata({ params }: PageProps) {
   });
 }
 
-const Contact = async ({ params }: PageProps) => {
+const Contact = async ({ params, searchParams }: PageProps) => {
   const lang = (await params).lang as Locale;
+  const query = await searchParams;
+  const initialReason = query?.reason === "venture-building" ? "Build a company with Revoluc" : "";
 
   return (
     <main className={styles.page}>
@@ -38,7 +43,7 @@ const Contact = async ({ params }: PageProps) => {
         <p className={styles.eyebrow}>{localize(eyebrowLabel, lang)}</p>
         <h1>{localize(contactContent.title, lang)}</h1>
         <p className={styles.lead}>{localize(contactContent.copy, lang)}</p>
-        <ContactForm lang={lang} />
+        <ContactForm lang={lang} initialReason={initialReason} />
       </section>
     </main>
   );
