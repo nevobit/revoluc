@@ -5,7 +5,7 @@ import { i18n, Locale } from "../../../i18n-config";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Sidebar from "@/components/Sidebar";
-import { siteUrl } from "@/content/seo";
+import { defaultOgImage, siteUrl } from "@/content/seo";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -61,4 +61,19 @@ export const metadata: Metadata = {
   authors: [{ name: "Nevobit", url: "https://nevobit.co" }],
   creator: "Nevobit Software",
   publisher: "Nevobit Software",
+  openGraph: {
+    images: [
+      {
+        url: defaultOgImage,
+        width: 1200,
+        height: 630,
+        alt: "Revoluc - Technology Holding and Venture Builder",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [defaultOgImage],
+  },
 };

@@ -10,6 +10,7 @@ type SeoConfig = {
 };
 
 export const siteUrl = "https://www.revoluc.com";
+export const defaultOgImage = `${siteUrl}/opengraph-image`;
 
 export const localizedPath = (lang: Locale, path = "") => {
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
@@ -48,11 +49,21 @@ export const pageMetadata = ({
       siteName: "Revoluc Inc.",
       type: "website",
       locale: lang,
+      images: [
+        {
+          url: defaultOgImage,
+          width: 1200,
+          height: 630,
+          alt: "Revoluc - Technology Holding and Venture Builder",
+          type: "image/png",
+        },
+      ],
     },
     twitter: {
       title: localizedTitle,
       description: localizedDescription,
       card: "summary_large_image",
+      images: [defaultOgImage],
     },
   };
 };
