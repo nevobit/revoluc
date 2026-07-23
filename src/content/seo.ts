@@ -10,7 +10,7 @@ type SeoConfig = {
 };
 
 export const siteUrl = "https://www.revoluc.com";
-export const defaultOgImage = `${siteUrl}/opengraph-image`;
+export const defaultOgImage = `${siteUrl}/opengraph-image.png`;
 
 export const localizedPath = (lang: Locale, path = "") => {
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
@@ -36,6 +36,7 @@ export const pageMetadata = ({
   const pathname = localizedPath(lang, path);
 
   return {
+    metadataBase: new URL(siteUrl),
     title: localizedTitle,
     description: localizedDescription,
     alternates: {
