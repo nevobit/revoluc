@@ -584,6 +584,197 @@ export const founderProfile = {
   ],
 };
 
+export const careersContent = {
+  title: {
+    en: "Careers",
+    es: "Carreras",
+    fr: "Carrières",
+  },
+  intro: {
+    en: "Revoluc works with people who can help build, operate and scale technology companies with discipline, ownership and long-term context. We currently have open roles in software development, UX/UI design and junior marketing.",
+    es: "Revoluc trabaja con personas que puedan ayudar a construir, operar y escalar compañías tecnológicas con disciplina, criterio propio y visión de largo plazo. Actualmente tenemos vacantes abiertas en desarrollo de software, diseño UX/UI y marketing junior.",
+    fr: "Revoluc travaille avec des personnes capables de construire, exploiter et développer des entreprises technologiques avec discipline, responsabilité et vision à long terme. Nous avons actuellement des postes ouverts en développement logiciel, design UX/UI et marketing junior.",
+  },
+  note: {
+    en: "Candidates can apply through the contact form. Please include your portfolio, GitHub, LinkedIn, case studies or examples of relevant work when available.",
+    es: "Las personas interesadas pueden aplicar desde el formulario de contacto. Incluye portafolio, GitHub, LinkedIn, casos de estudio o ejemplos de trabajo relevante cuando estén disponibles.",
+    fr: "Les candidats peuvent postuler via le formulaire de contact. Incluez votre portfolio, GitHub, LinkedIn, études de cas ou exemples de travaux pertinents si disponibles.",
+  },
+  cta: {
+    en: "Apply for the role",
+    es: "Aplicar a la vacante",
+    fr: "Postuler au poste",
+  },
+};
+
+export const careersOpenings = [
+  {
+    initials: "JS",
+    title: {
+      en: "Junior Software Developer",
+      es: "Junior Software Developer",
+      fr: "Junior Software Developer",
+    },
+    status: {
+      en: "Open role",
+      es: "Vacante abierta",
+      fr: "Poste ouvert",
+    },
+    category: {
+      en: "Software engineering",
+      es: "Ingeniería de software",
+      fr: "Ingénierie logicielle",
+    },
+    description: {
+      en: "Early-career role supporting websites, internal tools, business applications and product work across the Revoluc group.",
+      es: "Rol inicial para apoyar sitios web, herramientas internas, aplicaciones empresariales y trabajo de producto dentro del grupo Revoluc.",
+      fr: "Rôle de début de carrière pour soutenir les sites web, outils internes, applications métiers et travaux produit au sein du groupe Revoluc.",
+    },
+    area: {
+      en: "Software engineering and product development",
+      es: "Ingeniería de software y desarrollo de producto",
+      fr: "Ingénierie logicielle et développement produit",
+    },
+    focus: {
+      en: "Web development, internal tools, business applications and group products",
+      es: "Desarrollo web, herramientas internas, aplicaciones empresariales y productos del grupo",
+      fr: "Développement web, outils internes, applications métiers et produits du groupe",
+    },
+    profile: {
+      en: "Junior developer with fundamentals in web development, databases, version control and willingness to learn in production projects",
+      es: "Developer junior con bases en desarrollo web, bases de datos, control de versiones y disposición para aprender en proyectos reales",
+      fr: "Développeur junior avec des bases en développement web, bases de données, contrôle de version et volonté d'apprendre sur des projets réels",
+    },
+  },
+  {
+    initials: "UX",
+    title: {
+      en: "UX/UI Designer",
+      es: "Diseñador UX/UI",
+      fr: "Designer UX/UI",
+    },
+    status: {
+      en: "Open role",
+      es: "Vacante abierta",
+      fr: "Poste ouvert",
+    },
+    category: {
+      en: "Product design",
+      es: "Diseño de producto",
+      fr: "Design produit",
+    },
+    description: {
+      en: "Design role focused on product interfaces, user flows, visual systems and practical design support across Revoluc ventures.",
+      es: "Rol de diseño enfocado en interfaces de producto, flujos de usuario, sistemas visuales y soporte práctico de diseño para ventures de Revoluc.",
+      fr: "Rôle de design centré sur les interfaces produit, les parcours utilisateur, les systèmes visuels et le soutien design pratique pour les ventures de Revoluc.",
+    },
+    area: {
+      en: "UX/UI design and product experience",
+      es: "Diseño UX/UI y experiencia de producto",
+      fr: "Design UX/UI et expérience produit",
+    },
+    focus: {
+      en: "Interfaces, prototypes, design systems, usability and product visuals",
+      es: "Interfaces, prototipos, sistemas de diseño, usabilidad y visuales de producto",
+      fr: "Interfaces, prototypes, systèmes de design, utilisabilité et visuels produit",
+    },
+    profile: {
+      en: "Designer with a portfolio showing interface design, product thinking, attention to detail and collaboration with development teams",
+      es: "Diseñador con portafolio que muestre diseño de interfaces, criterio de producto, atención al detalle y colaboración con equipos de desarrollo",
+      fr: "Designer avec un portfolio montrant du design d'interface, une pensée produit, le souci du détail et la collaboration avec des équipes de développement",
+    },
+  },
+  {
+    initials: "JM",
+    title: {
+      en: "Junior Marketing",
+      es: "Junior Marketing",
+      fr: "Marketing Junior",
+    },
+    status: {
+      en: "Open role",
+      es: "Vacante abierta",
+      fr: "Poste ouvert",
+    },
+    category: {
+      en: "Brand and growth",
+      es: "Marca y crecimiento",
+      fr: "Marque et croissance",
+    },
+    description: {
+      en: "Junior role supporting content, brand execution, social channels, campaign operations and growth work across Revoluc companies.",
+      es: "Rol junior para apoyar contenido, ejecución de marca, canales sociales, operaciones de campañas y trabajo de crecimiento en compañías de Revoluc.",
+      fr: "Rôle junior pour soutenir le contenu, l'exécution de marque, les réseaux sociaux, les opérations de campagne et la croissance des entreprises Revoluc.",
+    },
+    area: {
+      en: "Marketing, brand and growth support",
+      es: "Marketing, marca y soporte de crecimiento",
+      fr: "Marketing, marque et soutien à la croissance",
+    },
+    focus: {
+      en: "Content, social media, campaign coordination, brand assets and reporting",
+      es: "Contenido, redes sociales, coordinación de campañas, activos de marca y reportes",
+      fr: "Contenu, réseaux sociaux, coordination de campagnes, actifs de marque et reporting",
+    },
+    profile: {
+      en: "Junior marketer with writing ability, organization, curiosity for digital channels and willingness to learn through execution",
+      es: "Marketer junior con habilidad de escritura, organización, curiosidad por canales digitales y disposición para aprender ejecutando",
+      fr: "Marketer junior avec des compétences rédactionnelles, de l'organisation, de la curiosité pour les canaux numériques et l'envie d'apprendre par l'exécution",
+    },
+  },
+];
+
+export const careersSections = [
+  {
+    title: {
+      en: "How we work",
+      es: "Cómo trabajamos",
+      fr: "Notre façon de travailler",
+    },
+    items: [
+      {
+        en: "Clear ownership over product, technology, operations or growth responsibilities.",
+        es: "Responsabilidad clara sobre producto, tecnología, operaciones o crecimiento.",
+        fr: "Responsabilité claire sur le produit, la technologie, les opérations ou la croissance.",
+      },
+      {
+        en: "Small teams focused on execution, learning and measurable operating progress.",
+        es: "Equipos pequeños enfocados en ejecución, aprendizaje y progreso operativo medible.",
+        fr: "Petites équipes centrées sur l'exécution, l'apprentissage et les progrès opérationnels mesurables.",
+      },
+      {
+        en: "Work connected to companies in the Revoluc group and selected partner ventures.",
+        es: "Trabajo conectado con compañías del grupo Revoluc y ventures aliados seleccionados.",
+        fr: "Travail lié aux entreprises du groupe Revoluc et à certains ventures partenaires.",
+      },
+    ],
+  },
+  {
+    title: {
+      en: "Areas of interest",
+      es: "Áreas de interés",
+      fr: "Domaines d'intérêt",
+    },
+    items: [
+      {
+        en: "Software engineering, product design, product operations and automation.",
+        es: "Ingeniería de software, diseño de producto, operaciones de producto y automatización.",
+        fr: "Ingénierie logicielle, design produit, opérations produit et automatisation.",
+      },
+      {
+        en: "Brand, growth, customer operations, finance and portfolio support.",
+        es: "Marca, crecimiento, operaciones de clientes, finanzas y soporte al portafolio.",
+        fr: "Marque, croissance, opérations client, finance et soutien au portefeuille.",
+      },
+      {
+        en: "Company-building roles for people comfortable working across early-stage ventures.",
+        es: "Roles de construcción de compañías para personas cómodas trabajando entre ventures en etapa temprana.",
+        fr: "Rôles de construction d'entreprises pour des personnes à l'aise avec des ventures en phase initiale.",
+      },
+    ],
+  },
+];
+
 export const contactContent = {
   title: {
     en: "Contact Revoluc",

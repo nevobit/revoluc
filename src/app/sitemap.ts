@@ -6,6 +6,7 @@ import { localizedPath, siteUrl } from "@/content/seo";
 const staticPaths = [
   "",
   "/about",
+  "/careers",
   "/companies",
   "/contact",
   "/social",

@@ -70,5 +70,9 @@ const getInitialReason = (reason?: string) => {
     return "Portfolio company inquiry";
   }
 
+  if (reason === "careers") {
+    return "Careers";
+  }
+
   return "";
 };
