@@ -74,5 +74,9 @@ const getInitialReason = (reason?: string) => {
     return "Careers";
   }
 
+  if (reason === "press") {
+    return "Media and press";
+  }
+
   return "";
 };

@@ -775,6 +775,217 @@ export const careersSections = [
   },
 ];
 
+export const pressKitContent = {
+  title: {
+    en: "Press Kit",
+    es: "Press Kit",
+    fr: "Press Kit",
+  },
+  intro: {
+    en: "Official information for journalists, partners and organizations that need to reference Revoluc Inc. accurately.",
+    es: "Información oficial para periodistas, aliados y organizaciones que necesitan referenciar correctamente a Revoluc Inc.",
+    fr: "Informations officielles pour les journalistes, partenaires et organisations qui doivent référencer Revoluc Inc. avec précision.",
+  },
+  cta: {
+    en: "Contact media team",
+    es: "Contactar prensa",
+    fr: "Contacter la presse",
+  },
+  logoCta: {
+    en: "View logo",
+    es: "Ver logo",
+    fr: "Voir le logo",
+  },
+};
+
+export const pressKitCards = [
+  {
+    initials: "BO",
+    title: {
+      en: "Official boilerplate",
+      es: "Boilerplate oficial",
+      fr: "Boilerplate officiel",
+    },
+    status: {
+      en: "Approved copy",
+      es: "Texto aprobado",
+      fr: "Texte approuvé",
+    },
+    category: {
+      en: "Company description",
+      es: "Descripción corporativa",
+      fr: "Description d'entreprise",
+    },
+    description: {
+      en: "Revoluc Inc. is a Delaware technology holding company and venture builder that builds, operates, supports and scales technology companies across enterprise software, digital commerce, real estate technology, professional networks, customer operations and digital services.",
+      es: "Revoluc Inc. es una holding tecnológica y venture builder constituida en Delaware que crea, opera, apoya y escala compañías tecnológicas en software empresarial, comercio digital, tecnología inmobiliaria, redes profesionales, operaciones de clientes y servicios digitales.",
+      fr: "Revoluc Inc. est une holding technologique et venture builder constituée au Delaware qui crée, exploite, soutient et développe des entreprises technologiques dans les logiciels d'entreprise, le commerce numérique, la technologie immobilière, les réseaux professionnels, les opérations client et les services numériques.",
+    },
+    facts: [
+      {
+        label: { en: "Legal name", es: "Nombre legal", fr: "Nom légal" },
+        value: {
+          en: corporateTruth.legalName,
+          es: corporateTruth.legalName,
+          fr: corporateTruth.legalName,
+        },
+      },
+      {
+        label: { en: "Incorporation", es: "Constitución", fr: "Constitution" },
+        value: {
+          en: `${corporateTruth.incorporationState}, ${corporateTruth.incorporationYear.en}`,
+          es: `${corporateTruth.incorporationState}, ${corporateTruth.incorporationYear.es}`,
+          fr: `${corporateTruth.incorporationState}, ${corporateTruth.incorporationYear.fr}`,
+        },
+      },
+    ],
+  },
+  {
+    initials: "LD",
+    title: {
+      en: "Leadership",
+      es: "Liderazgo",
+      fr: "Direction",
+    },
+    status: {
+      en: "Founder profile",
+      es: "Perfil fundador",
+      fr: "Profil fondateur",
+    },
+    category: {
+      en: "Founder & CEO",
+      es: "Founder & CEO",
+      fr: "Founder & CEO",
+    },
+    description: {
+      en: `${founderProfile.name} is the Founder & CEO of Revoluc, leading group strategy, product direction, technology decisions, portfolio development and company-building work.`,
+      es: `${founderProfile.name} es Founder & CEO de Revoluc y lidera estrategia del grupo, dirección de producto, decisiones tecnológicas, desarrollo del portafolio y construcción de compañías.`,
+      fr: `${founderProfile.name} est Founder & CEO de Revoluc et dirige la stratégie du groupe, la direction produit, les décisions technologiques, le développement du portefeuille et la construction d'entreprises.`,
+    },
+    facts: [
+      {
+        label: { en: "Location", es: "Ubicación", fr: "Localisation" },
+        value: {
+          en: founderProfile.location,
+          es: founderProfile.location,
+          fr: founderProfile.location,
+        },
+      },
+      {
+        label: { en: "LinkedIn", es: "LinkedIn", fr: "LinkedIn" },
+        value: {
+          en: founderProfile.linkedin,
+          es: founderProfile.linkedin,
+          fr: founderProfile.linkedin,
+        },
+      },
+    ],
+  },
+  {
+    initials: "PF",
+    title: {
+      en: "Portfolio focus",
+      es: "Enfoque del portafolio",
+      fr: "Orientation du portefeuille",
+    },
+    status: {
+      en: "Public scope",
+      es: "Alcance público",
+      fr: "Périmètre public",
+    },
+    category: {
+      en: "Operating areas",
+      es: "Áreas operativas",
+      fr: "Domaines opérationnels",
+    },
+    description: {
+      en: "Revoluc presents public companies only when there is a defined product, market, operating context, relationship with Revoluc and proof of existence.",
+      es: "Revoluc presenta compañías públicas solo cuando existe producto definido, mercado, contexto operativo, relación con Revoluc y prueba de existencia.",
+      fr: "Revoluc présente publiquement des entreprises uniquement lorsqu'il existe un produit défini, un marché, un contexte opérationnel, une relation avec Revoluc et une preuve d'existence.",
+    },
+    facts: [
+      {
+        label: {
+          en: "Current sectors",
+          es: "Sectores actuales",
+          fr: "Secteurs actuels",
+        },
+        value: {
+          en: "Enterprise software, digital commerce, real estate technology, professional networks, customer operations and digital services",
+          es: "Software empresarial, comercio digital, tecnología inmobiliaria, redes profesionales, operaciones de clientes y servicios digitales",
+          fr: "Logiciels d'entreprise, commerce numérique, technologie immobilière, réseaux professionnels, opérations client et services numériques",
+        },
+      },
+    ],
+  },
+  {
+    initials: "AS",
+    title: {
+      en: "Brand assets",
+      es: "Activos de marca",
+      fr: "Actifs de marque",
+    },
+    status: {
+      en: "Available asset",
+      es: "Activo disponible",
+      fr: "Actif disponible",
+    },
+    category: {
+      en: "Logo and identity",
+      es: "Logo e identidad",
+      fr: "Logo et identité",
+    },
+    description: {
+      en: "The current public logo is available for basic media reference. Product screenshots, founder photography and additional brand files should be requested before publication.",
+      es: "El logo público actual está disponible para referencia básica de medios. Capturas de producto, fotografía del fundador y archivos adicionales de marca deben solicitarse antes de publicación.",
+      fr: "Le logo public actuel est disponible pour une référence média de base. Les captures produit, photos du fondateur et fichiers de marque supplémentaires doivent être demandés avant publication.",
+    },
+    facts: [
+      {
+        label: { en: "Logo", es: "Logo", fr: "Logo" },
+        value: {
+          en: "/img/logo192.png",
+          es: "/img/logo192.png",
+          fr: "/img/logo192.png",
+        },
+      },
+    ],
+  },
+  {
+    initials: "MC",
+    title: {
+      en: "Media contact",
+      es: "Contacto de prensa",
+      fr: "Contact presse",
+    },
+    status: {
+      en: "Official channel",
+      es: "Canal oficial",
+      fr: "Canal officiel",
+    },
+    category: {
+      en: "Press inquiries",
+      es: "Consultas de prensa",
+      fr: "Demandes presse",
+    },
+    description: {
+      en: "Media inquiries, interview requests and requests for additional materials should be sent through Revoluc's official contact channel.",
+      es: "Consultas de medios, solicitudes de entrevista y solicitudes de materiales adicionales deben enviarse por el canal oficial de contacto de Revoluc.",
+      fr: "Les demandes média, demandes d'entretien et demandes de documents supplémentaires doivent être envoyées via le canal officiel de contact de Revoluc.",
+    },
+    facts: [
+      {
+        label: { en: "Email", es: "Correo", fr: "Email" },
+        value: {
+          en: corporateTruth.publicEmail,
+          es: corporateTruth.publicEmail,
+          fr: corporateTruth.publicEmail,
+        },
+      },
+    ],
+  },
+];
+
 export const contactContent = {
   title: {
     en: "Contact Revoluc",
@@ -1107,7 +1318,7 @@ export const companies: PortfolioCompany[] = [
       es: "Servicios de software de Nevobit",
       fr: "Services logiciels Nevobit",
     },
-    logo: placeholderCompanyLogo,
+    logo: "/img/logos/nevobit_logo.svg",
     internalResponsible: {
       en: "Néstor Mosquera",
       es: "Néstor Mosquera",
@@ -1262,7 +1473,7 @@ export const companies: PortfolioCompany[] = [
       es: "Software de gestión empresarial Helebba",
       fr: "Logiciel de gestion d'entreprise Helebba",
     },
-    logo: placeholderCompanyLogo,
+    logo: "/img/logos/helebba_logo.svg",
     internalResponsible: {
       en: "Néstor Mosquera",
       es: "Néstor Mosquera",
@@ -1311,6 +1522,7 @@ export const companies: PortfolioCompany[] = [
     slug: "loobic",
     relationship: "built",
     status: "venture-in-development",
+    logo: "/img/logos/loobic_logo.svg",
     category: {
       en: "Professional networks",
       es: "Redes profesionales",
@@ -1331,7 +1543,6 @@ export const companies: PortfolioCompany[] = [
       es: "Red Loobic",
       fr: "Réseau Loobic",
     },
-    logo: placeholderCompanyLogo,
     internalResponsible: {
       en: "Néstor Mosquera",
       es: "Néstor Mosquera",
@@ -1442,6 +1653,75 @@ export const companies: PortfolioCompany[] = [
       en: "Ask about Lytos",
       es: "Consultar sobre Lytos",
       fr: "Demander à propos de Lytos",
+    },
+  },
+  {
+    name: "Snappra",
+    slug: "snappra",
+    relationship: "built",
+    status: "venture-in-development",
+    category: {
+      en: "Customer operations",
+      es: "Operaciones de clientes",
+      fr: "Opérations client",
+    },
+    description: {
+      en: "Support, requests and ticket management platform.",
+      es: "Plataforma de soporte, solicitudes y gestión de tickets.",
+      fr: "Plateforme de support, demandes et gestion de tickets.",
+    },
+    market: {
+      en: "Latin America",
+      es: "América Latina",
+      fr: "Amérique latine",
+    },
+    productName: {
+      en: "Snappra support platform",
+      es: "Plataforma de soporte Snappra",
+      fr: "Plateforme de support Snappra",
+    },
+    logo: "/img/logos/snappra_logo.svg",
+    internalResponsible: {
+      en: "Néstor Mosquera",
+      es: "Néstor Mosquera",
+      fr: "Néstor Mosquera",
+    },
+    proof: {
+      en: "Defined product category and operating use case.",
+      es: "Categoría de producto y caso de uso operativo definidos.",
+      fr: "Catégorie de produit et cas d'usage opérationnel définis.",
+    },
+    problem: {
+      en: "Teams lose visibility when requests, incidents and customer support conversations live across scattered channels.",
+      es: "Los equipos pierden visibilidad cuando solicitudes, incidentes y conversaciones de soporte viven en canales dispersos.",
+      fr: "Les équipes perdent en visibilité lorsque demandes, incidents et conversations de support sont dispersés.",
+    },
+    solution: {
+      en: "Snappra is being built to organize requests, support queues, tickets and follow-up workflows.",
+      es: "Snappra se construye para organizar solicitudes, colas de soporte, tickets y flujos de seguimiento.",
+      fr: "Snappra est conçu pour organiser demandes, files de support, tickets et flux de suivi.",
+    },
+    evidenceItems: [
+      {
+        en: "Core scope: ticket intake, request management, support queues, assignments and follow-up workflows.",
+        es: "Alcance central: recepción de tickets, gestión de solicitudes, colas de soporte, asignaciones y flujos de seguimiento.",
+        fr: "Périmètre central : réception de tickets, gestion des demandes, files de support, affectations et suivis.",
+      },
+      {
+        en: "Use cases: customer operations, internal support, service requests and incident tracking.",
+        es: "Casos de uso: operaciones de clientes, soporte interno, solicitudes de servicio y seguimiento de incidentes.",
+        fr: "Cas d'usage : opérations client, support interne, demandes de service et suivi d'incidents.",
+      },
+      {
+        en: "Current status: in development with defined product category and operational use case.",
+        es: "Estado actual: en desarrollo con categoría de producto y caso de uso operativo definidos.",
+        fr: "Statut actuel : en développement avec catégorie produit et cas d'usage opérationnel définis.",
+      },
+    ],
+    ctaLabel: {
+      en: "Ask about Snappra",
+      es: "Consultar sobre Snappra",
+      fr: "Demander à propos de Snappra",
     },
   },
   {

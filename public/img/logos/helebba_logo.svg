@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 3000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <rect id="Artboard1" x="0" y="0" width="3000" height="1000" style="fill:none;"/>
+    <g id="Artboard11" serif:id="Artboard1">
+        <g transform="matrix(2.640219,0,0,2.640219,-1071.065825,-440.661831)">
+            <g transform="matrix(208.333333,0,0,208.333333,1481.567982,432.188834)">
+            </g>
+            <text x="699.276px" y="432.189px" style="font-family:'FilsonSoftRegular', 'Filson Soft';font-size:208.333px;">h<tspan x="816.776px 932.818px 978.651px 1094.693px 1220.943px 1347.193px " y="432.189px 432.189px 432.189px 432.189px 432.189px 432.189px ">elebba</tspan></text>
+        </g>
+        <g transform="matrix(4.437942,0,0,4.437942,-1314.776002,-1196.384312)">
+            <g transform="matrix(0.900901,0,0,0.813008,-36.378378,53.325203)">
+                <path d="M528.999,344C530.104,344 531,344.993 531,346.217L531,464.783C531,466.007 530.104,467 528.999,467L422.001,467C420.896,467 420,466.007 420,464.783L420,346.217C420,344.993 420.896,344 422.001,344L528.999,344Z"/>
+            </g>
+            <g transform="matrix(0.720721,0,0,0.650407,59.297297,109.260163)">
+                <path d="M528.499,344C529.88,344 531,345.241 531,346.772L531,467L421.251,467C420.919,467 420.601,466.854 420.366,466.594C420.132,466.334 420,465.982 420,465.614L420,344L528.499,344Z" style="fill:white;"/>
+            </g>
+            <g transform="matrix(0.630631,0,0,0.569106,107.135135,137.227642)">
+                <path d="M528.142,344C528.9,344 529.627,344.334 530.163,344.928C530.699,345.522 531,346.327 531,347.167L531,467L421.429,467C421.05,467 420.687,466.833 420.419,466.536C420.151,466.239 420,465.836 420,465.416L420,344L528.142,344Z"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -117,6 +117,14 @@ const Header = () => {
           <div className={styles.pageone}>
             <i className="bx bx-chevron-right"></i>
             <p>
+              <Link href={`/${locale}/press`}>
+                {t['banner'].press}
+              </Link>
+            </p>
+          </div>
+          <div className={styles.pageone}>
+            <i className="bx bx-chevron-right"></i>
+            <p>
               <Link href={`/${locale}/contact`}>
                 {t['banner'].contact}
               </Link>
